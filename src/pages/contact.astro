@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with Health and Safety Kits. Questions about our H&S compliance kits? We're here to help.">
+  <section class="section">
+    <div class="container" style="max-width: 600px;">
+      <h1 class="text-center">Contact Us</h1>
+      <p class="text-center">
+        Have a question about our kits or need help choosing the right one for your trade?
+        Get in touch and we&rsquo;ll get back to you.
+      </p>
+
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="trade">Your Trade</label>
+          <select id="trade" name="trade">
+            <option value="">Select your trade...</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="landscaping">Landscaping</option>
+            <option value="beauty">Mobile Beauty / Hairdressing</option>
+            <option value="dog-grooming">Dog Grooming / Pet Services</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-form {
+    margin-top: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    font-size: 0.925rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+</style>

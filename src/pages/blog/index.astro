@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+const posts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const featuredPosts = posts.filter(p => p.data.featured);
+const regularPosts = posts.filter(p => !p.data.featured);
+
+// Extract all unique tags
+const allTags = [...new Set(posts.flatMap(p => p.data.tags))].sort();
+
+// Tag metadata for display
+const tagMeta: Record<string, { label: string; description: string }> = {
+  'risk-assessment': { label: 'Risk Assessment', description: 'Guides on conducting workplace risk assessments' },
+  'compliance': { label: 'Compliance', description: 'Meeting your legal H&S obligations' },
+  'coshh': { label: 'COSHH', description: 'Control of substances hazardous to health' },
+  'policy': { label: 'Policy', description: 'Health and safety policy documents' },
+  'fire-safety': { label: 'Fire Safety', description: 'Fire risk assessments and prevention' },
+  'construction': { label: 'Construction', description: 'H&S for construction and trades' },
+  'method-statement': { label: 'Method Statements', description: 'Safe systems of work documentation' },
+  'training': { label: 'Training', description: 'Staff training and competence' },
+  'cleaning': { label: 'Cleaning', description: 'H&S for cleaning businesses' },
+};
+
+// Helper for reading time
+function getReadingTime(body: string | undefined): number {
+  if (!body) return 1;
+  return Math.max(1, Math.ceil(body.split(/\s+/).length / 230));
+}
+
+// CollectionPage schema
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Health and Safety Blog",
+  "description": "Practical health and safety compliance guides for UK and Ireland small businesses.",
+  "url": "https://healthandsafetykits.com/blog/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": posts.slice(0, 20).map((post, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://healthandsafetykits.com/blog/${post.id}/`,
+      "name": post.data.title,
+    })),
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://healthandsafetykits.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://healthandsafetykits.com/blog/" },
+  ],
+};
+---
+
+<BaseLayout title="Blog" description="Practical health and safety compliance guides, risk assessment tips, and template advice for UK and Ireland small businesses and sole traders.">
+  <script type="application/ld+json" set:html={JSON.stringify(collectionSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+
+      <header class="blog-header">
+        <h1>Health &amp; Safety Compliance Guides</h1>
+        <p>Practical compliance guidance for UK and Ireland small businesses. Plain English, no jargon, legally referenced.</p>
+      </header>
+
+      <!-- Quick tag navigation -->
+      {allTags.length > 0 && (
+        <nav class="tag-nav" aria-label="Filter by topic">
+          {allTags.map(tag => (
+            <a href={`/tags/${tag}/`} class="tag-pill">
+              {tagMeta[tag]?.label || tag}
+            </a>
+          ))}
+        </nav>
+      )}
+
+      <!-- Featured posts -->
+      {featuredPosts.length > 0 && (
+        <section class="featured-section">
+          <h2 class="section-heading">Featured Guides</h2>
+          {featuredPosts.map(post => (
+            <a href={`/blog/${post.id}/`} class="post-card featured">
+              <div class="post-card-content">
+                <div class="post-card-meta">
+                  <time datetime={new Date(post.data.date).toISOString()}>
+                    {new Date(post.data.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  </time>
+                  <span>{getReadingTime(post.body)} min read</span>
+                </div>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <div class="post-card-tags">
+                  {post.data.tags.map(tag => (
+                    <span class="tag-sm">{tagMeta[tag]?.label || tag}</span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </section>
+      )}
+
+      <!-- All posts -->
+      <section class="posts-section">
+        {posts.length > 0 && <h2 class="section-heading">{featuredPosts.length > 0 ? 'All Guides' : ''}</h2>}
+        {posts.length === 0 && (
+          <p class="text-center" style="margin-top: 2rem; color: #9ca3af;">
+            Posts coming soon. Check back for H&amp;S guides tailored to your trade.
+          </p>
+        )}
+        <div class="posts-list">
+          {(featuredPosts.length > 0 ? regularPosts : posts).map(post => (
+            <a href={`/blog/${post.id}/`} class="post-card">
+              <div class="post-card-content">
+                <div class="post-card-meta">
+                  <time datetime={new Date(post.data.date).toISOString()}>
+                    {new Date(post.data.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  </time>
+                  <span>{getReadingTime(post.body)} min read</span>
+                </div>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <div class="post-card-tags">
+                  {post.data.tags.map(tag => (
+                    <span class="tag-sm">{tagMeta[tag]?.label || tag}</span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <aside class="blog-cta">
+        <h3>Get Your Free H&amp;S Compliance Sample</h3>
+        <p>See the quality of our kits before you buy. Download a sample risk assessment and COSHH assessment &mdash; free, no signup required.</p>
+        <div class="cta-buttons">
+          <a href="/free-sample/" class="btn btn-primary">Download Free Sample</a>
+          <a href="/kits/" class="btn btn-secondary">Compare All Kits</a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .blog-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-header p {
+    color: #6b7280;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .tag-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .tag-pill {
+    padding: 0.3rem 0.75rem;
+    background: #f3f4f6;
+    color: #374151;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  .tag-pill:hover {
+    background: #dbeafe;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .section-heading {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+
+  .featured-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .post-card {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .post-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    text-decoration: none;
+  }
+
+  .post-card.featured {
+    border-left: 4px solid #2563eb;
+    background: #fafbff;
+  }
+
+  .post-card-meta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.4rem;
+  }
+
+  .post-card h3 {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+  }
+
+  .post-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .post-card-tags {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-sm {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-radius: 9999px;
+  }
+
+  .blog-cta {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #eff6ff 0%, #ecfdf5 100%);
+    border-radius: 0.75rem;
+    text-align: center;
+  }
+
+  .blog-cta h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-cta p {
+    color: #4b5563;
+    max-width: 520px;
+    margin: 0 auto 1.25rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+/**
+ * Umami Analytics Component
+ * Privacy-friendly, cookie-free analytics. GDPR compliant.
+ *
+ * Set the following environment variables in Netlify:
+ *   UMAMI_WEBSITE_ID  - Your Umami website ID
+ *   UMAMI_SRC         - Your Umami script URL (e.g. https://analytics.yourdomain.com/script.js)
+ *
+ * In development, tracking is disabled by default.
+ */
+
+const websiteId = import.meta.env.UMAMI_WEBSITE_ID || '';
+const umamiSrc = import.meta.env.UMAMI_SRC || '';
+const isDev = import.meta.env.DEV;
+---
+
+{!isDev && websiteId && umamiSrc && (
+  <script
+    defer
+    src={umamiSrc}
+    data-website-id={websiteId}
+  />
+)}

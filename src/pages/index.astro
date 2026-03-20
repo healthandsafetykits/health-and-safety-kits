@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="One-time download H&S compliance kits for small trades. Risk assessments, COSHH, policies & training — audit-ready in 60 minutes. No subscriptions.">
+
+  <section class="hero">
+    <div class="container">
+      <h1>H&S Compliance Kits for Small Trades</h1>
+      <p class="hero-subtitle">
+        One-time download. No subscriptions. Just download and protect your
+        business &mdash; <strong>audit-ready in 60 minutes</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="/free-sample/" class="btn btn-secondary">Try Free Sample</a>
+        <a href="/kits/" class="btn btn-primary">Compare All Kits</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Why Pay a Consultant When You Can Buy Once?</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 2rem;">
+        H&S consultants charge &pound;500&ndash;&pound;2,000+. SaaS platforms charge &pound;799/year for
+        templates you&rsquo;ll never use. We give you exactly what your trade needs, for a one-time price.
+      </p>
+
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Solution</th>
+              <th>Cost</th>
+              <th>What You Get</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>H&S Consultant</td>
+              <td>&pound;500&ndash;&pound;2,000+</td>
+              <td>Generic docs, one-off visit</td>
+            </tr>
+            <tr>
+              <td>SaaS Platform (e.g. HASpod)</td>
+              <td>&pound;799/year</td>
+              <td>790+ templates (mostly irrelevant)</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Health and Safety Kits</strong></td>
+              <td><strong>&pound;49&ndash;&pound;79</strong></td>
+              <td><strong>Everything your trade needs, forever</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-it-works">
+    <div class="container">
+      <h2 class="text-center">How It Works</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Choose Your Trade Kit</h3>
+          <p>Pick the kit that matches your trade &mdash; cleaning, landscaping, beauty, or more.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Instant Download</h3>
+          <p>Delivered as a ZIP file via Gumroad. No logins, no SaaS, no tracking.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Fill In &amp; Print</h3>
+          <p>Customise the templates for your business. Print or save as PDF.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Be Compliant</h3>
+          <p>Show clients, insurers, and inspectors you take health &amp; safety seriously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kits-overview">
+    <div class="container">
+      <h2 class="text-center">Trade-Specific Kits</h2>
+      <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
+        Each kit is tailored to your trade. Not a generic template pack &mdash; real documents
+        for real businesses.
+      </p>
+      <div class="kits-grid">
+        <div class="kit-card">
+          <h3>Cleaning Business</h3>
+          <p>COSHH assessments for chemicals, lone working, manual handling, slips &amp; trips, and more.</p>
+          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        </div>
+        <div class="kit-card">
+          <h3>Landscaping</h3>
+          <p>Equipment risk assessments, noise, work at height, pesticide COSHH, manual handling.</p>
+          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        </div>
+        <div class="kit-card">
+          <h3>Mobile Beauty</h3>
+          <p>Chemical COSHH for dyes &amp; acrylics, hygiene policies, lone working, client home risk.</p>
+          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        </div>
+        <div class="kit-card">
+          <h3>Dog Grooming</h3>
+          <p>Animal handling risk, chemical use, hygiene, bite protocols, equipment safety.</p>
+          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2>Get Compliant Today</h2>
+      <p style="max-width: 600px; margin: 0 auto 1.5rem;">
+        Download your trade-specific H&S kit and be audit-ready in 60 minutes.
+        One-time purchase. Yours forever.
+      </p>
+      <a href="/kits/" class="btn btn-primary">Compare All Kits</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .comparison-table {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    font-weight: 600;
+    background: #f9fafb;
+  }
+
+  .highlight-row {
+    background: #eff6ff;
+  }
+
+  .how-it-works {
+    background: #f9fafb;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .kits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .kit-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background: #fff;
+  }
+
+  .kit-card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .kit-card p {
+    color: #4b5563;
+    font-size: 0.925rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section p {
+    color: #dbeafe;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

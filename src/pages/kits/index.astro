@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Compare Kits" description="Compare our Basic and Pro H&S compliance kits. Find the right kit for your trade — cleaning, landscaping, beauty, dog grooming, and more.">
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center">Compare H&S Kits</h1>
+      <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
+        Choose your trade below to see exactly what&rsquo;s included in each kit.
+        Every kit comes with a Basic and Pro tier.
+      </p>
+
+      <div class="tier-comparison">
+        <table>
+          <thead>
+            <tr>
+              <th>Included</th>
+              <th>Basic Kit &pound;49</th>
+              <th>Pro Kit &pound;79</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Health &amp; Safety Policy</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Trade-Specific Risk Assessments</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>COSHH Assessments</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Accident/Incident Report Form</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Staff Induction Checklist</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Quick-Start Compliance Guide</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Training Presentation Slides</td>
+              <td>&ndash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Staff Quiz / Assessment</td>
+              <td>&ndash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Annual H&S Review Checklist</td>
+              <td>&ndash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Insurance Documentation Template</td>
+              <td>&ndash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Editable Versions (Word/Excel)</td>
+              <td>&ndash;</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-center" style="margin-top: 2rem; color: #6b7280;">
+        Kits coming soon for: Cleaning, Landscaping, Mobile Beauty, Dog Grooming, and more.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tier-comparison {
+    max-width: 700px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    font-weight: 600;
+    background: #f9fafb;
+  }
+
+  th:nth-child(2),
+  th:nth-child(3),
+  td:nth-child(2),
+  td:nth-child(3) {
+    text-align: center;
+  }
+</style>

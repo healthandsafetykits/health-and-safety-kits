@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    q: 'Do I need H&S experience to use these kits?',
+    a: 'No. All materials are written in plain English for business owners, not H&S professionals. If you can fill in a form, you can use these kits.',
+  },
+  {
+    q: 'Is this a subscription?',
+    a: 'No. All kits are a one-time purchase. You download the files and they are yours forever. No subscriptions, no logins, no recurring fees.',
+  },
+  {
+    q: 'What format are the documents?',
+    a: 'Basic Kits include PDF files ready to print. Pro Kits also include editable Word and Excel versions so you can customise them for your business.',
+  },
+  {
+    q: 'Are these legally compliant?',
+    a: 'Our templates are aligned with UK health and safety legislation including the Health and Safety at Work Act 1974 and the Management of Health and Safety at Work Regulations 1999. They are designed to help you meet your legal obligations.',
+  },
+  {
+    q: 'Can I see a sample before buying?',
+    a: 'Yes. We offer a free sample kit with no signup required so you can review the quality before purchasing.',
+  },
+  {
+    q: 'What trades do you cover?',
+    a: 'We currently offer kits for cleaning businesses, landscaping, mobile beauty, and dog grooming. More trades are being added regularly.',
+  },
+  {
+    q: 'What is the difference between Basic and Pro?',
+    a: 'The Basic Kit includes all essential compliance documents (policies, risk assessments, COSHH, forms). The Pro Kit adds training slides, staff quizzes, annual review checklists, insurance templates, and editable Word/Excel versions.',
+  },
+  {
+    q: 'Can I use these for multiple businesses?',
+    a: 'Each kit is licensed for use by a single business entity. If you run multiple businesses, you will need a kit for each one.',
+  },
+];
+---
+
+<BaseLayout title="FAQ" description="Frequently asked questions about Health and Safety Kits — pricing, formats, legal compliance, and what's included.">
+  <section class="section">
+    <div class="container" style="max-width: 700px;">
+      <h1 class="text-center">Frequently Asked Questions</h1>
+
+      <div class="faq-list">
+        {faqs.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <p>{a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .faq-list {
+    margin-top: 2rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+
+  .faq-item summary:hover {
+    color: #2563eb;
+  }
+
+  .faq-item p {
+    margin-top: 0.75rem;
+    color: #4b5563;
+  }
+</style>

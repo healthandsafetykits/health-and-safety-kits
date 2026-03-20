@@ -1,0 +1,126 @@
+---
+import Analytics from '../components/Analytics.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: string;
+  robots?: string;
+  ogType?: string;
+  ogImage?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  tags?: string[];
+}
+
+const {
+  title,
+  description = 'One-time download health and safety compliance kits for small trades. Risk assessments, COSHH, policies & training — compliance-ready in 60 minutes. No subscriptions.',
+  canonicalURL,
+  robots = 'index,follow',
+  ogType = 'website',
+  ogImage,
+  publishedTime,
+  modifiedTime,
+  tags = [],
+} = Astro.props;
+
+const siteName = 'Health and Safety Kits';
+const siteUrl = 'https://healthandsafetykits.com';
+const fullTitle = title === 'Home' ? siteName : `${title} | ${siteName}`;
+const canonicalHref = canonicalURL || new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = ogImage || `${siteUrl}/images/healthandsafetykits-logo.webp`;
+
+// Organization schema (appears on every page)
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Health and Safety Kits",
+  "url": siteUrl,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/images/healthandsafetykits-logo.webp`,
+    "width": 224,
+    "height": 112,
+  },
+  "description": "One-time download health and safety compliance kits for small trades and sole traders. Trade-specific templates for cleaning, landscaping, beauty, and more.",
+  "knowsAbout": [
+    "Health and Safety Compliance",
+    "Risk Assessment Templates",
+    "COSHH Assessments",
+    "Health and Safety Policy",
+    "Workplace Safety",
+    "Small Business Compliance",
+    "UK Health and Safety at Work Act 1974",
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": `${siteUrl}/contact/`,
+  },
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalHref} />
+
+    <!-- Preconnect to analytics and payment domains -->
+    <link rel="preconnect" href="https://cloud.umami.is" />
+    <link rel="dns-prefetch" href="https://healthandsafetykits.gumroad.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalHref} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+    {ogImageUrl && (
+      <>
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/webp" />
+      </>
+    )}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Article-specific meta (blog posts only) -->
+    {ogType === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {ogType === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {ogType === 'article' && tags.length > 0 && tags.map(tag => <meta property="article:tag" content={tag} />)}
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Health and Safety Kits Blog" href="/rss.xml" />
+
+    <slot name="head" />
+
+    <!-- Organization schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+
+    <Analytics />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,141 @@
+---
+const navItems = [
+  { label: 'Compare Kits', href: '/kits/' },
+  { label: 'Free Sample', href: '/free-sample/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'About', href: '/about/' },
+  { label: 'FAQ', href: '/faq/' },
+  { label: 'Contact', href: '/contact/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="/" class="logo">Health and Safety Kits</a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+    </label>
+
+    <ul class="nav-links">
+      {navItems.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[{ active: currentPath.startsWith(href) }]}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.925rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #2563eb;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: #1a1a1a;
+    height: 2px;
+    width: 1.5rem;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before {
+    top: -6px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle-label {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+      display: flex;
+    }
+  }
+</style>

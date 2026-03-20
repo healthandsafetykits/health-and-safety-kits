@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" robots="noindex,follow">
+  <section class="container section text-center" style="padding: 6rem 1.5rem;">
+    <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">404</h1>
+    <p style="font-size: 1.25rem; color: #4b5563; margin-bottom: 2rem;">
+      Sorry, the page you're looking for doesn't exist or has been moved.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+      <a href="/" class="btn btn-primary">Back to Home</a>
+      <a href="/kits/" class="btn btn-secondary">Compare Kits</a>
+      <a href="/free-sample/" class="btn btn-secondary">Free Sample</a>
+    </div>
+
+    <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+      <a href="/blog/" style="color: #2563eb; font-size: 0.9rem;">Blog</a>
+      <a href="/faq/" style="color: #2563eb; font-size: 0.9rem;">FAQ</a>
+      <a href="/contact/" style="color: #2563eb; font-size: 0.9rem;">Contact</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,34 @@
+# Node
+node_modules/
+npm-debug.log*
+npm-error.log*
+pnpm-lock.yaml
+yarn.lock
+
+# Astro build output
+dist/
+.astro/
+
+# Netlify local
+.netlify/
+
+# Local environment
+.env
+.env.*
+
+# Customer downloads (paid products - keep private)
+customer-downloads/
+
+# macOS & Linux junk
+.DS_Store
+*.swp
+
+# AI assistant context files
+.windsurfrules
+.memory/
+
+# Editor config
+.vscode/
+
+# Backup files
+*.backup

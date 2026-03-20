@@ -1,0 +1,15 @@
+# Trailing slash enforcement (matches trailingSlash: 'always' in astro.config.mjs)
+/kits           /kits/          301
+/free-sample    /free-sample/   301
+/blog           /blog/          301
+/about          /about/         301
+/faq            /faq/           301
+/contact        /contact/       301
+/terms          /terms/         301
+/privacy        /privacy/       301
+
+# URL aliases
+/compare        /kits/          301
+/pricing        /kits/          301
+/sample         /free-sample/   301
+/free           /free-sample/   301

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Free Sample" description="Try a free sample of our H&S compliance kit. No signup required. See the quality before you buy.">
+  <section class="section">
+    <div class="container" style="max-width: 700px;">
+      <h1 class="text-center">Free Sample Kit</h1>
+      <p class="text-center">
+        Download a free sample to see the quality of our templates before you buy.
+        No signup required &mdash; just download and review.
+      </p>
+
+      <div class="sample-box">
+        <h3>Sample Includes:</h3>
+        <ul>
+          <li>Sample Risk Assessment (General Workplace)</li>
+          <li>Sample COSHH Assessment (Cleaning Chemicals)</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+          <a href="#" class="btn btn-primary">Download Free Sample (PDF)</a>
+        </p>
+        <p class="note">No email, no signup, no tracking. Just click and download.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sample-box {
+    border: 2px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    background: #eff6ff;
+  }
+
+  .sample-box ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .sample-box li {
+    margin-bottom: 0.5rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+</style>
