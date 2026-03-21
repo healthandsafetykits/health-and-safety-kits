@@ -2,31 +2,102 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Free Sample" description="Try a free sample of our H&S compliance kit. No signup required. See the quality before you buy.">
+<BaseLayout title="Free Sample" description="Download a free sample of our H&S compliance kit — a risk assessment and COSHH assessment pre-filled for cleaning businesses. No signup required.">
   <section class="section">
-    <div class="container" style="max-width: 700px;">
+    <div class="container" style="max-width: 750px;">
       <h1 class="text-center">Free Sample Kit</h1>
-      <p class="text-center">
-        Download a free sample to see the quality of our templates before you buy.
-        No signup required &mdash; just download and review.
+      <p class="text-center subtitle">
+        See the quality before you buy. Download two sample documents from our
+        compliance kits &mdash; completely free, no email required.
       </p>
 
       <div class="sample-box">
-        <h3>Sample Includes:</h3>
+        <h3>Your Free Sample Includes:</h3>
         <ul>
-          <li>Sample Risk Assessment (General Workplace)</li>
-          <li>Sample COSHH Assessment (Cleaning Chemicals)</li>
+          <li>
+            <strong>Sample Risk Assessment</strong> &mdash; General workplace risk assessment
+            pre-filled with cleaning-business hazards, controls, and action items.
+          </li>
+          <li>
+            <strong>Sample COSHH Assessment</strong> &mdash; Full chemical assessment for a common
+            cleaning product, including H-codes, GHS classification, exposure routes,
+            control measures, and PPE requirements.
+          </li>
         </ul>
-        <p style="margin-top: 1rem;">
-          <a href="#" class="btn btn-primary">Download Free Sample (PDF)</a>
+        <p class="sample-note">
+          These are real extracts from the full Cleaning Business Kit &mdash; not cut-down demos.
+          Same format, same detail, same quality.
         </p>
-        <p class="note">No email, no signup, no tracking. Just click and download.</p>
+        <p style="margin-top: 1.5rem; margin-bottom: 0;">
+          <a href="#" class="btn btn-primary btn-lg">Download Free Sample (PDF)</a>
+        </p>
+        <p class="no-catch">No email. No signup. No tracking. Just click and download.</p>
+      </div>
+
+      <div class="upsell-box">
+        <h3>Like What You See?</h3>
+        <p>
+          Each full kit includes <strong>19 professional documents</strong> &mdash;
+          risk assessments, COSHH assessments for 8 chemicals, H&amp;S policy, training materials,
+          and more. All pre-filled for your specific trade and ready to use.
+        </p>
+        <div class="upsell-options">
+          <div class="upsell-option">
+            <span class="upsell-tier">Basic Kit</span>
+            <span class="upsell-price">&pound;49</span>
+            <span class="upsell-detail">9 documents &middot; PDFs</span>
+          </div>
+          <div class="upsell-option upsell-option-featured">
+            <span class="upsell-badge">Most Popular</span>
+            <span class="upsell-tier">Pro Kit</span>
+            <span class="upsell-price">&pound;79</span>
+            <span class="upsell-detail">19 documents &middot; PDFs + Word</span>
+          </div>
+        </div>
+        <div class="kit-links">
+          <a href="/kits/cleaning/" class="btn btn-primary">Cleaning Kit</a>
+          <a href="/kits/landscaping/" class="btn btn-primary">Landscaping Kit</a>
+          <a href="/kits/beauty/" class="btn btn-primary">Beauty Kit</a>
+          <a href="/kits/dog-grooming/" class="btn btn-primary">Dog Grooming Kit</a>
+        </div>
+        <p style="margin-top: 0.75rem; margin-bottom: 0;">
+          <a href="/kits/" class="btn btn-secondary">Compare All Kits</a>
+        </p>
+      </div>
+
+      <div class="faq-box">
+        <h3>Questions About the Sample</h3>
+        <details>
+          <summary>Is this really free?</summary>
+          <p>Yes. No credit card, no email, no account. It&rsquo;s a PDF download, no strings attached.</p>
+        </details>
+        <details>
+          <summary>Why are you giving it away?</summary>
+          <p>Because we&rsquo;re confident in the quality. Once you see the detail in our documents, you&rsquo;ll understand why cleaning businesses choose the full kit.</p>
+        </details>
+        <details>
+          <summary>Is the sample the same quality as the paid kit?</summary>
+          <p>Identical. The sample is extracted directly from the full Cleaning Business Kit. Same formatting, same level of detail, same regulatory references.</p>
+        </details>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .subtitle {
+    color: #4b5563;
+    font-size: 1.05rem;
+    max-width: 580px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+  }
+
   .sample-box {
     border: 2px solid #2563eb;
     border-radius: 0.75rem;
@@ -35,18 +106,185 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background: #eff6ff;
   }
 
+  .sample-box h3 {
+    margin-bottom: 1rem;
+  }
+
   .sample-box ul {
-    margin: 0.75rem 0;
-    padding-left: 1.5rem;
+    margin: 0;
+    padding-left: 1.25rem;
   }
 
   .sample-box li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.55;
+    font-size: 0.95rem;
   }
 
-  .note {
-    font-size: 0.85rem;
+  .sample-note {
+    font-size: 0.9rem;
+    color: #374151;
+    background: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    border-left: 3px solid #2563eb;
+  }
+
+  .no-catch {
+    font-size: 0.8rem;
     color: #6b7280;
     margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  /* Upsell box */
+  .upsell-box {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f9fafb;
+  }
+
+  .upsell-box h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .upsell-box > p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .upsell-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .upsell-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: #fff;
+    position: relative;
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .upsell-option-featured {
+    border-color: #2563eb;
+    border-width: 2px;
+  }
+
+  .upsell-badge {
+    position: absolute;
+    top: -0.6rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px;
+  }
+
+  .upsell-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .upsell-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .upsell-detail {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  /* FAQ box */
+  .faq-box {
+    margin-top: 2.5rem;
+  }
+
+  .faq-box h3 {
+    margin-bottom: 1rem;
+  }
+
+  .faq-box details {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 0;
+  }
+
+  .faq-box summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+  }
+
+  .faq-box summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-box summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-box details[open] summary::after {
+    content: '\2212';
+  }
+
+  .faq-box details p {
+    margin-top: 0.5rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  .kit-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .upsell-options {
+      flex-direction: column;
+    }
+
+    .kit-links {
+      flex-direction: column;
+    }
+
+    .btn-lg {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>

@@ -2,54 +2,139 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Home" description="One-time download H&S compliance kits for small trades. Risk assessments, COSHH, policies & training — audit-ready in 60 minutes. No subscriptions.">
+<BaseLayout title="Home" description="Trade-specific H&S compliance kits for UK and Ireland small businesses. Risk assessments, COSHH, policies and training — audit-ready in 60 minutes. One-time download from £49. No subscriptions.">
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>H&S Compliance Kits for Small Trades</h1>
+      <p class="hero-eyebrow">For Sole Traders &amp; Small Businesses in the UK &amp; Ireland</p>
+      <h1>Get H&amp;S Compliant in 60 Minutes.<br />Not 60 Days.</h1>
       <p class="hero-subtitle">
-        One-time download. No subscriptions. Just download and protect your
-        business &mdash; <strong>audit-ready in 60 minutes</strong>.
+        Trade-specific health &amp; safety documents &mdash; pre-filled with real hazards,
+        real chemicals, and real control measures for <em>your</em> trade.
+        Just add your company name and print.
       </p>
       <div class="hero-cta">
-        <a href="/free-sample/" class="btn btn-secondary">Try Free Sample</a>
-        <a href="/kits/" class="btn btn-primary">Compare All Kits</a>
+        <a href="/kits/" class="btn btn-primary btn-lg">View All Kits &mdash; From &pound;49</a>
+        <a href="/free-sample/" class="btn btn-secondary btn-lg">Try Free Sample</a>
+      </div>
+      <p class="hero-note">One-time download. No subscriptions. No logins. Yours forever.</p>
+    </div>
+  </section>
+
+  <!-- Problem / Pain Points -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Sound Familiar?</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>Won a Contract &mdash; But They Want H&amp;S Docs</h3>
+          <p>You&rsquo;ve been asked for a health and safety policy, risk assessments, or COSHH assessments before you can start. You don&rsquo;t know where to begin.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Free Templates Are Useless</h3>
+          <p>The HSE templates are blank forms designed for offices and factories. They don&rsquo;t mention your chemicals, your hazards, or your way of working.</p>
+        </div>
+        <div class="pain-card">
+          <h3>Consultants Want &pound;500+</h3>
+          <p>You only need the basics &mdash; not a &pound;2,000 audit. But everything out there is either too expensive or too generic.</p>
+        </div>
+        <div class="pain-card">
+          <h3>SaaS Platforms Charge &pound;799/Year</h3>
+          <p>Subscription services give you 790 templates when you need 9. And you&rsquo;re paying every year for documents you download once.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Solution -->
+  <section class="section solution-section">
+    <div class="container">
+      <h2 class="text-center">We Built the Kit You Actually Need</h2>
+      <p class="section-subtitle">
+        Every document is <strong>pre-filled</strong> for your specific trade &mdash; not blank templates
+        you have to figure out yourself. Real hazards. Real chemicals with safety data.
+        Real control measures already written.
+      </p>
+      <div class="features-grid">
+        <div class="feature">
+          <span class="feature-icon">&#10003;</span>
+          <div>
+            <h3>Trade-Specific, Not Generic</h3>
+            <p>Your kit covers the exact hazards, chemicals, and risks for your trade. Not a one-size-fits-all template pack.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">&#10003;</span>
+          <div>
+            <h3>Pre-Filled &amp; Ready to Use</h3>
+            <p>COSHH assessments with real H-codes and GHS data. Risk assessments with real control measures. Just add your business name.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">&#10003;</span>
+          <div>
+            <h3>UK &amp; Ireland Compliant</h3>
+            <p>Aligned with the Health and Safety at Work Act 1974, MHSWR 1999, COSHH 2002, and the Irish SHWW Act 2005.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">&#10003;</span>
+          <div>
+            <h3>One-Time Purchase</h3>
+            <p>Pay once, download instantly, use forever. No subscriptions, no logins, no per-user fees. It&rsquo;s yours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Comparison / Anchoring -->
   <section class="section">
     <div class="container">
-      <h2 class="text-center">Why Pay a Consultant When You Can Buy Once?</h2>
-      <p class="text-center" style="max-width: 700px; margin: 0 auto 2rem;">
-        H&S consultants charge &pound;500&ndash;&pound;2,000+. SaaS platforms charge &pound;799/year for
-        templates you&rsquo;ll never use. We give you exactly what your trade needs, for a one-time price.
+      <h2 class="text-center">How We Compare</h2>
+      <p class="section-subtitle">
+        You need H&amp;S documents. Here are your options:
       </p>
-
       <div class="comparison-table">
         <table>
           <thead>
             <tr>
-              <th>Solution</th>
+              <th>Option</th>
               <th>Cost</th>
-              <th>What You Get</th>
+              <th>Trade-Specific?</th>
+              <th>Pre-Filled?</th>
+              <th>Ongoing Fees?</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>H&S Consultant</td>
+              <td>H&amp;S Consultant</td>
               <td>&pound;500&ndash;&pound;2,000+</td>
-              <td>Generic docs, one-off visit</td>
+              <td>Sometimes</td>
+              <td>Yes</td>
+              <td>Per visit</td>
             </tr>
             <tr>
               <td>SaaS Platform (e.g. HASpod)</td>
               <td>&pound;799/year</td>
-              <td>790+ templates (mostly irrelevant)</td>
+              <td>Construction only</td>
+              <td>No</td>
+              <td><strong>&pound;799 every year</strong></td>
+            </tr>
+            <tr>
+              <td>HSE.gov.uk Templates</td>
+              <td>Free</td>
+              <td>No</td>
+              <td>No</td>
+              <td>N/A</td>
             </tr>
             <tr class="highlight-row">
               <td><strong>Health and Safety Kits</strong></td>
               <td><strong>&pound;49&ndash;&pound;79</strong></td>
-              <td><strong>Everything your trade needs, forever</strong></td>
+              <td><strong>Yes</strong></td>
+              <td><strong>Yes</strong></td>
+              <td><strong>Never</strong></td>
             </tr>
           </tbody>
         </table>
@@ -57,96 +142,190 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- How It Works -->
   <section class="section how-it-works">
     <div class="container">
-      <h2 class="text-center">How It Works</h2>
+      <h2 class="text-center">Audit-Ready in 4 Steps</h2>
       <div class="steps-grid">
         <div class="step">
           <span class="step-number">1</span>
-          <h3>Choose Your Trade Kit</h3>
-          <p>Pick the kit that matches your trade &mdash; cleaning, landscaping, beauty, or more.</p>
+          <h3>Choose Your Trade</h3>
+          <p>Pick the kit that matches your business &mdash; cleaning, landscaping, beauty, dog grooming, and more.</p>
         </div>
         <div class="step">
           <span class="step-number">2</span>
-          <h3>Instant Download</h3>
-          <p>Delivered as a ZIP file via Gumroad. No logins, no SaaS, no tracking.</p>
+          <h3>Download Instantly</h3>
+          <p>Pay once via secure checkout. Your ZIP file downloads immediately &mdash; PDFs and editable Word documents.</p>
         </div>
         <div class="step">
           <span class="step-number">3</span>
-          <h3>Fill In &amp; Print</h3>
-          <p>Customise the templates for your business. Print or save as PDF.</p>
+          <h3>Add Your Details</h3>
+          <p>Documents come pre-filled with real hazards and controls. Just add your company name, address, and review.</p>
         </div>
         <div class="step">
           <span class="step-number">4</span>
-          <h3>Be Compliant</h3>
-          <p>Show clients, insurers, and inspectors you take health &amp; safety seriously.</p>
+          <h3>You&rsquo;re Compliant</h3>
+          <p>Print or save as PDF. Show clients, insurers, and inspectors you take health &amp; safety seriously.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Available Kits -->
   <section class="section kits-overview">
     <div class="container">
       <h2 class="text-center">Trade-Specific Kits</h2>
-      <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
-        Each kit is tailored to your trade. Not a generic template pack &mdash; real documents
-        for real businesses.
+      <p class="section-subtitle">
+        Each kit is built for a specific trade. Not a generic pack &mdash; real documents
+        with real content for your business.
       </p>
       <div class="kits-grid">
-        <div class="kit-card">
+        <div class="kit-card kit-card-featured">
+          <span class="kit-badge">Available Now</span>
           <h3>Cleaning Business</h3>
-          <p>COSHH assessments for chemicals, lone working, manual handling, slips &amp; trips, and more.</p>
-          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+          <p>19 documents including COSHH assessments for 8 chemicals, cleaning operations risk assessment, lone working, manual handling, slips &amp; trips, fire safety, staff training, and more.</p>
+          <div class="kit-price">From <strong>&pound;49</strong></div>
+          <a href="/kits/cleaning/" class="btn btn-primary">View Cleaning Kit</a>
         </div>
-        <div class="kit-card">
-          <h3>Landscaping</h3>
-          <p>Equipment risk assessments, noise, work at height, pesticide COSHH, manual handling.</p>
-          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        <div class="kit-card kit-card-featured">
+          <span class="kit-badge">Available Now</span>
+          <h3>Landscaping &amp; Grounds</h3>
+          <p>19 documents including COSHH for 8 pesticides and herbicides, equipment risk assessments, work at height, noise &amp; vibration, chainsaw safety, manual handling, and more.</p>
+          <div class="kit-price">From <strong>&pound;49</strong></div>
+          <a href="/kits/landscaping/" class="btn btn-primary">View Landscaping Kit</a>
         </div>
-        <div class="kit-card">
-          <h3>Mobile Beauty</h3>
-          <p>Chemical COSHH for dyes &amp; acrylics, hygiene policies, lone working, client home risk.</p>
-          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        <div class="kit-card kit-card-featured">
+          <span class="kit-badge">Available Now</span>
+          <h3>Beauty Salon &amp; Hair</h3>
+          <p>19 documents including COSHH for 8 salon chemicals, beauty operations risk assessment, infection control, client safety, patch testing protocols, and more.</p>
+          <div class="kit-price">From <strong>&pound;49</strong></div>
+          <a href="/kits/beauty/" class="btn btn-primary">View Beauty Kit</a>
         </div>
-        <div class="kit-card">
-          <h3>Dog Grooming</h3>
-          <p>Animal handling risk, chemical use, hygiene, bite protocols, equipment safety.</p>
-          <a href="/kits/" class="btn btn-secondary">View Kit</a>
+        <div class="kit-card kit-card-featured">
+          <span class="kit-badge">Available Now</span>
+          <h3>Dog Grooming &amp; Pets</h3>
+          <p>19 documents including COSHH for 8 grooming chemicals, animal handling &amp; bite risk, zoonotic disease protocols, noise exposure, equipment safety, and more.</p>
+          <div class="kit-price">From <strong>&pound;49</strong></div>
+          <a href="/kits/dog-grooming/" class="btn btn-primary">View Dog Grooming Kit</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Individual Documents -->
+  <section class="section individual-section">
+    <div class="container">
+      <h2 class="text-center">Just Need One Document?</h2>
+      <p class="section-subtitle">
+        Don&rsquo;t need the full kit? Buy individual documents from &pound;12.
+        Every document is the same professional, trade-specific quality as the kits.
+      </p>
+      <div class="individual-grid">
+        <div class="individual-card">
+          <h3>Risk Assessments</h3>
+          <p>General, trade-specific, manual handling, slips/trips, fire &mdash; pre-filled for your trade.</p>
+          <span class="individual-price">From &pound;12</span>
+        </div>
+        <div class="individual-card">
+          <h3>COSHH Assessments</h3>
+          <p>Chemical-by-chemical assessments with real H-codes, GHS data, and control measures.</p>
+          <span class="individual-price">From &pound;12</span>
+        </div>
+        <div class="individual-card">
+          <h3>H&amp;S Policies</h3>
+          <p>Complete health and safety policies pre-written for your trade. Just add your company details.</p>
+          <span class="individual-price">From &pound;19</span>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top: 1.5rem; color: #4b5563;">
+        <strong>Better value:</strong> Each full kit includes 19 documents for &pound;79 &mdash; just &pound;4.16 each.
+        <a href="/kits/">Compare all kits</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust / Compliance -->
+  <section class="section trust-section">
+    <div class="container">
+      <h2 class="text-center">Built for Compliance</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3>UK Regulation Aligned</h3>
+          <p>Health and Safety at Work Act 1974, Management of H&amp;S at Work Regulations 1999, COSHH Regulations 2002</p>
+        </div>
+        <div class="trust-item">
+          <h3>Ireland Compliant</h3>
+          <p>Safety, Health and Welfare at Work Act 2005. Pro kits include a dedicated Ireland Safety Statement.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Written by Compliance Experts</h3>
+          <p>20+ years of IT and compliance experience. Same team behind SMBCyberHub&rsquo;s cybersecurity compliance kits.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Instant, Secure Download</h3>
+          <p>Secure payment via Gumroad. Instant ZIP download with PDFs and editable Word files. No account needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Sample CTA -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="sample-cta-box">
+        <h2>Not Sure Yet? Try Before You Buy</h2>
+        <p>Download a free sample with a Risk Assessment and COSHH Assessment. No email required &mdash; just download and see the quality for yourself.</p>
+        <a href="/free-sample/" class="btn btn-secondary btn-lg">Download Free Sample</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
   <section class="section cta-section">
     <div class="container text-center">
       <h2>Get Compliant Today</h2>
-      <p style="max-width: 600px; margin: 0 auto 1.5rem;">
-        Download your trade-specific H&S kit and be audit-ready in 60 minutes.
-        One-time purchase. Yours forever.
-      </p>
-      <a href="/kits/" class="btn btn-primary">Compare All Kits</a>
+      <p>Choose your trade-specific H&amp;S kit and be audit-ready in 60 minutes. One-time purchase. Yours forever.</p>
+      <div class="cta-buttons">
+        <a href="/kits/" class="btn btn-primary btn-lg">View All Kits &mdash; From &pound;49</a>
+        <a href="/free-sample/" class="btn btn-ghost btn-lg">Try Free Sample</a>
+      </div>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
+  /* Hero */
   .hero {
     background: linear-gradient(135deg, #eff6ff, #dbeafe);
-    padding: 4rem 0;
+    padding: 5rem 0 4rem;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
+  .hero-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin-bottom: 1rem;
   }
 
+  .hero h1 {
+    font-size: 2.75rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #4b5563;
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto 2rem;
+    line-height: 1.65;
   }
 
   .hero-cta {
@@ -154,10 +333,116 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
 
+  .hero-note {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0;
+  }
+
+  /* Button sizes */
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    text-decoration: none;
+  }
+
+  /* Section subtitle */
+  .section-subtitle {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Pain points */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .pain-card {
+    padding: 1.5rem;
+    border-left: 3px solid #ef4444;
+    background: #fef2f2;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .pain-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+
+  .pain-card p {
+    color: #4b5563;
+    font-size: 0.925rem;
+    margin-bottom: 0;
+    line-height: 1.55;
+  }
+
+  /* Solution features */
+  .solution-section {
+    background: #f9fafb;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .feature h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .feature p {
+    color: #4b5563;
+    font-size: 0.925rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Comparison table */
   .comparison-table {
-    max-width: 700px;
+    max-width: 850px;
     margin: 0 auto;
     overflow-x: auto;
   }
@@ -171,6 +456,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 0.75rem 1rem;
     text-align: left;
     border-bottom: 1px solid #e5e7eb;
+    font-size: 0.925rem;
   }
 
   th {
@@ -182,6 +468,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background: #eff6ff;
   }
 
+  /* How it works */
   .how-it-works {
     background: #f9fafb;
   }
@@ -211,6 +498,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 0.75rem;
   }
 
+  .step h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .step p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Kit cards */
   .kits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -220,37 +519,182 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .kit-card {
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
-    padding: 1.5rem;
+    padding: 1.75rem;
     background: #fff;
+    position: relative;
+  }
+
+  .kit-card-featured {
+    border-color: #2563eb;
+    border-width: 2px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  }
+
+  .kit-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    background: #dcfce7;
+    color: #16a34a;
+    margin-bottom: 0.75rem;
+  }
+
+  .kit-badge-soon {
+    background: #fef3c7;
+    color: #b45309;
   }
 
   .kit-card h3 {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
   .kit-card p {
     color: #4b5563;
-    font-size: 0.925rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
     margin-bottom: 1rem;
   }
 
+  .kit-price {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .kit-price strong {
+    font-size: 1.35rem;
+    color: #2563eb;
+  }
+
+  /* Individual documents */
+  .individual-section {
+    background: #f9fafb;
+  }
+
+  .individual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .individual-card {
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #fff;
+    text-align: center;
+  }
+
+  .individual-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .individual-card p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .individual-price {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 1.1rem;
+  }
+
+  /* Trust section */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .trust-item {
+    padding: 1.25rem;
+  }
+
+  .trust-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .trust-item p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* Free sample CTA box */
+  .sample-cta-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border: 2px dashed #d1d5db;
+    border-radius: 0.75rem;
+    background: #fff;
+  }
+
+  .sample-cta-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .sample-cta-box p {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Final CTA */
   .cta-section {
     background: linear-gradient(135deg, #1e3a5f, #2563eb);
     color: #fff;
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
 
   .cta-section h2 {
     color: #fff;
+    font-size: 2rem;
   }
 
   .cta-section p {
     color: #dbeafe;
+    max-width: 550px;
+    margin: 0 auto 1.75rem;
+    font-size: 1.05rem;
   }
 
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+
     .hero h1 {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .pain-grid,
+    .features-grid,
+    .trust-grid {
+      grid-template-columns: 1fr;
     }
 
     .steps-grid {
@@ -259,6 +703,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .kits-grid {
       grid-template-columns: 1fr;
+    }
+
+    .individual-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+      font-size: 0.85rem;
+    }
+
+    .btn-lg {
+      width: 100%;
+      text-align: center;
     }
   }
 </style>

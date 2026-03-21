@@ -1,0 +1,864 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const basicDocs = [
+  { name: 'Health & Safety Policy', desc: 'Complete H&S policy pre-written for landscaping and grounds maintenance businesses. Covers your legal duties, employee responsibilities, risk management approach, and emergency procedures.' },
+  { name: 'General Risk Assessment', desc: 'Comprehensive workplace risk assessment covering 10 general hazards a landscaping business encounters day-to-day.' },
+  { name: 'Landscaping Operations Risk Assessment', desc: '13 landscaping operations assessed — mowers, strimmers, chainsaws, hedge cutters, chippers, manual handling, work at height, excavation, roadside work, water hazards, weather exposure, and biological hazards.' },
+  { name: 'COSHH Assessments (8 Chemicals)', desc: 'Individual assessments for 8 chemicals used in grounds maintenance — each with real H-codes, GHS classifications, exposure routes, control measures, PPE requirements, and emergency procedures.' },
+  { name: 'Manual Handling Assessment', desc: 'TILE framework assessment covering 7 common landscaping tasks — turf rolls, paving slabs, aggregate bags, equipment loading, digging, carrying, and wheelbarrow use.' },
+  { name: 'Lone Working Policy', desc: 'Policy and risk assessment for landscapers working alone on client sites — includes 7 prohibited solo activities including chainsaw felling alone and tree climbing alone.' },
+  { name: 'Slip, Trip & Fall Assessment', desc: 'Comprehensive assessment of 10 slip, trip, and fall hazards with seasonal considerations across all landscaping environments — uneven ground, slopes, wet grass, mud, and excavations.' },
+  { name: 'Accident & Incident Report Form + Log', desc: 'RIDDOR-aligned reporting form and running log. Ready to print and keep on site.' },
+  { name: 'Quick-Start Compliance Guide', desc: 'Step-by-step guide to get audit-ready in 60 minutes. Tells you exactly what to do with each document and in what order.' },
+];
+
+const proDocs = [
+  { name: 'Fire Risk Assessment', desc: 'Fire risk assessment covering fuel storage, chemical storage, grass clipping combustion risks, and lithium-ion battery charging — key fire hazards for landscaping operations.' },
+  { name: 'Staff Induction Checklist', desc: 'Structured 12-section checklist ensuring every new employee is properly inducted into H&S procedures, including NPTC/chainsaw certification verification.' },
+  { name: 'Training Presentation (28 Slides)', desc: 'Ready-to-deliver staff training covering hazard awareness, equipment safety, COSHH basics, manual handling, emergency procedures, and reporting. Includes speaker notes.' },
+  { name: 'Staff Knowledge Quiz (20 Questions)', desc: 'Multiple-choice assessment with answer key. Proves staff have understood their training — required for due diligence.' },
+  { name: 'Training Record Log & Matrix', desc: 'Track who has been trained, when, and on what. Covers 9 certification types including CS30/CS31 chainsaw certificates and PA1/PA6 pesticide application.' },
+  { name: 'Annual H&S Review Checklist', desc: '76-item annual review across 12 sections covering all compliance areas. Ensures nothing slips through the cracks year to year.' },
+  { name: 'PPE Assessment', desc: '10-activity PPE matrix with EN standards for each item — covering mowing, strimming, chainsaw use, hedge cutting, chipping, spraying, and more.' },
+  { name: 'Client Site Assessment', desc: 'Pre-work assessment template for new client sites. 15 hazard checkboxes, What3Words location reference, and lone working considerations.' },
+  { name: 'Emergency Procedures', desc: 'Wall-display-ready emergency procedures covering 8 emergency types including biological hazard exposure — ready to print and display in your yard or welfare unit.' },
+  { name: 'Ireland Safety Statement', desc: 'Full safety statement compliant with the Safety, Health and Welfare at Work Act 2005. Required for all Irish businesses.' },
+];
+
+const chemicals = [
+  'Glyphosate (Roundup-type herbicide)',
+  'Selective Herbicide (lawn weedkiller)',
+  'Pyrethroid Insecticide',
+  'Granular Fertiliser',
+  'Petrol (unleaded)',
+  'Two-Stroke Oil Mix',
+  'Chainsaw Bar & Chain Oil',
+  'Wood Preservative',
+];
+
+const faqs = [
+  {
+    q: 'Are these just blank templates?',
+    a: 'No. Every document is pre-filled with real landscaping content — 13 operational risk assessments, 8 chemicals with real H-codes and GHS data, NPTC/certification references, and real control measures. You just add your company name and review.',
+  },
+  {
+    q: 'Do I need the Basic or Pro kit?',
+    a: 'If you\'re a sole trader working alone, the Basic kit covers everything you legally need. If you employ staff (even one person), the Pro kit adds training materials, induction checklists, and ongoing compliance tools that demonstrate due diligence.',
+  },
+  {
+    q: 'Is this compliant with UK and Irish law?',
+    a: 'Yes. All documents reference the Health and Safety at Work Act 1974, Management of Health and Safety at Work Regulations 1999, PUWER 1998, Noise Regulations 2005, Vibration Regulations 2005, COSHH Regulations 2002, and Work at Height Regulations 2005. The Pro kit includes an Ireland Safety Statement compliant with the SHWW Act 2005.',
+  },
+  {
+    q: 'What format are the documents?',
+    a: 'The Basic kit includes print-ready PDFs. The Pro kit includes both PDFs and editable Word (.docx) files so you can customise everything to your business.',
+  },
+  {
+    q: 'Can I buy individual documents instead?',
+    a: 'Yes. Individual risk assessments and COSHH assessments are available from £12 each. But the full kit is much better value — 19 documents for £79 works out at just £4.16 each.',
+  },
+  {
+    q: 'What if regulations change?',
+    a: 'All documents include version dates. We monitor UK and Irish regulatory changes and offer free updates to kit buyers when significant changes occur.',
+  },
+  {
+    q: 'Do I get a refund if it\'s not what I expected?',
+    a: 'We offer refunds through Gumroad within 30 days of purchase. But we also offer a free sample so you can check the quality before buying.',
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://healthandsafetykits.com" },
+    { "@type": "ListItem", "position": 2, "name": "Kits", "item": "https://healthandsafetykits.com/kits/" },
+    { "@type": "ListItem", "position": 3, "name": "Landscaping Business Kit", "item": "https://healthandsafetykits.com/kits/landscaping/" },
+  ],
+};
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Landscaping Business H&S Compliance Kit",
+  "description": "Complete health and safety compliance kit for landscaping businesses. 19 pre-filled documents including risk assessments, COSHH assessments for 8 chemicals, policies, and training materials.",
+  "brand": { "@type": "Brand", "name": "Health and Safety Kits" },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Basic Kit",
+      "price": "49.00",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/PreOrder",
+      "url": "https://healthandsafetykits.com/kits/landscaping/",
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Kit",
+      "price": "79.00",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/PreOrder",
+      "url": "https://healthandsafetykits.com/kits/landscaping/",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Landscaping Business H&S Kit"
+  description="Complete health and safety kit for landscaping businesses. 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, training materials. From £49. One-time download."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/kits/">Kits</a>
+        <span aria-hidden="true">/</span>
+        <span>Landscaping Business</span>
+      </nav>
+      <h1>Landscaping Business H&amp;S Compliance Kit</h1>
+      <p class="hero-subtitle">
+        19 professional compliance documents &mdash; pre-filled with real landscaping hazards,
+        8 chemicals used in grounds maintenance, equipment risk assessments for mowers, chainsaws,
+        and strimmers. <strong>Audit-ready in 60 minutes.</strong>
+      </p>
+      <div class="hero-pricing">
+        <div class="price-option">
+          <span class="price-label">Basic Kit</span>
+          <span class="price-amount">&pound;49</span>
+          <span class="price-detail">9 documents &middot; PDFs</span>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-option price-option-featured">
+          <span class="price-badge">Most Popular</span>
+          <span class="price-label">Pro Kit</span>
+          <span class="price-amount">&pound;79</span>
+          <span class="price-detail">19 documents &middot; PDFs + Word</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#buy" class="btn btn-primary btn-lg">Buy Now</a>
+        <a href="/free-sample/" class="btn btn-secondary btn-lg">Try Free Sample First</a>
+      </div>
+      <p class="hero-note">One-time purchase. Instant download. No subscriptions.</p>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Built for Landscaping Business Owners Like You</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>Sole Trader Landscapers</h3>
+          <p>Working alone or with one helper. Need H&amp;S docs for council contracts, insurance, or client requirements.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Landscaping Companies</h3>
+          <p>Employing a small team. Bidding on commercial grounds maintenance contracts that demand H&amp;S compliance evidence.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Grounds Maintenance Businesses</h3>
+          <p>Maintaining parks, schools, estates, or commercial properties. Clients expect documented H&amp;S systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included: Basic -->
+  <section class="section included-section" id="whats-included">
+    <div class="container">
+      <h2 class="text-center">What&rsquo;s in the Kit</h2>
+      <p class="section-subtitle">
+        Every document is pre-filled with landscaping-business-specific content.
+        Real hazards, real chemicals, real control measures.
+      </p>
+
+      <h3 class="tier-heading">Basic Kit &mdash; &pound;49 <span class="tier-count">(9 documents)</span></h3>
+      <div class="docs-grid">
+        {basicDocs.map((doc) => (
+          <div class="doc-card">
+            <h4>{doc.name}</h4>
+            <p>{doc.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="tier-heading tier-heading-pro">Pro Kit Adds &mdash; &pound;79 total <span class="tier-count">(all 19 documents)</span></h3>
+      <p class="tier-note">Everything in Basic, plus these 10 additional documents:</p>
+      <div class="docs-grid">
+        {proDocs.map((doc) => (
+          <div class="doc-card doc-card-pro">
+            <h4>{doc.name}</h4>
+            <p>{doc.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COSHH Chemicals Covered -->
+  <section class="section chemicals-section">
+    <div class="container">
+      <h2 class="text-center">COSHH Assessments for 8 Common Landscaping Chemicals</h2>
+      <p class="section-subtitle">
+        Each chemical has its own individual COSHH assessment with real H-codes,
+        GHS hazard classifications, exposure routes, control measures, PPE requirements,
+        first aid procedures, and emergency spill response.
+      </p>
+      <div class="chemicals-grid">
+        {chemicals.map((chem) => (
+          <div class="chemical-card">
+            <span class="chemical-icon">&#9878;</span>
+            <span>{chem}</span>
+          </div>
+        ))}
+      </div>
+      <p class="text-center" style="margin-top: 1.5rem; color: #4b5563; font-size: 0.9rem;">
+        Not using these exact products? The editable Word versions in the Pro kit let you swap in your specific chemicals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Value Comparison -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">How This Compares</h2>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>H&amp;S Consultant</th>
+              <th>HASpod (a la carte)</th>
+              <th class="highlight-col">Our Landscaping Kit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost</td>
+              <td>&pound;500&ndash;&pound;2,000+</td>
+              <td>&pound;85&ndash;&pound;100+ (for equivalent docs)</td>
+              <td class="highlight-col"><strong>&pound;49&ndash;&pound;79</strong></td>
+            </tr>
+            <tr>
+              <td>Landscaping-specific content</td>
+              <td>Sometimes</td>
+              <td>No (generic templates)</td>
+              <td class="highlight-col"><strong>Yes &mdash; 8 chemicals, 13 operations</strong></td>
+            </tr>
+            <tr>
+              <td>Pre-filled documents</td>
+              <td>Yes</td>
+              <td>No</td>
+              <td class="highlight-col"><strong>Yes</strong></td>
+            </tr>
+            <tr>
+              <td>Training materials</td>
+              <td>Sometimes</td>
+              <td>No</td>
+              <td class="highlight-col"><strong>Yes (Pro kit)</strong></td>
+            </tr>
+            <tr>
+              <td>Ireland Safety Statement</td>
+              <td>Rarely</td>
+              <td>No</td>
+              <td class="highlight-col"><strong>Yes (Pro kit)</strong></td>
+            </tr>
+            <tr>
+              <td>Ongoing fees</td>
+              <td>Per visit</td>
+              <td>&pound;799/year for full access</td>
+              <td class="highlight-col"><strong>Never &mdash; one-time purchase</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Buy Section -->
+  <section class="section pricing-section" id="buy">
+    <div class="container">
+      <h2 class="text-center">Choose Your Kit</h2>
+      <p class="section-subtitle">
+        Both tiers include the same professional, pre-filled landscaping-business documents.
+        Pro adds training, ongoing compliance tools, and editable Word files.
+      </p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Basic Kit</h3>
+          <div class="pricing-amount">&pound;49</div>
+          <p class="pricing-detail">9 documents &middot; Print-ready PDFs</p>
+          <ul class="pricing-list">
+            <li>H&amp;S Policy (pre-filled)</li>
+            <li>General Risk Assessment</li>
+            <li>Landscaping Operations Risk Assessment</li>
+            <li>COSHH Assessments (8 chemicals)</li>
+            <li>Manual Handling Assessment</li>
+            <li>Lone Working Policy</li>
+            <li>Slip, Trip &amp; Fall Assessment</li>
+            <li>Accident Report Form + Log</li>
+            <li>Quick-Start Compliance Guide</li>
+          </ul>
+          <a href="#" class="btn btn-secondary btn-block">Buy Basic Kit &mdash; &pound;49</a>
+          <p class="pricing-note">&pound;5.44 per document</p>
+        </div>
+        <div class="pricing-card pricing-card-featured">
+          <span class="pricing-badge">Most Popular</span>
+          <h3>Pro Kit</h3>
+          <div class="pricing-amount">&pound;79</div>
+          <p class="pricing-detail">19 documents &middot; PDFs + Editable Word</p>
+          <ul class="pricing-list">
+            <li>Everything in Basic, plus:</li>
+            <li>Fire Risk Assessment</li>
+            <li>Staff Induction Checklist</li>
+            <li>Training Presentation (28 slides)</li>
+            <li>Staff Knowledge Quiz (20 Qs)</li>
+            <li>Training Record Log &amp; Matrix</li>
+            <li>Annual H&amp;S Review Checklist</li>
+            <li>PPE Assessment (with EN standards)</li>
+            <li>Client Site Assessment</li>
+            <li>Emergency Procedures (wall-display)</li>
+            <li>Ireland Safety Statement</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">Buy Pro Kit &mdash; &pound;79</a>
+          <p class="pricing-note">&pound;4.16 per document</p>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top: 1.5rem; color: #6b7280; font-size: 0.9rem;">
+        Secure payment via Gumroad. Instant download. 30-day refund policy.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <div class="container" style="max-width: 780px;">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <details class="faq-item">
+            <summary>{faq.q}</summary>
+            <p>{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2>Get Your Landscaping Business Compliant Today</h2>
+      <p>19 professional documents. Pre-filled for landscaping businesses. Audit-ready in 60 minutes.</p>
+      <div class="cta-buttons">
+        <a href="#buy" class="btn btn-primary btn-lg">Buy Landscaping Kit &mdash; From &pound;49</a>
+        <a href="/free-sample/" class="btn btn-ghost btn-lg">Try Free Sample First</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 2rem 0 3.5rem;
+    text-align: center;
+  }
+
+  .breadcrumbs {
+    font-size: 0.825rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumbs a {
+    color: #6b7280;
+    text-decoration: none;
+  }
+
+  .breadcrumbs a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  .breadcrumbs span[aria-hidden] {
+    margin: 0 0.4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    line-height: 1.65;
+  }
+
+  .hero-pricing {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .price-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+  }
+
+  .price-option-featured {
+    background: #fff;
+    border: 2px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  }
+
+  .price-badge {
+    position: absolute;
+    top: -0.65rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.15rem 0.6rem;
+    border-radius: 9999px;
+  }
+
+  .price-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .price-amount {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .price-detail {
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+
+  .price-divider {
+    width: 1px;
+    height: 3rem;
+    background: #d1d5db;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-note {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0;
+  }
+
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Section subtitle */
+  .section-subtitle {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* Audience grid */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .audience-card {
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #fff;
+  }
+
+  .audience-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .audience-card p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* Documents included */
+  .included-section {
+    background: #f9fafb;
+  }
+
+  .tier-heading {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+  }
+
+  .tier-heading-pro {
+    margin-top: 3rem;
+    border-color: #7c3aed;
+  }
+
+  .tier-count {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6b7280;
+  }
+
+  .tier-note {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .doc-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+  }
+
+  .doc-card-pro {
+    border-left: 3px solid #7c3aed;
+  }
+
+  .doc-card h4 {
+    font-size: 0.975rem;
+    margin-bottom: 0.35rem;
+    color: #1a1a1a;
+  }
+
+  .doc-card p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* Chemicals */
+  .chemicals-section {
+    background: #fff;
+  }
+
+  .chemicals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .chemical-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #fde68a;
+    border-radius: 0.5rem;
+    background: #fffbeb;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .chemical-icon {
+    font-size: 1.1rem;
+  }
+
+  /* Comparison table */
+  .comparison-table {
+    max-width: 850px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+  }
+
+  th {
+    font-weight: 600;
+    background: #f9fafb;
+    font-size: 0.85rem;
+  }
+
+  .highlight-col {
+    background: #eff6ff;
+  }
+
+  /* Pricing */
+  .pricing-section {
+    background: #f9fafb;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .pricing-card-featured {
+    border-color: #2563eb;
+    border-width: 2px;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing-amount {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+  }
+
+  .pricing-detail {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1.25rem;
+  }
+
+  .pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    text-align: left;
+  }
+
+  .pricing-list li {
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .pricing-list li:last-child {
+    border-bottom: none;
+  }
+
+  .pricing-list li:first-child {
+    font-weight: 600;
+    color: #2563eb;
+  }
+
+  .pricing-card:first-child .pricing-list li:first-child {
+    font-weight: 400;
+    color: #374151;
+  }
+
+  .pricing-note {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  /* FAQ */
+  .faq-section {
+    background: #fff;
+  }
+
+  .faq-list {
+    margin-top: 2rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-item[open] summary::after {
+    content: '\2212';
+  }
+
+  .faq-item p {
+    margin-top: 0.75rem;
+    color: #4b5563;
+    font-size: 0.925rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff;
+    padding: 4rem 0;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    color: #dbeafe;
+    max-width: 550px;
+    margin: 0 auto 1.75rem;
+    font-size: 1.05rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.85rem;
+    }
+
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .docs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .chemicals-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .btn-lg {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

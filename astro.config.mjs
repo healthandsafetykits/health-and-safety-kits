@@ -24,9 +24,13 @@ try {
 
 // Static page last-modified dates (update when meaningfully edited)
 const staticDates = {
-  '/': '2026-03-20',
-  '/kits/': '2026-03-20',
-  '/free-sample/': '2026-03-20',
+  '/': '2026-03-21',
+  '/kits/': '2026-03-21',
+  '/kits/cleaning/': '2026-03-21',
+  '/kits/landscaping/': '2026-03-21',
+  '/kits/beauty/': '2026-03-21',
+  '/kits/dog-grooming/': '2026-03-21',
+  '/free-sample/': '2026-03-21',
   '/about/': '2026-03-20',
   '/faq/': '2026-03-20',
   '/contact/': '2026-03-20',

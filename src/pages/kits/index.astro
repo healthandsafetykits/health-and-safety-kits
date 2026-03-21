@@ -2,94 +2,365 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Compare Kits" description="Compare our Basic and Pro H&S compliance kits. Find the right kit for your trade — cleaning, landscaping, beauty, dog grooming, and more.">
+<BaseLayout title="Compare Kits" description="Compare Basic and Pro H&S compliance kits for cleaning, landscaping, beauty, and dog grooming. See what's included and choose the right kit for your trade.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Compare H&amp;S Compliance Kits</h1>
+      <p class="hero-subtitle">
+        Every kit is trade-specific and pre-filled with real content.
+        Choose Basic for the essentials or Pro for complete compliance coverage.
+      </p>
+    </div>
+  </section>
+
+  <!-- Price Anchoring -->
   <section class="section">
     <div class="container">
-      <h1 class="text-center">Compare H&S Kits</h1>
-      <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
-        Choose your trade below to see exactly what&rsquo;s included in each kit.
-        Every kit comes with a Basic and Pro tier.
+      <h2 class="text-center">What Others Charge</h2>
+      <p class="section-subtitle">
+        Before comparing our kits, here&rsquo;s what the alternatives cost for the same level of coverage:
+      </p>
+      <div class="anchor-grid">
+        <div class="anchor-card anchor-expensive">
+          <span class="anchor-label">H&amp;S Consultant</span>
+          <span class="anchor-price">&pound;500&ndash;&pound;2,000+</span>
+          <span class="anchor-note">One-off visit, generic docs</span>
+        </div>
+        <div class="anchor-card anchor-expensive">
+          <span class="anchor-label">SaaS Platform (HASpod)</span>
+          <span class="anchor-price">&pound;799/year</span>
+          <span class="anchor-note">790 templates, mostly irrelevant</span>
+        </div>
+        <div class="anchor-card anchor-us">
+          <span class="anchor-label">Health and Safety Kits</span>
+          <span class="anchor-price">&pound;49&ndash;&pound;79</span>
+          <span class="anchor-note">One-time. Trade-specific. Pre-filled. Yours forever.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tier Comparison -->
+  <section class="section comparison-section">
+    <div class="container">
+      <h2 class="text-center">Basic vs Pro &mdash; What&rsquo;s the Difference?</h2>
+      <p class="section-subtitle">
+        Both kits include professional, pre-filled documents. Pro adds training materials,
+        ongoing compliance tools, Ireland coverage, and editable Word files.
       </p>
 
       <div class="tier-comparison">
         <table>
           <thead>
             <tr>
-              <th>Included</th>
-              <th>Basic Kit &pound;49</th>
-              <th>Pro Kit &pound;79</th>
+              <th>Document</th>
+              <th>Basic &pound;49</th>
+              <th class="col-pro">Pro &pound;79 <span class="badge-popular">Most Popular</span></th>
             </tr>
           </thead>
           <tbody>
+            <tr class="group-header"><td colspan="3">Core Compliance Documents</td></tr>
             <tr>
-              <td>Health &amp; Safety Policy</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td>Health &amp; Safety Policy (pre-filled)</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Trade-Specific Risk Assessments</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td>General Risk Assessment</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>COSHH Assessments</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td>Trade-Specific Risk Assessment</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Accident/Incident Report Form</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td>COSHH Assessments (chemical-by-chemical)</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Staff Induction Checklist</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td>Manual Handling Assessment (TILE)</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Lone Working Policy &amp; Risk Assessment</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Slip, Trip &amp; Fall Assessment</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Accident/Incident Report Form + Log</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
               <td>Quick-Start Compliance Guide</td>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Training &amp; Staff Development (Pro Only)</td></tr>
+            <tr>
+              <td>Staff Induction Checklist</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Training Presentation Slides</td>
-              <td>&ndash;</td>
-              <td>Yes</td>
+              <td>Training Presentation (21 slides + notes)</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Staff Quiz / Assessment</td>
-              <td>&ndash;</td>
-              <td>Yes</td>
+              <td>Staff Knowledge Quiz (20 MCQs + key)</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Annual H&S Review Checklist</td>
-              <td>&ndash;</td>
-              <td>Yes</td>
+              <td>Training Record Log &amp; Matrix</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Advanced Compliance (Pro Only)</td></tr>
+            <tr>
+              <td>Fire Risk Assessment</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Insurance Documentation Template</td>
-              <td>&ndash;</td>
-              <td>Yes</td>
+              <td>Annual H&amp;S Review Checklist</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
             <tr>
-              <td>Editable Versions (Word/Excel)</td>
-              <td>&ndash;</td>
-              <td>Yes</td>
+              <td>PPE Assessment (with EN standards)</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Client Site Assessment</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Emergency Procedures (wall-display ready)</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Ireland Safety Statement (SHWW Act 2005)</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">File Formats</td></tr>
+            <tr>
+              <td>Print-ready PDFs</td>
+              <td class="tick">&#10003;</td>
+              <td class="tick col-pro">&#10003;</td>
+            </tr>
+            <tr>
+              <td>Editable Word (.docx) files</td>
+              <td class="dash">&ndash;</td>
+              <td class="tick col-pro">&#10003;</td>
             </tr>
           </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Total Documents</strong></td>
+              <td><strong>9</strong></td>
+              <td class="col-pro"><strong>19</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Cost Per Document</strong></td>
+              <td><strong>&pound;5.44</strong></td>
+              <td class="col-pro"><strong>&pound;4.16</strong></td>
+            </tr>
+            <tr class="price-row">
+              <td></td>
+              <td><span class="price-label">Basic &mdash; &pound;49</span></td>
+              <td class="col-pro"><span class="price-label price-label-pro">Pro &mdash; &pound;79</span></td>
+            </tr>
+          </tfoot>
         </table>
       </div>
+      <p class="tier-note">Choose your trade below to buy Basic or Pro for your specific business.</p>
+    </div>
+  </section>
 
-      <p class="text-center" style="margin-top: 2rem; color: #6b7280;">
-        Kits coming soon for: Cleaning, Landscaping, Mobile Beauty, Dog Grooming, and more.
+  <!-- Individual Documents -->
+  <section class="section">
+    <div class="container text-center">
+      <h2>Just Need One Document?</h2>
+      <p class="section-subtitle">
+        Buy individual documents from &pound;12 each. Same professional quality, same pre-filled trade-specific content.
+      </p>
+      <div class="individual-prices">
+        <div class="ind-item">
+          <span class="ind-type">Risk Assessments</span>
+          <span class="ind-price">From &pound;12</span>
+        </div>
+        <div class="ind-item">
+          <span class="ind-type">COSHH Assessments</span>
+          <span class="ind-price">From &pound;12</span>
+        </div>
+        <div class="ind-item">
+          <span class="ind-type">H&amp;S Policies</span>
+          <span class="ind-price">From &pound;19</span>
+        </div>
+        <div class="ind-item">
+          <span class="ind-type">Training Materials</span>
+          <span class="ind-price">From &pound;15</span>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; color: #4b5563; font-size: 0.925rem;">
+        <strong>Tip:</strong> Buying 4+ individual documents? The full kit is better value at just &pound;4.16 per document.
       </p>
     </div>
   </section>
+
+  <!-- Available Trades -->
+  <section class="section trades-section">
+    <div class="container">
+      <h2 class="text-center">Available Trades</h2>
+      <div class="trades-grid">
+        <a href="/kits/cleaning/" class="trade-card trade-card-available">
+          <span class="trade-badge">Available Now</span>
+          <h3>Cleaning Business</h3>
+          <p>19 documents &middot; 8 COSHH chemicals &middot; From &pound;49</p>
+        </a>
+        <a href="/kits/landscaping/" class="trade-card trade-card-available">
+          <span class="trade-badge">Available Now</span>
+          <h3>Landscaping &amp; Grounds</h3>
+          <p>19 documents &middot; 8 COSHH chemicals &middot; From &pound;49</p>
+        </a>
+        <a href="/kits/beauty/" class="trade-card trade-card-available">
+          <span class="trade-badge">Available Now</span>
+          <h3>Beauty Salon &amp; Hair</h3>
+          <p>19 documents &middot; 8 COSHH chemicals &middot; From &pound;49</p>
+        </a>
+        <a href="/kits/dog-grooming/" class="trade-card trade-card-available">
+          <span class="trade-badge">Available Now</span>
+          <h3>Dog Grooming &amp; Pets</h3>
+          <p>19 documents &middot; 8 COSHH chemicals &middot; From &pound;49</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta-section">
+    <div class="container text-center">
+      <h2>Ready to Get Compliant?</h2>
+      <p>Choose your trade above and be audit-ready in 60 minutes. One-time purchase. Yours forever.</p>
+      <a href="/free-sample/" class="btn btn-primary btn-lg">Try Free Sample First</a>
+    </div>
+  </section>
+
 </BaseLayout>
 
 <style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .section-subtitle {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  /* Anchoring */
+  .anchor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .anchor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+  }
+
+  .anchor-expensive {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+  }
+
+  .anchor-us {
+    background: #eff6ff;
+    border: 2px solid #2563eb;
+  }
+
+  .anchor-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .anchor-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .anchor-us .anchor-price {
+    color: #2563eb;
+  }
+
+  .anchor-note {
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+
+  /* Tier comparison table */
+  .comparison-section {
+    background: #f9fafb;
+  }
+
   .tier-comparison {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     overflow-x: auto;
   }
@@ -97,23 +368,237 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   table {
     width: 100%;
     border-collapse: collapse;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
 
   th, td {
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 1rem;
     text-align: left;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.9rem;
   }
 
   th {
     font-weight: 600;
     background: #f9fafb;
+    padding: 0.85rem 1rem;
   }
 
-  th:nth-child(2),
-  th:nth-child(3),
-  td:nth-child(2),
-  td:nth-child(3) {
+  .col-pro {
+    background: #eff6ff;
+  }
+
+  th.col-pro {
+    background: #dbeafe;
+    position: relative;
+  }
+
+  .badge-popular {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .group-header td {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+    background: #f9fafb;
+    padding: 0.75rem 1rem 0.35rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .tick {
     text-align: center;
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  .dash {
+    text-align: center;
+    color: #d1d5db;
+  }
+
+  tfoot td {
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+  }
+
+  tfoot td:first-child {
+    font-size: 0.9rem;
+  }
+
+  .price-row td {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  .price-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4b5563;
+  }
+
+  .price-label-pro {
+    color: #2563eb;
+  }
+
+  .tier-note {
+    text-align: center;
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  /* Individual docs */
+  .individual-prices {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ind-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: #f9fafb;
+  }
+
+  .ind-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+  }
+
+  .ind-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+  }
+
+  /* Trades grid */
+  .trades-section {
+    background: #f9fafb;
+  }
+
+  .trades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .trade-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .trade-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+    text-decoration: none;
+  }
+
+  .trade-card-available {
+    border-color: #2563eb;
+    border-width: 2px;
+  }
+
+  .trade-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    background: #dcfce7;
+    color: #16a34a;
+    margin-bottom: 0.5rem;
+  }
+
+  .trade-badge-soon {
+    background: #fef3c7;
+    color: #b45309;
+  }
+
+  .trade-card h3 {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 0.35rem;
+  }
+
+  .trade-card p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff;
+    padding: 3.5rem 0;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section p {
+    color: #dbeafe;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .anchor-grid {
+      grid-template-columns: 1fr;
+      max-width: 320px;
+    }
+
+    .trades-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .individual-prices {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ind-item {
+      width: 100%;
+      max-width: 280px;
+    }
   }
 </style>
