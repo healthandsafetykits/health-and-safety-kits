@@ -2,6 +2,7 @@
 title: "Health and Safety for Beauty Salons and Mobile Therapists: Complete Guide"
 description: "Complete H&S guide for beauty salons and mobile beauticians. Covers COSHH, hygiene, dermatitis prevention, and compliance requirements."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["beauty", "compliance", "risk-assessment", "coshh"]
 featured: true
 excerpt: "Whether you work from a salon or visit clients at home, beauty therapists face specific H&S risks — from chemical exposure and dermatitis to lone working and infection control. Here's what you need."

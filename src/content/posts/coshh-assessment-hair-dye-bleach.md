@@ -2,6 +2,7 @@
 title: "COSHH Assessment for Hair Dye, Bleach, and Salon Chemicals: Hairdresser's Guide"
 description: "COSHH assessments for hairdressing chemicals — hair dye, bleach, hydrogen peroxide, and keratin treatments. Real hazard codes and controls."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["beauty", "coshh", "compliance"]
 featured: false
 excerpt: "Hair dye, bleach, and peroxide are hazardous substances that require COSHH assessments. Here's how to do them — with real chemical examples and the control measures that actually work."

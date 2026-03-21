@@ -2,6 +2,7 @@
 title: "Method Statements and RAMS: A Plain English Guide for Contractors"
 description: "How to write method statements and RAMS for construction and trades. Covers what to include, when they're required, CDM 2015, and practical examples."
 date: 2026-03-12
+dateModified: 2026-03-12
 tags: ["method-statement", "construction", "compliance"]
 featured: false
 excerpt: "Clients asking for your RAMS? Here's everything you need to know about method statements — what they are, when you need them, and how to write one properly."

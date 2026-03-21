@@ -2,6 +2,7 @@
 title: "Health and Safety Risk Assessment: Complete Guide for Small Businesses"
 description: "Step-by-step guide to H&S risk assessments for UK and Ireland small businesses. The 5-step process, legal requirements, and common mistakes."
 date: 2026-03-20
+dateModified: 2026-03-21
 tags: ["risk-assessment", "compliance"]
 featured: true
 excerpt: "Everything you need to know about conducting risk assessments for your small business — the legal requirements, the 5-step HSE process, and how to avoid common mistakes."

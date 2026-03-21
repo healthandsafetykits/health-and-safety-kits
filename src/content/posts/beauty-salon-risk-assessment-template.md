@@ -2,6 +2,7 @@
 title: "Beauty Salon Risk Assessment: What to Include and How to Write One"
 description: "How to write a risk assessment for your beauty salon. Covers chemical hazards, dermatitis, hygiene, and what inspectors expect."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["beauty", "risk-assessment", "compliance"]
 featured: false
 excerpt: "A beauty salon risk assessment needs to cover chemicals, skin conditions, infection control, electrical equipment, and more. Here's exactly what to include."

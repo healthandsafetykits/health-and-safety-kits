@@ -2,6 +2,7 @@
 title: "Health and Safety for Small Businesses in the UK: What You Actually Need"
 description: "Plain-English guide to H&S requirements for UK and Ireland small businesses. What's legally required, what documents you need, and how to comply."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "risk-assessment", "small-business"]
 featured: false
 excerpt: "Confused about health and safety for your small business? Here's what's actually required by law, what documents you need, and how to get it sorted — without paying a consultant thousands."

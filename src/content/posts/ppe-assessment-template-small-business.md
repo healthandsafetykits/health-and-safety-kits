@@ -2,6 +2,7 @@
 title: "PPE Assessment for Small Businesses: What You Need and How to Do It"
 description: "How to carry out a PPE assessment for your small business. What PPE is legally required, how to choose it, and how to document your assessment."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "risk-assessment", "small-business"]
 featured: false
 excerpt: "PPE is the last line of defence — not the first. But when you need it, you need the right kit. Here's how to assess what PPE your business requires and document it properly."

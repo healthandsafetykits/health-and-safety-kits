@@ -2,6 +2,7 @@
 title: "Council Contract Health and Safety Requirements: What You Need to Win Local Authority Work"
 description: "What H&S documents and accreditations do you need to win council contracts? Covers PQQ requirements, CHAS, and SafeContractor."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "cleaning", "landscaping"]
 featured: false
 excerpt: "Councils are the most demanding clients for H&S documentation. Here's exactly what local authorities require from contractors — and how to get compliant without spending thousands."

@@ -2,6 +2,7 @@
 title: "COSHH Assessment for Gardening Chemicals: Pesticides, Herbicides, and Fertilisers"
 description: "COSHH assessment guide for gardening and landscaping chemicals. Covers glyphosate, pesticides, herbicides, fertilisers, and fuel."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["coshh", "landscaping", "compliance"]
 featured: false
 excerpt: "If your landscaping business uses weedkiller, pesticides, fertiliser, or even petrol and chainsaw oil, you need COSHH assessments. Here's how to do them properly."

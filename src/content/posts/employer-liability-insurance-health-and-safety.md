@@ -2,6 +2,7 @@
 title: "Employers' Liability Insurance and Health and Safety: What Small Businesses Need to Know"
 description: "How employers' liability insurance connects to health and safety. What insurers require, how H&S documentation affects claims."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false
 excerpt: "Your employers' liability insurance and your H&S compliance are directly linked. Poor documentation can void your cover or increase premiums. Here's what insurers actually need from you."

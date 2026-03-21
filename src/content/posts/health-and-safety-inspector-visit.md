@@ -2,6 +2,7 @@
 title: "Health and Safety Inspector Visit: What to Expect and How to Prepare"
 description: "What happens during an HSE health and safety inspection? What inspectors check, what documents you need, and how to prepare your business."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false
 excerpt: "An HSE inspector can visit without warning. Here's exactly what they check, what documents they'll ask for, what triggers an inspection, and how to make sure you're ready."

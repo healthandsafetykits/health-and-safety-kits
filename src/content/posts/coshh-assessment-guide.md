@@ -2,6 +2,7 @@
 title: "COSHH Assessment: Complete Guide to Controlling Hazardous Substances"
 description: "How to conduct a COSHH assessment for your business. Covers the legal requirements, 6-step process, industry examples, and common mistakes to avoid."
 date: 2026-03-16
+dateModified: 2026-03-16
 tags: ["coshh", "compliance", "cleaning"]
 featured: false
 excerpt: "If your business uses any chemicals — even household cleaning products — you probably need a COSHH assessment. Here's exactly how to do one."

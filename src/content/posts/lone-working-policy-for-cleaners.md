@@ -2,6 +2,7 @@
 title: "Lone Working Policy for Cleaners: What You Need and How to Write One"
 description: "How to create a lone working policy for your cleaning business. Legal requirements, risk assessment, check-in procedures, and safety measures."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["cleaning", "compliance", "risk-assessment"]
 featured: false
 excerpt: "Most cleaners work alone on client sites. That creates specific risks your business needs to address — here's how to write a lone working policy that actually protects your staff."

@@ -5,9 +5,11 @@ import matter from 'gray-matter';
 
 import sitemap from '@astrojs/sitemap';
 
-// Pre-compute blog post dates at build time for sitemap lastmod
+// Pre-compute blog post dates and tag data at build time for sitemap
 const postDir = './src/content/posts';
 const postDates = {};
+const tagPostCounts = {};  // tag → number of posts
+const tagLatestDates = {}; // tag → most recent post date
 try {
   const files = await readdir(postDir);
   for (const file of files) {
@@ -15,7 +17,20 @@ try {
       const raw = await readFile(`${postDir}/${file}`, 'utf-8');
       const { data } = matter(raw);
       const slug = file.replace(/\.md$/, '');
-      postDates[slug] = data.dateModified || data.date || null;
+      const postDate = data.dateModified || data.date || null;
+      postDates[slug] = postDate;
+
+      // Count posts per tag and track latest date
+      const tags = data.tags || [];
+      for (const tag of tags) {
+        tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
+        if (postDate) {
+          const d = new Date(postDate);
+          if (!tagLatestDates[tag] || d > new Date(tagLatestDates[tag])) {
+            tagLatestDates[tag] = postDate;
+          }
+        }
+      }
     }
   }
 } catch {
@@ -45,7 +60,12 @@ export default defineConfig({
     sitemap({
       filter: (page) =>
         !page.includes('/terms/') &&
-        !page.includes('/privacy/'),
+        !page.includes('/privacy/') &&
+        // Exclude noindex tag pages (fewer than 2 posts)
+        !(page.includes('/tags/') && (() => {
+          const tagMatch = page.match(/\/tags\/([^/]+)\//);
+          return tagMatch && (tagPostCounts[tagMatch[1]] || 0) < 2;
+        })()),
       serialize: (item) => {
         const url = item.url;
 
@@ -70,7 +90,12 @@ export default defineConfig({
 
         // Tag pages
         if (url.includes('/tags/')) {
-          return { ...item, changefreq: 'monthly', priority: 0.5 };
+          const tagMatch = url.match(/\/tags\/([^/]+)\//);
+          const tag = tagMatch ? tagMatch[1] : null;
+          const lastmod = tag && tagLatestDates[tag]
+            ? new Date(tagLatestDates[tag]).toISOString().split('T')[0]
+            : undefined;
+          return { ...item, changefreq: 'monthly', priority: 0.5, lastmod };
         }
 
         // Other static pages

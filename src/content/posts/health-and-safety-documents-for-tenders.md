@@ -2,6 +2,7 @@
 title: "Health and Safety Documents You Need for Tender Applications and Contracts"
 description: "What H&S documents do you need for tenders and commercial contracts? Requirements for cleaning, landscaping, and maintenance businesses."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "cleaning", "landscaping"]
 featured: false
 excerpt: "Lost a contract because you couldn't provide H&S documents? Here's exactly which health and safety paperwork commercial clients and councils expect when you bid for work."

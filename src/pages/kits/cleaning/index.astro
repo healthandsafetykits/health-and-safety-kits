@@ -103,6 +103,8 @@ const productSchema = {
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
       "url": "https://healthandsafetykits.com/kits/cleaning/",
+      "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
+      "priceValidUntil": "2027-03-31",
     },
     {
       "@type": "Offer",
@@ -111,6 +113,8 @@ const productSchema = {
       "priceCurrency": "GBP",
       "availability": "https://schema.org/InStock",
       "url": "https://healthandsafetykits.com/kits/cleaning/",
+      "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
+      "priceValidUntil": "2027-03-31",
     },
   ],
 };
@@ -119,6 +123,7 @@ const productSchema = {
 <BaseLayout
   title="Cleaning Business H&S Kit"
   description="Complete health and safety kit for cleaning businesses. 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, training materials. From £49. One-time download."
+  ogType="product"
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />

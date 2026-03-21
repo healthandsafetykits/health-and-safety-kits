@@ -2,6 +2,7 @@
 title: "Annual Health and Safety Review Checklist for Small Businesses"
 description: "Complete annual H&S review checklist for small businesses. What to check, update, and record to stay compliant year after year."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false
 excerpt: "Your H&S documents aren't 'done and forget.' An annual review keeps you compliant, keeps your insurance valid, and takes less time than you think. Here's exactly what to check."

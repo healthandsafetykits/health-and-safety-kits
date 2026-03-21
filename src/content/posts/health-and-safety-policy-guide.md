@@ -2,6 +2,7 @@
 title: "Health and Safety Policy: How to Write One for Your Small Business"
 description: "How to write a health and safety policy for your small business. Covers legal requirements, what to include, and step-by-step guidance."
 date: 2026-03-18
+dateModified: 2026-03-21
 tags: ["policy", "compliance"]
 featured: true
 excerpt: "Your health and safety policy is the foundation of your compliance. Here's how to write one that actually protects your business — without hiring a consultant."

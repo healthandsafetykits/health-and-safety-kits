@@ -2,6 +2,7 @@
 title: "Health and Safety for Dog Groomers: Complete Guide for UK & Ireland"
 description: "Complete H&S guide for dog groomers. Covers animal handling, zoonotic diseases, COSHH for grooming chemicals, and compliance requirements."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["dog-grooming", "compliance", "risk-assessment", "coshh"]
 featured: true
 excerpt: "Dog grooming involves real health and safety risks — from animal bites and zoonotic diseases to chemical exposure and electrical equipment. Here's everything you need to know to stay compliant."

@@ -2,6 +2,7 @@
 title: "Health and Safety Compliance Checklist: What Your Small Business Legally Needs"
 description: "Complete health and safety compliance checklist for UK and Ireland small businesses. Know exactly which H&S documents and procedures you legally need."
 date: 2026-03-14
+dateModified: 2026-03-14
 tags: ["compliance", "risk-assessment"]
 featured: false
 excerpt: "Not sure what health and safety documents your business actually needs? This checklist covers every legal requirement for UK and Ireland small businesses."

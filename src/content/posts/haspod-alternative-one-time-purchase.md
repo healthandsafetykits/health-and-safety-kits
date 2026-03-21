@@ -2,6 +2,7 @@
 title: "HASpod Alternative: One-Time Purchase H&S Documents (No Subscription)"
 description: "HASpod alternative: compare one-time purchase H&S kits with HASpod's annual subscription. Trade-specific, pre-filled, yours forever."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false
 excerpt: "HASpod charges £799+VAT per year for document access. Here's how one-time purchase trade kits compare — same compliance coverage, fraction of the price, no recurring fees."

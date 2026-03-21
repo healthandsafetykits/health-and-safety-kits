@@ -2,6 +2,7 @@
 title: "Fire Risk Assessment for Small Businesses: What You Need and How to Do It"
 description: "How to complete a fire risk assessment for your small business. Legal requirements, common hazards by trade, and what inspectors check."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["compliance", "risk-assessment", "small-business"]
 featured: false
 excerpt: "Every business premises needs a fire risk assessment — it's the law. Here's how to do one for your small business, what to include, and how to avoid the most common mistakes."

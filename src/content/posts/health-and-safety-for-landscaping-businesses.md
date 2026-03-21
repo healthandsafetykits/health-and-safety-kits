@@ -2,6 +2,7 @@
 title: "Health and Safety for Landscaping Businesses: Complete Guide for UK & Ireland"
 description: "Complete H&S guide for landscaping businesses. Covers risk assessments, COSHH, equipment safety, work at height, noise, and vibration."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["landscaping", "compliance", "risk-assessment", "coshh"]
 featured: true
 excerpt: "Landscaping is one of the highest-risk trades for small businesses. From chainsaws to chemicals, noise to manual handling — here's everything you need to know about staying compliant."

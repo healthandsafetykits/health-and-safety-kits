@@ -2,6 +2,7 @@
 title: "Health and Safety for Cleaning Businesses: Complete Compliance Guide"
 description: "H&S compliance guide for cleaning business owners. Covers legal requirements, essential documents, common hazards, and getting audit-ready."
 date: 2026-03-21
+dateModified: 2026-03-21
 tags: ["cleaning", "compliance", "risk-assessment", "coshh"]
 featured: true
 excerpt: "Running a cleaning business? Here's every H&S document you need, the regulations that apply to you, and how to get fully compliant without hiring a consultant."
