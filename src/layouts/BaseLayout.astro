@@ -32,7 +32,7 @@ const siteName = 'Health and Safety Kits';
 const siteUrl = 'https://healthandsafetykits.com';
 const fullTitle = title === 'Home' ? siteName : `${title} | ${siteName}`;
 const canonicalHref = canonicalURL || new URL(Astro.url.pathname, siteUrl).href;
-const ogImageUrl = ogImage || `${siteUrl}/images/healthandsafetykits-logo.webp`;
+const ogImageUrl = ogImage || `${siteUrl}/images/healthandsafetykits-og.png`;
 
 // Organization schema (appears on every page)
 const orgSchema = {
@@ -42,7 +42,7 @@ const orgSchema = {
   "url": siteUrl,
   "logo": {
     "@type": "ImageObject",
-    "url": `${siteUrl}/images/healthandsafetykits-logo.webp`,
+    "url": `${siteUrl}/images/healthandsafetykits-og.png`,
     "width": 224,
     "height": 112,
   },
@@ -61,6 +61,19 @@ const orgSchema = {
     "contactType": "customer support",
     "email": "info@healthandsafetykits.com",
     "url": `${siteUrl}/contact/`,
+  },
+};
+
+// WebSite schema (helps search engines understand site structure)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Health and Safety Kits",
+  "url": siteUrl,
+  "description": "One-time download health and safety compliance kits for small trades. Risk assessments, COSHH, policies & training — compliance-ready in 60 minutes.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Health and Safety Kits",
   },
 };
 ---
@@ -98,7 +111,7 @@ const orgSchema = {
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:image:type" content="image/png" />
       </>
     )}
 
@@ -118,6 +131,8 @@ const orgSchema = {
 
     <!-- Organization schema -->
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <!-- WebSite schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
     <Analytics />
   </head>
