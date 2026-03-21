@@ -1,6 +1,6 @@
 ---
 title: "Health and Safety Policy: How to Write One for Your Small Business"
-description: "Complete guide to writing a health and safety policy for UK and Ireland small businesses. Includes what to include, legal requirements, and step-by-step instructions."
+description: "How to write a health and safety policy for your small business. Covers legal requirements, what to include, and step-by-step guidance."
 date: 2026-03-18
 tags: ["policy", "compliance"]
 featured: true

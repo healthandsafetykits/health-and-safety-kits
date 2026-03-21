@@ -14,6 +14,36 @@ const siteUrl = 'https://healthandsafetykits.com';
 const wordCount = post.body ? post.body.split(/\s+/).length : 0;
 const readingTime = Math.max(1, Math.ceil(wordCount / 230));
 
+// Trade-aware CTA: match post tags to the most relevant kit
+const tradeCtas: Record<string, { label: string; href: string; copy: string }> = {
+  'cleaning': {
+    label: 'View Cleaning Kit',
+    href: '/kits/cleaning/',
+    copy: 'Our Cleaning Business Kit includes 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, and training materials. All tailored for UK and Ireland regulations. From £49.',
+  },
+  'landscaping': {
+    label: 'View Landscaping Kit',
+    href: '/kits/landscaping/',
+    copy: 'Our Landscaping Business Kit includes 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, and training materials. All tailored for UK and Ireland regulations. From £49.',
+  },
+  'beauty': {
+    label: 'View Beauty Salon Kit',
+    href: '/kits/beauty/',
+    copy: 'Our Beauty Salon Kit includes 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, and training materials. All tailored for UK and Ireland regulations. From £49.',
+  },
+  'dog-grooming': {
+    label: 'View Dog Grooming Kit',
+    href: '/kits/dog-grooming/',
+    copy: 'Our Dog Grooming Kit includes 19 pre-filled documents — risk assessments, COSHH assessments for 8 chemicals, H&S policy, and training materials. All tailored for UK and Ireland regulations. From £49.',
+  },
+};
+const matchedTrade = tags.find((t: string) => t in tradeCtas);
+const cta = matchedTrade ? tradeCtas[matchedTrade] : {
+  label: 'View All Kits',
+  href: '/kits/',
+  copy: 'Our trade-specific compliance kits include 19 pre-filled documents each — risk assessments, COSHH assessments, H&S policies, and training materials. All tailored for UK and Ireland regulations. From £49.',
+};
+
 const publishedDate = new Date(date);
 const modifiedDate = dateModified ? new Date(dateModified) : undefined;
 const formattedDate = publishedDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -112,9 +142,9 @@ const breadcrumbSchema = {
       <!-- CTA -->
       <aside class="post-cta">
         <h3>Get Compliant in 60 Minutes</h3>
-        <p>Our Cleaning Business Kit includes 19 pre-filled documents &mdash; risk assessments, COSHH assessments for 8 chemicals, H&amp;S policy, and training materials. All tailored for UK and Ireland regulations. From &pound;49.</p>
+        <p>{cta.copy}</p>
         <div class="cta-buttons">
-          <a href="/kits/cleaning/" class="btn btn-primary">View Cleaning Kit</a>
+          <a href={cta.href} class="btn btn-primary">{cta.label}</a>
           <a href="/free-sample/" class="btn btn-secondary">Download Free Sample</a>
         </div>
       </aside>

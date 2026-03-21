@@ -1,6 +1,6 @@
 ---
 title: "Health and Safety Policy vs Safety Statement: UK vs Ireland Requirements Explained"
-description: "What's the difference between a UK health and safety policy and an Irish safety statement? Who needs which, what to include, and how to make sure you're compliant in both jurisdictions."
+description: "UK health and safety policy vs Irish safety statement — who needs which, what to include, and how to be compliant in both jurisdictions."
 date: 2026-03-21
 tags: ["compliance", "policy"]
 featured: false

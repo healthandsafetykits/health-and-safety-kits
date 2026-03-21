@@ -269,6 +269,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Popular Guides -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Popular Compliance Guides</h2>
+      <p class="section-subtitle">
+        Free, in-depth guides to help you understand your health &amp; safety obligations.
+      </p>
+      <div class="guides-grid">
+        <a href="/blog/health-and-safety-for-cleaning-businesses/" class="guide-card">
+          <h3>H&amp;S for Cleaning Businesses</h3>
+          <p>Complete compliance guide for cleaning companies and sole traders.</p>
+        </a>
+        <a href="/blog/health-and-safety-risk-assessment-guide/" class="guide-card">
+          <h3>Risk Assessment Guide</h3>
+          <p>Step-by-step guide to the HSE 5-step risk assessment process.</p>
+        </a>
+        <a href="/blog/coshh-assessment-guide/" class="guide-card">
+          <h3>COSHH Assessment Guide</h3>
+          <p>How to assess hazardous substances in your workplace.</p>
+        </a>
+        <a href="/blog/do-i-need-health-and-safety-policy-sole-trader/" class="guide-card">
+          <h3>Do Sole Traders Need a H&amp;S Policy?</h3>
+          <p>Legal requirements and what clients and insurers expect.</p>
+        </a>
+      </div>
+      <p class="text-center" style="margin-top: 1.5rem;">
+        <a href="/blog/" class="btn btn-secondary">View All Guides</a>
+      </p>
+    </div>
+  </section>
+
   <!-- Free Sample CTA -->
   <section class="section">
     <div class="container text-center">
@@ -631,6 +662,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 0;
   }
 
+  /* Guides grid */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .guide-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .guide-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    text-decoration: none;
+  }
+
+  .guide-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+    color: #1a1a1a;
+  }
+
+  .guide-card p {
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
   /* Free sample CTA box */
   .sample-cta-box {
     max-width: 600px;
@@ -693,7 +760,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .pain-grid,
     .features-grid,
-    .trust-grid {
+    .trust-grid,
+    .guides-grid {
       grid-template-columns: 1fr;
     }
 

@@ -1,6 +1,6 @@
 ---
 title: "Health and Safety Training for Small Business Staff: What's Required and How to Do It"
-description: "What health and safety training must you provide to employees? Covers legal requirements, induction training, COSHH training, manual handling, first aid, and how to document it — for small businesses."
+description: "What H&S training must you provide to employees? Covers induction, COSHH, manual handling, first aid, and how to document it all."
 date: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false

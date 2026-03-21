@@ -1,6 +1,6 @@
 ---
 title: "COSHH Assessment for Cleaning Chemicals: What You Need to Know"
-description: "How to do a COSHH assessment for cleaning chemicals. Covers which chemicals need assessing, where to find Safety Data Sheets, and how to fill in a COSHH assessment form."
+description: "How to do a COSHH assessment for cleaning chemicals. Which chemicals need assessing, Safety Data Sheets, and how to complete the form."
 date: 2026-03-21
 tags: ["coshh", "cleaning", "compliance"]
 featured: false

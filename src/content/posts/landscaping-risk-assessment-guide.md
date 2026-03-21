@@ -1,6 +1,6 @@
 ---
 title: "Landscaping Risk Assessment: What to Include and How to Write One"
-description: "How to write a risk assessment for your landscaping or grounds maintenance business. Covers equipment hazards, COSHH, work at height, noise, vibration, and what inspectors expect."
+description: "How to write a risk assessment for your landscaping business. Covers equipment hazards, COSHH, work at height, noise, and vibration."
 date: 2026-03-21
 tags: ["landscaping", "risk-assessment", "compliance"]
 featured: false

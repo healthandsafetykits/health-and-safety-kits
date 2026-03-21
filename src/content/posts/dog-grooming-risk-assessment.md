@@ -1,6 +1,6 @@
 ---
 title: "Dog Grooming Risk Assessment: What to Include and How to Write One"
-description: "How to write a risk assessment for your dog grooming business. Covers animal handling, bites, zoonotic diseases, chemicals, electrical safety, and what inspectors and insurers expect."
+description: "How to write a risk assessment for your dog grooming business. Covers animal handling, bites, zoonotic diseases, and chemicals."
 date: 2026-03-21
 tags: ["dog-grooming", "risk-assessment", "compliance"]
 featured: false

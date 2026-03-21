@@ -1,6 +1,6 @@
 ---
 title: "Free Health and Safety Templates UK: What You Actually Get (and What's Missing)"
-description: "A honest review of free health and safety templates from HSE, government sites, and online marketplaces. What they cover, what they miss, and when you need something better."
+description: "Honest review of free H&S templates from HSE and government sites. What they cover, what they miss, and when you need something better."
 date: 2026-03-21
 tags: ["compliance", "risk-assessment", "small-business"]
 featured: false

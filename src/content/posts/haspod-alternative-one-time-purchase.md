@@ -1,6 +1,6 @@
 ---
 title: "HASpod Alternative: One-Time Purchase H&S Documents (No Subscription)"
-description: "Looking for an alternative to HASpod's subscription model? Compare one-time purchase H&S document kits with HASpod's annual plans. Trade-specific, pre-filled, and yours to keep forever."
+description: "HASpod alternative: compare one-time purchase H&S kits with HASpod's annual subscription. Trade-specific, pre-filled, yours forever."
 date: 2026-03-21
 tags: ["compliance", "small-business"]
 featured: false

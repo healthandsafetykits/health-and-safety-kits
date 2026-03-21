@@ -68,6 +68,16 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a },
+  })),
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -112,6 +122,7 @@ const productSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
 
   <!-- Hero -->
   <section class="hero">
@@ -351,6 +362,20 @@ const productSchema = {
           </details>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="section" style="background: #f9fafb;">
+    <div class="container" style="max-width: 780px;">
+      <h2 class="text-center">Free Cleaning Business H&amp;S Guides</h2>
+      <p class="section-subtitle">Learn more about your compliance obligations before you buy.</p>
+      <ul class="related-guides">
+        <li><a href="/blog/health-and-safety-for-cleaning-businesses/">Health and Safety for Cleaning Businesses: Complete Guide</a></li>
+        <li><a href="/blog/cleaning-company-risk-assessment-template/">Cleaning Company Risk Assessment Template</a></li>
+        <li><a href="/blog/coshh-assessment-cleaning-chemicals/">COSHH Assessment for Cleaning Chemicals</a></li>
+        <li><a href="/blog/lone-working-policy-for-cleaners/">Lone Working Policy for Cleaners</a></li>
+      </ul>
     </div>
   </section>
 
@@ -861,5 +886,31 @@ const productSchema = {
       width: 100%;
       text-align: center;
     }
+  }
+
+  .related-guides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .related-guides li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .related-guides li a:hover {
+    border-color: #2563eb;
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 title: "Do I Need a Health and Safety Policy as a Sole Trader?"
-description: "Whether sole traders need a written health and safety policy in the UK and Ireland. Covers the legal requirements, what clients and insurers expect, and what your policy should include."
+description: "Do sole traders need a written H&S policy? Covers UK and Ireland legal requirements, what clients and insurers expect, and what to include."
 date: 2026-03-21
 tags: ["policy", "compliance"]
 featured: false

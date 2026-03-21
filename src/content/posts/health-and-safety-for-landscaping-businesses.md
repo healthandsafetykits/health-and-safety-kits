@@ -1,6 +1,6 @@
 ---
 title: "Health and Safety for Landscaping Businesses: Complete Guide for UK & Ireland"
-description: "Complete health and safety guide for landscaping and grounds maintenance businesses. Covers risk assessments, COSHH, equipment safety, work at height, noise, vibration, and essential documents."
+description: "Complete H&S guide for landscaping businesses. Covers risk assessments, COSHH, equipment safety, work at height, noise, and vibration."
 date: 2026-03-21
 tags: ["landscaping", "compliance", "risk-assessment", "coshh"]
 featured: true

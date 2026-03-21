@@ -1,6 +1,6 @@
 ---
 title: "COSHH Assessment for Hair Dye, Bleach, and Salon Chemicals: Hairdresser's Guide"
-description: "How to write COSHH assessments for hairdressing chemicals — hair dye (PPD), bleach, hydrogen peroxide, keratin treatments, and more. Includes real hazard codes, control measures, and dermatitis prevention."
+description: "COSHH assessments for hairdressing chemicals — hair dye, bleach, hydrogen peroxide, and keratin treatments. Real hazard codes and controls."
 date: 2026-03-21
 tags: ["beauty", "coshh", "compliance"]
 featured: false

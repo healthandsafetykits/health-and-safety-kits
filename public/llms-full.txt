@@ -116,6 +116,10 @@ A: As digital products, all sales are final. That's why we offer a free sample s
 
 - Home: https://healthandsafetykits.com/
 - Compare Kits: https://healthandsafetykits.com/kits/
+- Cleaning Business Kit: https://healthandsafetykits.com/kits/cleaning/
+- Landscaping Business Kit: https://healthandsafetykits.com/kits/landscaping/
+- Beauty Salon Kit: https://healthandsafetykits.com/kits/beauty/
+- Dog Grooming Kit: https://healthandsafetykits.com/kits/dog-grooming/
 - Free Sample: https://healthandsafetykits.com/free-sample/
 - Blog: https://healthandsafetykits.com/blog/
 - About: https://healthandsafetykits.com/about/
@@ -123,6 +127,50 @@ A: As digital products, all sales are final. That's why we offer a free sample s
 - Contact: https://healthandsafetykits.com/contact/
 - Terms: https://healthandsafetykits.com/terms/
 - Privacy: https://healthandsafetykits.com/privacy/
+
+## Blog Posts
+
+### Pillar Guides
+- Health and Safety Risk Assessment Guide: https://healthandsafetykits.com/blog/health-and-safety-risk-assessment-guide/
+- Health and Safety Policy Guide: https://healthandsafetykits.com/blog/health-and-safety-policy-guide/
+- COSHH Assessment Guide: https://healthandsafetykits.com/blog/coshh-assessment-guide/
+- H&S Compliance Checklist: https://healthandsafetykits.com/blog/health-and-safety-compliance-checklist/
+- Method Statements and RAMS Guide: https://healthandsafetykits.com/blog/method-statements-rams-guide/
+
+### Cleaning Business Guides
+- Health and Safety for Cleaning Businesses: https://healthandsafetykits.com/blog/health-and-safety-for-cleaning-businesses/
+- Cleaning Company Risk Assessment Template: https://healthandsafetykits.com/blog/cleaning-company-risk-assessment-template/
+- COSHH Assessment for Cleaning Chemicals: https://healthandsafetykits.com/blog/coshh-assessment-cleaning-chemicals/
+- Lone Working Policy for Cleaners: https://healthandsafetykits.com/blog/lone-working-policy-for-cleaners/
+- Do I Need a Health and Safety Policy as a Sole Trader?: https://healthandsafetykits.com/blog/do-i-need-health-and-safety-policy-sole-trader/
+
+### Landscaping Business Guides
+- Health and Safety for Landscaping Businesses: https://healthandsafetykits.com/blog/health-and-safety-for-landscaping-businesses/
+- Landscaping Risk Assessment Guide: https://healthandsafetykits.com/blog/landscaping-risk-assessment-guide/
+- COSHH Assessment for Gardening Chemicals: https://healthandsafetykits.com/blog/coshh-assessment-gardening-chemicals/
+
+### Beauty Salon Guides
+- Health and Safety for Beauty Salons: https://healthandsafetykits.com/blog/health-and-safety-for-beauty-salons/
+- Beauty Salon Risk Assessment Template: https://healthandsafetykits.com/blog/beauty-salon-risk-assessment-template/
+- COSHH Assessment for Hair Dye and Bleach: https://healthandsafetykits.com/blog/coshh-assessment-hair-dye-bleach/
+
+### Dog Grooming Guides
+- Health and Safety for Dog Groomers: https://healthandsafetykits.com/blog/health-and-safety-for-dog-groomers/
+- Dog Grooming Risk Assessment: https://healthandsafetykits.com/blog/dog-grooming-risk-assessment/
+
+### Cross-Trade and Buying-Intent Guides
+- H&S Documents for Tender Applications: https://healthandsafetykits.com/blog/health-and-safety-documents-for-tenders/
+- Health and Safety for Small Businesses UK: https://healthandsafetykits.com/blog/health-and-safety-for-small-businesses-uk/
+- Free Health and Safety Templates UK: https://healthandsafetykits.com/blog/free-health-and-safety-templates-uk/
+- HASpod Alternative — One-Time Purchase: https://healthandsafetykits.com/blog/haspod-alternative-one-time-purchase/
+- Health and Safety Inspector Visit: https://healthandsafetykits.com/blog/health-and-safety-inspector-visit/
+- Employers' Liability Insurance and H&S: https://healthandsafetykits.com/blog/employer-liability-insurance-health-and-safety/
+- Council Contract H&S Requirements: https://healthandsafetykits.com/blog/council-contract-health-and-safety-requirements/
+- H&S Training for Small Business Staff: https://healthandsafetykits.com/blog/health-and-safety-training-small-business/
+- Fire Risk Assessment for Small Business: https://healthandsafetykits.com/blog/fire-risk-assessment-small-business/
+- Annual H&S Review Checklist: https://healthandsafetykits.com/blog/annual-health-and-safety-review-checklist/
+- H&S Policy vs Safety Statement (UK vs Ireland): https://healthandsafetykits.com/blog/health-and-safety-policy-vs-safety-statement/
+- PPE Assessment Template for Small Businesses: https://healthandsafetykits.com/blog/ppe-assessment-template-small-business/
 
 ## Contact
 

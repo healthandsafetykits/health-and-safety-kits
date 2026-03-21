@@ -1,6 +1,6 @@
 ---
 title: "Cleaning Company Risk Assessment: What to Include and How to Write One"
-description: "How to write a risk assessment for your cleaning company. Covers the specific hazards, the HSE 5-step process, what inspectors look for, and where to get a ready-made template."
+description: "How to write a risk assessment for your cleaning company. Covers hazards, the HSE 5-step process, and what inspectors look for."
 date: 2026-03-21
 tags: ["cleaning", "risk-assessment", "compliance"]
 featured: false
