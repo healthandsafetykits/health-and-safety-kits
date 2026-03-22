@@ -1,0 +1,557 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Subscription vs One-Time Download H&S Documents: Which Is Right for Your Business?",
+  "description": "Compare subscription H&S platforms like HASpod (£799/year) with one-time download compliance kits. See why sole traders and small businesses choose downloadable H&S documents.",
+  "url": "https://healthandsafetykits.com/subscription-vs-download/",
+  "author": {
+    "@type": "Person",
+    "name": "Jim Health",
+    "jobTitle": "Health & Safety Compliance Specialist",
+    "url": "https://healthandsafetykits.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Health and Safety Kits",
+    "url": "https://healthandsafetykits.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://healthandsafetykits.com/images/healthandsafetykits-logo.png"
+    }
+  },
+  "datePublished": "2026-03-22",
+  "dateModified": "2026-03-22",
+  "image": ["https://healthandsafetykits.com/images/healthandsafetykits-og.png"],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".lead-paragraph"]
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://healthandsafetykits.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Subscription vs Download", "item": "https://healthandsafetykits.com/subscription-vs-download/" }
+  ]
+};
+---
+
+<BaseLayout
+  title="Subscription vs One-Time Download H&S Documents"
+  description="Compare subscription H&S platforms like HASpod (£799/year) with one-time download compliance kits. See why sole traders and small businesses choose downloadable H&S documents."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <!-- Hero / Intro -->
+  <section class="hero-section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span>Subscription vs Download</span>
+      </nav>
+
+      <h1>Subscription vs One-Time Download: Which Is Right for Your Business?</h1>
+      <p class="lead-paragraph">
+        Every small business in the UK and Ireland needs health &amp; safety documentation &mdash; that&rsquo;s the law under the
+        <strong>Health and Safety at Work Act 1974</strong> and the <strong>Safety, Health and Welfare at Work Act 2005</strong>.
+        But how you get those documents matters. Subscription platforms like HASpod charge &pound;799/year for access to generic templates.
+        One-time download kits give you trade-specific, audit-ready documents you own forever &mdash; for a fraction of the cost.
+        Here&rsquo;s how they compare.
+      </p>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-heading">Feature-by-Feature Comparison</h2>
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Feature</th>
+              <th class="subscription-col">Subscription Platform</th>
+              <th class="download-col">One-Time Download Kit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-cell">Cost Structure</td>
+              <td class="sub-cell">Annual subscription (&pound;799/yr)</td>
+              <td class="dl-cell">One-time purchase (&pound;49&ndash;&pound;79)</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Trade-Specific Content</td>
+              <td class="sub-cell">Generic templates</td>
+              <td class="dl-cell">Pre-filled for your trade</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Document Ownership</td>
+              <td class="sub-cell">Lose access if you cancel</td>
+              <td class="dl-cell">Yours forever</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Customisation</td>
+              <td class="sub-cell">Limited to platform tools</td>
+              <td class="dl-cell">Full Word file editing</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Setup Time</td>
+              <td class="sub-cell">Hours configuring platform</td>
+              <td class="dl-cell">60 minutes to audit-ready</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Ongoing Fees</td>
+              <td class="sub-cell">Annual renewal required</td>
+              <td class="dl-cell">None, ever</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Internet Required</td>
+              <td class="sub-cell">Yes, always</td>
+              <td class="dl-cell">No, works offline</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Price Per Document</td>
+              <td class="sub-cell">&pound;5+ per individual doc</td>
+              <td class="dl-cell">&pound;4.16 per doc in Pro Kit</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">UK/Ireland Compliance</td>
+              <td class="sub-cell">UK-focused only</td>
+              <td class="dl-cell">UK + Ireland (Safety Statement included)</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Vendor Lock-in</td>
+              <td class="sub-cell">High, proprietary format</td>
+              <td class="dl-cell">None, standard PDF + Word</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Matters -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-heading">Why This Matters for Your Business</h2>
+
+      <div class="matters-grid">
+        <div class="matters-box matters-box--red">
+          <h3>The Hidden Costs of H&amp;S Subscriptions</h3>
+          <ul>
+            <li>&pound;799/year means you&rsquo;ve spent &pound;3,995 after five years &mdash; for documents you still don&rsquo;t own</li>
+            <li>Cancel your subscription and lose access to every policy, risk assessment, and COSHH form</li>
+            <li>Generic templates still require hours of customisation to match your trade&rsquo;s actual hazards</li>
+            <li>Platform outages or vendor closure leave you without compliance documentation</li>
+            <li>Most subscriptions are UK-only &mdash; no Irish Safety Statement or SHWW Act 2005 coverage</li>
+          </ul>
+        </div>
+
+        <div class="matters-box matters-box--green">
+          <h3>The Download Advantage</h3>
+          <ul>
+            <li>One payment of &pound;49&ndash;&pound;79 and the documents are yours forever &mdash; no renewals, no logins</li>
+            <li>Trade-specific content pre-filled with real hazards, chemicals, and control measures for your trade</li>
+            <li>Edit freely in Word or Excel &mdash; add your logo, update staff names, tailor to your sites</li>
+            <li>Works offline from your laptop, tablet, or printed folder &mdash; ready for any inspection</li>
+            <li>Covers both UK (HSWA 1974, MHSWR 1999) and Irish (SHWW Act 2005) compliance in one kit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-World Scenarios -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-heading">Real-World Scenarios</h2>
+
+      <div class="scenarios-grid">
+        <div class="scenario-card">
+          <h3>Contract Tender</h3>
+          <p class="scenario-context">You need H&amp;S docs to win a council cleaning or landscaping contract.</p>
+          <p class="scenario-sub"><strong>Subscription:</strong> Pay &pound;799 for a year&rsquo;s access, then spend hours navigating generic templates to assemble the right documents before the deadline.</p>
+          <p class="scenario-dl"><strong>Download Kit:</strong> Purchase for &pound;79, download instantly, and submit trade-specific risk assessments, method statements, and policies &mdash; all pre-filled and audit-ready.</p>
+        </div>
+
+        <div class="scenario-card">
+          <h3>Insurance Renewal</h3>
+          <p class="scenario-context">Your insurer asks for evidence of H&amp;S compliance at renewal.</p>
+          <p class="scenario-sub"><strong>Subscription:</strong> Log in (if you remember the password), export documents in the platform&rsquo;s format, hope they&rsquo;re accepted by your broker.</p>
+          <p class="scenario-dl"><strong>Download Kit:</strong> Open the folder on your laptop, print or email your H&amp;S policy, risk assessments, and training records directly &mdash; standard PDF format every insurer accepts.</p>
+        </div>
+
+        <div class="scenario-card">
+          <h3>New Employee</h3>
+          <p class="scenario-context">You&rsquo;ve hired new staff and need to bring them up to speed on health &amp; safety.</p>
+          <p class="scenario-sub"><strong>Subscription:</strong> Pay for an additional user licence, create an account for the new starter, and walk them through the platform interface.</p>
+          <p class="scenario-dl"><strong>Download Kit:</strong> Print the induction checklist, hand over the training slides, and have them sign the acknowledgement form &mdash; no extra cost, no logins needed.</p>
+        </div>
+
+        <div class="scenario-card">
+          <h3>HSE Inspector Visit</h3>
+          <p class="scenario-context">An HSE inspector arrives unannounced and asks to see your documents.</p>
+          <p class="scenario-sub"><strong>Subscription:</strong> Hope you have internet access on site, log in to the platform, and try to find the right documents whilst the inspector waits.</p>
+          <p class="scenario-dl"><strong>Download Kit:</strong> Pull out your printed compliance folder or open the files on your phone &mdash; everything is organised, labelled, and ready to present immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Bottom Line -->
+  <section class="section">
+    <div class="container">
+      <div class="bottom-line-box">
+        <h2>The Bottom Line</h2>
+        <p class="bottom-line-lead">
+          Subscription H&amp;S platforms are designed for large organisations with dedicated compliance teams and big budgets.
+          For sole traders and small businesses, they&rsquo;re an expensive, over-engineered solution to a straightforward problem.
+        </p>
+        <p>
+          You don&rsquo;t need a &pound;799/year platform to comply with the Health and Safety at Work Act 1974 or the
+          Management of Health and Safety at Work Regulations 1999. You need the right documents, filled in correctly
+          for your trade, stored where you can access them any time. That&rsquo;s exactly what a one-time download kit provides &mdash;
+          at a fraction of the cost, with no strings attached.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container cta-container">
+      <a href="/free-sample/" class="cta-button">Try the No-Subscription Approach</a>
+      <p class="cta-subtext">Download our free sample to experience the difference &mdash; no signup, no credit card</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero-section {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb span[aria-hidden] {
+    margin: 0 0.35rem;
+    color: #9ca3af;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1.25rem;
+  }
+
+  .lead-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  /* Sections */
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section--alt {
+    background-color: #f9fafb;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Comparison Table */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #d1d5db;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .comparison-table thead tr {
+    background-color: #f3f4f6;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid #d1d5db;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .feature-col {
+    font-weight: 600;
+    color: #374151;
+    width: 22%;
+  }
+
+  .subscription-col {
+    font-weight: 600;
+    color: #dc2626;
+    width: 39%;
+  }
+
+  .download-col {
+    font-weight: 600;
+    color: #16a34a;
+    width: 39%;
+  }
+
+  .feature-cell {
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .sub-cell {
+    color: #dc2626;
+  }
+
+  .dl-cell {
+    color: #16a34a;
+  }
+
+  .comparison-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+
+  /* Why This Matters */
+  .matters-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .matters-box {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .matters-box--red {
+    background-color: #fef2f2;
+  }
+
+  .matters-box--red h3 {
+    color: #991b1b;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .matters-box--green {
+    background-color: #f0fdf4;
+  }
+
+  .matters-box--green h3 {
+    color: #166534;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .matters-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .matters-box li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.6rem;
+    color: #374151;
+    line-height: 1.55;
+    font-size: 0.95rem;
+  }
+
+  .matters-box li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .matters-box--red li::before {
+    color: #dc2626;
+  }
+
+  .matters-box--green li::before {
+    color: #16a34a;
+  }
+
+  /* Real-World Scenarios */
+  .scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .scenario-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .scenario-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .scenario-context {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .scenario-sub {
+    font-size: 0.9rem;
+    color: #991b1b;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .scenario-dl {
+    font-size: 0.9rem;
+    color: #166534;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Bottom Line */
+  .bottom-line-box {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border-left: 4px solid #2563eb;
+  }
+
+  .bottom-line-box h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-line-lead {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .bottom-line-box p:last-child {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding-bottom: 4rem;
+  }
+
+  .cta-container {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.85rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  .cta-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.03);
+  }
+
+  .cta-subtext {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.75rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    .section-heading {
+      font-size: 1.4rem;
+    }
+
+    .scenarios-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.65rem 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .feature-col,
+    .subscription-col,
+    .download-col {
+      width: auto;
+    }
+
+    .bottom-line-box {
+      padding: 1.25rem;
+    }
+  }
+</style>

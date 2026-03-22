@@ -47,9 +47,11 @@ const staticDates = {
   '/kits/dog-grooming/': '2026-03-21',
   '/free-sample/': '2026-03-21',
   '/about/': '2026-03-20',
-  '/faq/': '2026-03-20',
+  '/faq/': '2026-03-22',
   '/contact/': '2026-03-20',
   '/blog/': '2026-03-20',
+  '/compliance-checklist-2026/': '2026-03-22',
+  '/subscription-vs-download/': '2026-03-22',
 };
 
 // https://astro.build/config
@@ -61,6 +63,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/terms/') &&
         !page.includes('/privacy/') &&
+        !page.includes('/licensing/') &&
         // Exclude noindex tag pages (fewer than 2 posts)
         !(page.includes('/tags/') && (() => {
           const tagMatch = page.match(/\/tags\/([^/]+)\//);

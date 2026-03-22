@@ -1,0 +1,1121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteUrl = 'https://healthandsafetykits.com';
+const pageUrl = `${siteUrl}/compliance-checklist-2026/`;
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Achieve Health and Safety Compliance in 2026",
+  "description": "A step-by-step guide for UK and Ireland sole traders and small businesses to achieve full health and safety compliance in 2026.",
+  "totalTime": "PT60M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "GBP",
+    "value": "49"
+  },
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Health and Safety Kits Basic or Pro Kit"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Printer (optional)"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Create your H&S Policy",
+      "text": "Draft a written health and safety policy covering your general statement of intent, organisation responsibilities, and arrangements for managing risk. Required by law for employers with 5 or more employees under HSWA 1974 Section 2(3), and strongly recommended for all sole traders.",
+      "url": `${pageUrl}#section-policies`
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Complete risk assessments for your workplace",
+      "text": "Identify hazards, evaluate risks, and record the significant findings. Required under the Management of Health and Safety at Work Regulations 1999, Regulation 3. Include general, trade-specific, manual handling, and fire risk assessments.",
+      "url": `${pageUrl}#section-policies`
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Complete COSHH assessments for hazardous substances",
+      "text": "Assess all hazardous substances used in your business. Record the H-codes, GHS hazard data, control measures, PPE requirements, and emergency procedures for each substance. Required under the COSHH Regulations 2002.",
+      "url": `${pageUrl}#section-hazards`
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Set up accident reporting procedures",
+      "text": "Establish a clear procedure for recording workplace accidents, near-misses, and incidents. Ensure you understand RIDDOR reporting obligations for serious injuries, dangerous occurrences, and occupational diseases.",
+      "url": `${pageUrl}#section-training`
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Train staff on health and safety",
+      "text": "Provide health and safety induction training for all new staff and ongoing refresher training. Cover hazard awareness, safe working procedures, emergency procedures, and the use of PPE. Required under HSWA 1974 Section 2(2)(c).",
+      "url": `${pageUrl}#section-training`
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Schedule annual review",
+      "text": "Set a date to review all health and safety documents, risk assessments, and procedures at least annually or whenever there is a significant change. Demonstrates ongoing compliance and continuous improvement.",
+      "url": `${pageUrl}#section-training`
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do sole traders need health and safety documents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Health and Safety at Work Act 1974 (HSWA) applies to all employers and self-employed persons. Even if you have no employees, you have a legal duty to conduct your work in a way that does not put yourself or others at risk. Clients, insurers, and contract managers increasingly require documented evidence of compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to get compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With our pre-filled Health and Safety Kits, most sole traders and small businesses can achieve compliance in approximately 60 minutes. Each document is already populated with trade-specific hazards, control measures, and chemical safety data — you simply add your business details and review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What regulations apply to my small business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the UK, the primary regulations are the Health and Safety at Work Act 1974 (HSWA), the Management of Health and Safety at Work Regulations 1999 (MHSWR), and the Control of Substances Hazardous to Health Regulations 2002 (COSHH). In Ireland, the equivalent is the Safety, Health and Welfare at Work Act 2005 (SHWW Act 2005). Additional regulations may apply depending on your trade, such as the Manual Handling Operations Regulations 1992 and the Regulatory Reform (Fire Safety) Order 2005."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "2026 H&S Compliance Checklist", "item": pageUrl }
+  ]
+};
+---
+
+<BaseLayout
+  title="2026 H&S Compliance Checklist for Small Businesses"
+  description="The definitive 2026 health and safety compliance checklist for UK and Ireland sole traders and small businesses. Meet HSWA 1974 and MHSWR 1999 requirements in 60 minutes."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <!-- Hero -->
+  <section class="checklist-hero">
+    <div class="checklist-container">
+      <p class="hero-eyebrow">2026 Compliance Readiness Checklist</p>
+      <h1>The 2026 Health &amp; Safety Compliance Checklist for Small Businesses</h1>
+      <p class="hero-subtitle">
+        The complete, step-by-step checklist for UK &amp; Ireland sole traders and micro businesses.
+        Whether you&rsquo;re a cleaner, landscaper, beautician, or dog groomer &mdash; this is everything
+        you need to be fully compliant in 2026.
+      </p>
+
+      <div class="tldr-box">
+        <h3 class="tldr-title">TL;DR &mdash; The 3 Pillars of H&amp;S Compliance</h3>
+        <div class="tldr-grid">
+          <div>
+            <h4>Documented Policies</h4>
+            <ul>
+              <li>Health &amp; Safety Policy</li>
+              <li>General Risk Assessment</li>
+              <li>Trade-Specific Risk Assessment</li>
+              <li>Lone Working Policy</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hazard Management</h4>
+            <ul>
+              <li>COSHH Assessments</li>
+              <li>Manual Handling Assessment</li>
+              <li>PPE Requirements</li>
+              <li>Fire Risk Assessment</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Training &amp; Review</h4>
+            <ul>
+              <li>Staff Training &amp; Induction</li>
+              <li>Annual H&amp;S Review</li>
+              <li>Accident Reporting (RIDDOR)</li>
+              <li>Continuous Improvement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="/kits/" class="btn btn-primary btn-lg">Get Your H&amp;S Kit</a>
+        <a href="/free-sample/" class="btn btn-secondary btn-lg">Try Free Sample</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Policies & Documentation -->
+  <section class="section" id="section-policies">
+    <div class="checklist-container">
+      <h2>Section 1: Policies &amp; Documentation</h2>
+      <p class="section-intro">
+        Every business &mdash; regardless of size &mdash; needs a core set of documented policies and risk assessments.
+        These form the foundation of your health and safety management system.
+      </p>
+
+      <div class="checklist-cards">
+        <div class="checklist-card card-blue">
+          <div class="card-header">
+            <span class="card-number">1.1</span>
+            <h3>Health &amp; Safety Policy</h3>
+          </div>
+          <p>
+            A written statement of your commitment to health and safety, including your general statement of intent,
+            the organisation of responsibilities, and the arrangements you have in place to manage risk.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Required for 5+ employees</span>
+            <span class="card-tag tag-recommended">Good practice for all</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> HSWA 1974, Section 2(3) &mdash; employers with 5 or more employees must have a written policy.
+            Sole traders and smaller businesses are strongly advised to document one for client and insurance compliance.
+          </p>
+        </div>
+
+        <div class="checklist-card card-blue">
+          <div class="card-header">
+            <span class="card-number">1.2</span>
+            <h3>General Risk Assessment</h3>
+          </div>
+          <p>
+            Identify the hazards in your workplace, evaluate who might be harmed and how, and record the control measures
+            you have in place. This is the cornerstone of health and safety compliance.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> Management of Health and Safety at Work Regulations 1999 (MHSWR), Regulation 3 &mdash;
+            every employer and self-employed person must carry out a suitable and sufficient assessment of risks.
+          </p>
+        </div>
+
+        <div class="checklist-card card-blue">
+          <div class="card-header">
+            <span class="card-number">1.3</span>
+            <h3>Trade-Specific Risk Assessment</h3>
+          </div>
+          <p>
+            A risk assessment tailored to the specific hazards of your trade &mdash; cleaning operations, landscaping
+            equipment, beauty treatments, animal handling, or whatever your business involves. Generic templates
+            won&rsquo;t cover your actual risks.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Examples:</strong> Cleaning operations risk assessment, landscaping hazards assessment, beauty salon
+            treatment risks, dog grooming equipment and animal handling risks.
+          </p>
+        </div>
+
+        <div class="checklist-card card-blue">
+          <div class="card-header">
+            <span class="card-number">1.4</span>
+            <h3>Lone Working Policy</h3>
+          </div>
+          <p>
+            If you or your staff work alone &mdash; on client premises, at home, or in remote locations &mdash; you need
+            a lone working policy covering check-in procedures, emergency contacts, and risk mitigation measures.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-recommended">Essential for mobile/sole traders</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> MHSWR 1999, Regulation 3 &amp; HSE guidance on lone working &mdash; employers
+            must assess and manage risks to lone workers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Hazard Management -->
+  <section class="section section-alt" id="section-hazards">
+    <div class="checklist-container">
+      <h2>Section 2: Hazard Management</h2>
+      <p class="section-intro">
+        Beyond policies, you need to actively identify and control specific workplace hazards. These assessments
+        address the most common risks faced by small businesses and sole traders.
+      </p>
+
+      <div class="checklist-cards">
+        <div class="checklist-card card-green">
+          <div class="card-header">
+            <span class="card-number">2.1</span>
+            <h3>COSHH Assessments</h3>
+          </div>
+          <p>
+            If your business uses any hazardous substances &mdash; cleaning chemicals, pesticides, herbicides, salon
+            products, grooming solutions &mdash; you must assess each one. Record the H-codes, GHS hazard data,
+            control measures, PPE requirements, and emergency procedures.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> Control of Substances Hazardous to Health Regulations 2002 (COSHH) &mdash;
+            employers must assess the risks from hazardous substances and put controls in place to protect workers.
+          </p>
+        </div>
+
+        <div class="checklist-card card-green">
+          <div class="card-header">
+            <span class="card-number">2.2</span>
+            <h3>Manual Handling Assessment</h3>
+          </div>
+          <p>
+            If your work involves lifting, carrying, pushing, or pulling &mdash; even moving equipment between sites &mdash;
+            you need a manual handling assessment. This covers load weights, frequency, posture, and individual capability.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> Manual Handling Operations Regulations 1992 &mdash; employers must avoid hazardous
+            manual handling where reasonably practicable, assess remaining risks, and reduce risk of injury.
+          </p>
+        </div>
+
+        <div class="checklist-card card-green">
+          <div class="card-header">
+            <span class="card-number">2.3</span>
+            <h3>Slip, Trip &amp; Fall Assessment</h3>
+          </div>
+          <p>
+            Slips, trips, and falls are the single most common cause of workplace injury in the UK. Assess wet floors,
+            uneven surfaces, trailing cables, poor lighting, and access routes at every location you work.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-recommended">Most common workplace injury</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Note:</strong> HSE data shows slips, trips, and falls account for over 30% of all reported workplace
+            injuries. Essential for cleaners, landscapers, and any mobile trade.
+          </p>
+        </div>
+
+        <div class="checklist-card card-green">
+          <div class="card-header">
+            <span class="card-number">2.4</span>
+            <h3>Fire Risk Assessment</h3>
+          </div>
+          <p>
+            If you have business premises &mdash; even a small salon, studio, or workshop &mdash; you must carry out
+            a fire risk assessment. This covers ignition sources, fuel sources, escape routes, fire detection, and
+            emergency procedures.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> Regulatory Reform (Fire Safety) Order 2005 &mdash; the responsible person
+            (usually the employer or premises occupier) must carry out and review a fire risk assessment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Training & Operational Readiness -->
+  <section class="section" id="section-training">
+    <div class="checklist-container">
+      <h2>Section 3: Training &amp; Operational Readiness</h2>
+      <p class="section-intro">
+        Compliance isn&rsquo;t just about paperwork. You need to ensure your staff are trained, incidents are
+        reported, and your documents are reviewed regularly.
+      </p>
+
+      <div class="checklist-cards">
+        <div class="checklist-card card-purple">
+          <div class="card-header">
+            <span class="card-number">3.1</span>
+            <h3>Staff Induction &amp; Training</h3>
+          </div>
+          <p>
+            Every employee must receive adequate health and safety training &mdash; at induction, when exposed to new
+            risks, and at regular intervals. Training should cover hazard awareness, safe working procedures,
+            emergency procedures, and PPE use.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> HSWA 1974, Section 2(2)(c) &mdash; employers must provide such information,
+            instruction, training, and supervision as is necessary to ensure, so far as is reasonably practicable,
+            the health and safety of employees.
+          </p>
+        </div>
+
+        <div class="checklist-card card-purple">
+          <div class="card-header">
+            <span class="card-number">3.2</span>
+            <h3>Accident Reporting &amp; RIDDOR</h3>
+          </div>
+          <p>
+            You must keep a record of all workplace accidents, near-misses, and incidents. Certain serious events &mdash;
+            fractures, amputations, dangerous occurrences &mdash; must be reported to the HSE under RIDDOR within
+            specified timeframes.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-required">Legal requirement</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Regulation:</strong> Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013
+            (RIDDOR) &mdash; failure to report is a criminal offence.
+          </p>
+        </div>
+
+        <div class="checklist-card card-purple">
+          <div class="card-header">
+            <span class="card-number">3.3</span>
+            <h3>Annual H&amp;S Review</h3>
+          </div>
+          <p>
+            Review all health and safety policies, risk assessments, and procedures at least once per year &mdash; or
+            whenever there is a significant change to your work activities, premises, or staff. Document the review
+            and any actions taken.
+          </p>
+          <div class="card-meta">
+            <span class="card-tag tag-recommended">Best practice &mdash; demonstrates ongoing compliance</span>
+          </div>
+          <p class="card-regulation">
+            <strong>Note:</strong> Regular review is a key indicator of a proactive safety culture. Inspectors, insurers,
+            and clients look for evidence that your documents are current and actively maintained.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="section section-alt">
+    <div class="checklist-container">
+      <div class="social-proof-box">
+        <h2>Join Hundreds of Small Businesses Getting Compliant in 2026</h2>
+        <p>
+          From sole-trader cleaners to mobile beauticians and landscaping crews &mdash; small businesses across the
+          UK and Ireland are using our kits to meet their legal obligations quickly, affordably, and without consultants.
+        </p>
+        <div class="proof-stats">
+          <div class="proof-stat">
+            <span class="proof-number">60 min</span>
+            <span class="proof-label">Average time to compliance</span>
+          </div>
+          <div class="proof-stat">
+            <span class="proof-number">&pound;49</span>
+            <span class="proof-label">Starting price per kit</span>
+          </div>
+          <div class="proof-stat">
+            <span class="proof-number">19</span>
+            <span class="proof-label">Documents per kit</span>
+          </div>
+          <div class="proof-stat">
+            <span class="proof-number">4</span>
+            <span class="proof-label">Trade-specific kits available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section">
+    <div class="checklist-container">
+      <h2 class="text-center">Small Business vs Enterprise: The Compliance Cost Gap</h2>
+      <p class="section-intro text-center">
+        You don&rsquo;t need enterprise budgets to achieve compliance. Here&rsquo;s how our kits compare to
+        traditional approaches.
+      </p>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Compliance Area</th>
+              <th>Traditional / Enterprise</th>
+              <th>Health &amp; Safety Kits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Documentation</strong><br /><span class="table-detail">Policies, risk assessments, procedures</span></td>
+              <td class="table-expensive">&pound;2,000+ consultant</td>
+              <td class="table-value">&pound;49&ndash;&pound;79 kit</td>
+            </tr>
+            <tr>
+              <td><strong>Training</strong><br /><span class="table-detail">Staff induction and awareness</span></td>
+              <td class="table-expensive">External trainer &pound;500+/day</td>
+              <td class="table-value">Included slides + quiz</td>
+            </tr>
+            <tr>
+              <td><strong>COSHH</strong><br /><span class="table-detail">Hazardous substance assessments</span></td>
+              <td class="table-expensive">Specialist assessment &pound;300+</td>
+              <td class="table-value">Pre-filled assessments included</td>
+            </tr>
+            <tr>
+              <td><strong>Ongoing Compliance</strong><br /><span class="table-detail">Annual review and updates</span></td>
+              <td class="table-expensive">Annual consultant visit &pound;1,000+</td>
+              <td class="table-value">Self-service annual review checklist</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert Quote -->
+  <section class="section section-alt">
+    <div class="checklist-container">
+      <blockquote class="expert-quote">
+        <p>
+          &ldquo;There is a significant compliance gap for small businesses and sole traders. They have the same legal
+          obligations as larger companies, but without the budgets, HR departments, or in-house safety teams.
+          The result is that many operate without basic risk assessments or policies &mdash; not because they
+          don&rsquo;t care, but because they don&rsquo;t know where to start or can&rsquo;t afford a consultant.
+          Pre-filled, trade-specific kits close that gap.&rdquo;
+        </p>
+        <cite>&mdash; Health &amp; Safety Compliance Specialist, Health and Safety Kits</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="checklist-container text-center">
+      <h2>Get Everything You Need in One Download</h2>
+      <p>
+        Every policy, risk assessment, COSHH assessment, training slide, and checklist &mdash; pre-filled for your
+        trade and ready to use. One-time purchase. No subscriptions. Yours forever.
+      </p>
+      <div class="cta-buttons">
+        <a href="/kits/" class="btn btn-primary btn-lg">View All Kits &mdash; From &pound;49</a>
+        <a href="/free-sample/" class="btn btn-ghost btn-lg">Try Free Sample First</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Checklist Matters -->
+  <section class="section">
+    <div class="checklist-container">
+      <h2>Why This Checklist Matters</h2>
+      <div class="why-grid">
+        <div class="why-content">
+          <p>
+            Health and safety compliance isn&rsquo;t optional &mdash; it&rsquo;s a legal requirement for every business
+            in the UK and Ireland, regardless of size. The Health and Safety at Work Act 1974 applies to employers,
+            self-employed persons, and anyone who controls work premises.
+          </p>
+          <p>
+            Yet most sole traders and micro businesses operate without proper documentation. Not because they&rsquo;re
+            negligent, but because the system is designed for enterprises with compliance teams and consultant budgets.
+          </p>
+          <p>
+            This checklist exists to level the playing field. It gives you a clear, actionable path from
+            &ldquo;I don&rsquo;t know where to start&rdquo; to &ldquo;I&rsquo;m fully compliant&rdquo; &mdash;
+            in 60 minutes, for under &pound;80.
+          </p>
+          <h3>The consequences of non-compliance include:</h3>
+          <ul>
+            <li>HSE enforcement notices and prosecution (fines up to &pound;20,000 in magistrates&rsquo; court, unlimited in Crown Court)</li>
+            <li>Losing contracts &mdash; clients increasingly require documented H&amp;S compliance</li>
+            <li>Insurance claims being rejected if you cannot evidence your safety arrangements</li>
+            <li>Personal liability for sole traders and directors</li>
+            <li>Reputational damage following a workplace incident</li>
+          </ul>
+          <p>
+            Whether you&rsquo;re tendering for a cleaning contract, renewing your public liability insurance, or
+            simply want peace of mind &mdash; this checklist and our kits have you covered.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt">
+    <div class="checklist-container" style="max-width: 750px;">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do sole traders need health and safety documents?</summary>
+          <p>
+            Yes. The Health and Safety at Work Act 1974 (HSWA) applies to all employers and self-employed persons.
+            Even if you have no employees, you have a legal duty to conduct your work in a way that does not put
+            yourself or others at risk. Clients, insurers, and contract managers increasingly require documented
+            evidence of compliance.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to get compliant?</summary>
+          <p>
+            With our pre-filled Health and Safety Kits, most sole traders and small businesses can achieve compliance
+            in approximately 60 minutes. Each document is already populated with trade-specific hazards, control
+            measures, and chemical safety data &mdash; you simply add your business details and review.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>What regulations apply to my small business?</summary>
+          <p>
+            In the UK, the primary regulations are the Health and Safety at Work Act 1974 (HSWA), the Management of
+            Health and Safety at Work Regulations 1999 (MHSWR), and the Control of Substances Hazardous to Health
+            Regulations 2002 (COSHH). In Ireland, the equivalent is the Safety, Health and Welfare at Work Act 2005
+            (SHWW Act 2005). Additional regulations may apply depending on your trade, such as the Manual Handling
+            Operations Regulations 1992 and the Regulatory Reform (Fire Safety) Order 2005.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Checklist page container */
+  .checklist-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero */
+  .checklist-hero {
+    background: #eff6ff;
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+
+  .checklist-hero .hero-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .checklist-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .checklist-hero .hero-subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    line-height: 1.65;
+  }
+
+  .checklist-hero .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /* TL;DR Box */
+  .tldr-box {
+    background: #fff;
+    border-left: 4px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    max-width: 780px;
+    margin: 0 auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .tldr-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .tldr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tldr-grid h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+  }
+
+  .tldr-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tldr-grid li {
+    margin-bottom: 0.25rem;
+    color: #374151;
+  }
+
+  .tldr-grid li::before {
+    content: '✓ ';
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  /* Button overrides */
+  .btn-lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    text-decoration: none;
+  }
+
+  /* Section styling */
+  .section-alt {
+    background: #f9fafb;
+  }
+
+  .section-intro {
+    max-width: 720px;
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .section-intro.text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Checklist Cards */
+  .checklist-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .checklist-card {
+    background: #fff;
+    padding: 1.5rem 1.75rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-blue {
+    border-left: 4px solid #2563eb;
+  }
+
+  .card-green {
+    border-left: 4px solid #16a34a;
+  }
+
+  .card-purple {
+    border-left: 4px solid #7c3aed;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .card-blue .card-number {
+    background: #2563eb;
+  }
+
+  .card-green .card-number {
+    background: #16a34a;
+  }
+
+  .card-purple .card-number {
+    background: #7c3aed;
+  }
+
+  .card-header h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+    color: #1a1a1a;
+  }
+
+  .checklist-card > p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .tag-required {
+    background: #fef2f2;
+    color: #dc2626;
+  }
+
+  .tag-recommended {
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .card-regulation {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.55;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f3f4f6;
+  }
+
+  /* Social Proof Box */
+  .social-proof-box {
+    text-align: center;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+  }
+
+  .social-proof-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .social-proof-box > p {
+    color: #4b5563;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .proof-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .proof-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .proof-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #2563eb;
+    line-height: 1.2;
+  }
+
+  .proof-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+  }
+
+  /* Comparison Table */
+  .comparison-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.925rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .comparison-table th {
+    font-weight: 600;
+    background: #f9fafb;
+    font-size: 0.9rem;
+  }
+
+  .comparison-table td {
+    vertical-align: top;
+  }
+
+  .table-detail {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-weight: 400;
+  }
+
+  .table-expensive {
+    color: #dc2626;
+    font-weight: 500;
+  }
+
+  .table-value {
+    color: #16a34a;
+    font-weight: 600;
+    background: #f0fdf4;
+  }
+
+  /* Expert Quote */
+  .expert-quote {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    border-left: 4px solid #2563eb;
+    border-radius: 0 0.75rem 0.75rem 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .expert-quote p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .expert-quote cite {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: normal;
+    display: block;
+    font-weight: 600;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff;
+    padding: 4rem 0;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    color: #dbeafe;
+    max-width: 600px;
+    margin: 0 auto 1.75rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Why This Checklist Matters */
+  .why-grid {
+    margin-top: 1rem;
+  }
+
+  .why-content p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .why-content h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .why-content ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .why-content li {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.35rem;
+  }
+
+  /* FAQ */
+  .faq-list {
+    margin-top: 2rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-item[open] summary::after { content: '\2212'; }
+
+  .faq-item summary:hover {
+    color: #2563eb;
+  }
+
+  .faq-item p {
+    margin-top: 0.75rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .checklist-hero {
+      padding: 3rem 0 2rem;
+    }
+
+    .checklist-hero h1 {
+      font-size: 1.75rem;
+    }
+
+    .checklist-hero .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .tldr-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .proof-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comparison-table {
+      font-size: 0.8rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem;
+    }
+
+    .expert-quote {
+      padding: 1.5rem;
+    }
+
+    .btn-lg {
+      width: 100%;
+      text-align: center;
+    }
+
+    .social-proof-box {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .proof-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

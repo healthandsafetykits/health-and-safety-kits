@@ -7,9 +7,13 @@
 /contact        /contact/       301
 /terms          /terms/         301
 /privacy        /privacy/       301
+/licensing      /licensing/     301
+/compliance-checklist-2026  /compliance-checklist-2026/  301
+/subscription-vs-download   /subscription-vs-download/   301
 
 # URL aliases
 /compare        /kits/          301
 /pricing        /kits/          301
 /sample         /free-sample/   301
 /free           /free-sample/   301
+/checklist      /compliance-checklist-2026/  301

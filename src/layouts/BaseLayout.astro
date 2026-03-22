@@ -42,7 +42,7 @@ const orgSchema = {
   "url": siteUrl,
   "logo": {
     "@type": "ImageObject",
-    "url": `${siteUrl}/images/healthandsafetykits-og.png`,
+    "url": `${siteUrl}/images/healthandsafetykits-logo.png`,
     "width": 224,
     "height": 112,
   },
@@ -142,7 +142,9 @@ const websiteSchema = {
     {ogType === 'article' && tags.length > 0 && tags.map(tag => <meta property="article:tag" content={tag} />)}
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Health and Safety Kits Blog" href="/rss.xml" />
 

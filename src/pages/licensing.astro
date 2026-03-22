@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteUrl = 'https://healthandsafetykits.com';
+
+const faqs = [
+  {
+    q: 'Can I use one kit for all my staff?',
+    a: 'Yes. A single licence covers your entire business entity, including all employees and workers operating under that business name.',
+  },
+  {
+    q: 'Do I need a separate licence for each business?',
+    a: 'Yes. Each kit is licensed per business entity. If you trade under multiple names or run separate businesses, each one requires its own licence.',
+  },
+  {
+    q: 'Can consultants use these for their clients?',
+    a: 'Yes, but one kit is needed per client business. Health and safety consultants should purchase a separate kit for each client they are setting up compliance for. Contact us about volume bundles.',
+  },
+  {
+    q: 'Can I edit the documents?',
+    a: 'Yes. Pro Kits include editable Word and Excel files specifically designed to be customised. You can add your logo, business name, and tailor the content to your operations.',
+  },
+  {
+    q: 'What is not allowed under the licence?',
+    a: 'You may not resell, redistribute, upload to public platforms, or repackage the kit contents into other products. The materials are for internal use by the licensed business only.',
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": a,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "Licensing", "item": `${siteUrl}/licensing/` },
+  ],
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Licensing — Health and Safety Kits",
+  "url": `${siteUrl}/licensing/`,
+  "description": "Licence terms for Health and Safety Kits compliance documents. Covers single-business use, multi-business licensing, consultant use, and permitted modifications.",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".licensing-intro"],
+  },
+};
+---
+
+<BaseLayout
+  title="Licensing"
+  description="Licence terms for Health and Safety Kits compliance documents. Covers single-business use, multi-business licensing, consultant use, and permitted modifications."
+  robots="noindex"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} slot="head" />
+
+  <section class="section">
+    <div class="container" style="max-width: 700px;">
+      <h1 class="text-center">Licensing</h1>
+      <p><em>Last updated: March 2026</em></p>
+
+      <p class="licensing-intro">
+        All <a href="/kits/">Health and Safety Kits</a> are sold as downloadable digital products
+        (PDF and Word files) delivered via Gumroad. This page explains how you may use the materials
+        once purchased. If you have any questions, please <a href="/contact/">get in touch</a>.
+      </p>
+
+      <!-- 1. Internal Use Licence -->
+      <div class="licence-section">
+        <h2>1. Internal Use Licence</h2>
+        <p>
+          A one-time purchase grants you a <strong>perpetual licence</strong> to use the kit within
+          a <strong>single business entity</strong>. There are no subscriptions, renewals, or recurring
+          fees. Once purchased, the documents are yours to use for as long as your business operates.
+        </p>
+        <ul>
+          <li>Print, distribute, and display the documents within your organisation.</li>
+          <li>Customise documents with your business name, logo, and operational details.</li>
+          <li>Share with employees, contractors, and workers operating under your business.</li>
+        </ul>
+        <p>
+          The licence does not permit redistribution outside your business, public posting, or sharing
+          with other organisations. See <a href="#not-permitted">What's Not Permitted</a> below.
+        </p>
+      </div>
+
+      <!-- 2. Multi-Business Use -->
+      <div class="licence-section">
+        <h2>2. Multi-Business Use</h2>
+        <p>
+          If you operate <strong>multiple businesses</strong> or trade under different names, you need
+          a <strong>separate licence for each business entity</strong>. Each kit is tied to one business —
+          even if the same person owns both.
+        </p>
+        <p>
+          For example, if you run a cleaning company and a separate landscaping business, you would
+          need a <a href="/kits/">kit for each trade</a>. This ensures every business has its own
+          properly branded, trade-specific compliance documents.
+        </p>
+      </div>
+
+      <!-- 3. Consultant & Advisor Use -->
+      <div class="licence-section">
+        <h2>3. Consultant &amp; Advisor Use</h2>
+        <p>
+          Health and safety consultants, business advisors, and compliance specialists who help
+          clients set up their H&amp;S documentation should <strong>purchase one kit per client
+          business</strong>. You may not use a single kit across multiple client organisations.
+        </p>
+        <p>
+          We offer <strong>volume bundles on request</strong> for consultants working with multiple
+          clients. Please <a href="/contact/">contact us</a> with details of your requirements and
+          we will provide a tailored quote.
+        </p>
+      </div>
+
+      <!-- 4. Educational & Training Use -->
+      <div class="licence-section">
+        <h2>4. Educational &amp; Training Use</h2>
+        <p>
+          Training providers, colleges, and course creators who wish to use our materials in
+          <strong>classroom or online course settings</strong> should contact us to discuss
+          licensing terms. Standard single-business licences do not cover educational distribution.
+        </p>
+        <p>
+          Email <a href="mailto:info@healthandsafetykits.com">info@healthandsafetykits.com</a> with
+          details of your institution, course, and expected student numbers, and we will work out
+          appropriate terms.
+        </p>
+      </div>
+
+      <!-- 5. Modifications & Customisation -->
+      <div class="licence-section">
+        <h2>5. Modifications &amp; Customisation</h2>
+        <p>
+          Pro Kit Word and Excel files are <strong>specifically designed to be edited</strong>.
+          You are encouraged to customise the documents to reflect your business operations.
+          Permitted modifications include:
+        </p>
+        <ul>
+          <li>Adding your business name, logo, and branding.</li>
+          <li>Inserting employee names, site addresses, and operational details.</li>
+          <li>Adjusting risk assessments and COSHH entries for your specific products and processes.</li>
+          <li>Removing sections that are not applicable to your operations.</li>
+        </ul>
+        <p>
+          <strong>No attribution is required.</strong> The finished documents are yours to present as
+          your own business paperwork. Want editable files? Make sure you choose the
+          <a href="/kits/">Pro Kit</a> for your trade.
+        </p>
+      </div>
+
+      <!-- 6. What's Not Permitted -->
+      <div class="licence-section" id="not-permitted">
+        <h2>6. What's Not Permitted</h2>
+        <p>To keep things fair for everyone, the following uses are <strong>not allowed</strong>:</p>
+        <ul>
+          <li><strong>Resale</strong> — You may not sell the documents or any derivative of them.</li>
+          <li><strong>Redistribution</strong> — You may not share the files with other businesses, freelancers, or individuals outside your licensed entity.</li>
+          <li><strong>Public posting</strong> — You may not upload the documents to public websites, forums, file-sharing platforms, or social media.</li>
+          <li><strong>Repackaging</strong> — You may not incorporate the materials into another product, course, or template pack for distribution or sale.</li>
+        </ul>
+        <p>
+          If you are unsure whether your intended use is permitted, please
+          <a href="/contact/">contact us</a> and we will be happy to clarify.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="licence-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          {faqs.map(({ q, a }) => (
+            <details class="faq-item">
+              <summary>{q}</summary>
+              <p>{a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      <!-- Related Links -->
+      <div class="licence-section related-links">
+        <h2>Related Pages</h2>
+        <ul>
+          <li><a href="/kits/">Browse All Kits</a></li>
+          <li><a href="/free-sample/">Download a Free Sample</a></li>
+          <li><a href="/faq/">General FAQ</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .licensing-intro {
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .licence-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .licence-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+  }
+
+  .licence-section p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .licence-section ul {
+    margin: 0.75rem 0 1rem 1.5rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  .licence-section li {
+    margin-bottom: 0.35rem;
+  }
+
+  .licence-section a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .licence-section a:hover {
+    color: #1d4ed8;
+  }
+
+  /* FAQ within licensing page */
+  .faq-list {
+    margin-top: 1rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+
+  .faq-item summary:hover {
+    color: #2563eb;
+  }
+
+  .faq-item p {
+    margin-top: 0.75rem;
+    color: #6b7280;
+  }
+
+  /* Related links */
+  .related-links ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .related-links li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .related-links li:last-child {
+    border-bottom: none;
+  }
+
+  .related-links a {
+    font-weight: 500;
+  }
+</style>
