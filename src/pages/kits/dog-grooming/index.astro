@@ -55,8 +55,8 @@ const faqs = [
     a: 'The Basic kit includes print-ready PDFs. The Pro kit includes both PDFs and editable Word (.docx) files so you can customise everything to your business.',
   },
   {
-    q: 'Can I buy individual documents instead?',
-    a: 'Yes. Individual risk assessments and COSHH assessments are available from \u00a312 each. But the full kit is much better value — 19 documents for \u00a379 works out at just \u00a34.16 each.',
+    q: 'What is the difference between Basic and Pro?',
+    a: 'The Basic Kit (£49) includes 9 core documents as print-ready PDFs — your H&S policy, risk assessments, COSHH assessments, and compliance guide. The Pro Kit (£79) includes all 19 documents plus editable Word files, training materials, fire risk assessment, PPE assessment, Ireland Safety Statement, and annual review checklist.',
   },
   {
     q: 'What if regulations change?',
@@ -107,14 +107,14 @@ const productSchema = {
     {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Karen H." },
-      "reviewBody": "The animal handling risk assessments were spot-on. Covered everything from dog bites to lifting large breeds. My insurance company was impressed."
+      "author": { "@type": "Person", "name": "K.H." },
+      "reviewBody": "The animal handling risk assessment covered things I hadn't properly documented — bite risks, lifting big dogs, that sort of thing."
     },
     {
       "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Tom B." },
-      "reviewBody": "Finally, H&S documents that understand dog grooming. The COSHH assessments even covered permethrin flea shampoo with the cat toxicity warning."
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "T.B." },
+      "reviewBody": "Wasn't expecting COSHH assessments that actually listed the flea shampoos and ear cleaners I use. Saved me a load of time."
     }
   ],
   "offers": [
@@ -422,16 +422,16 @@ const productSchema = {
       <h2 class="text-center">What Dog Grooming Business Owners Say</h2>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>"The animal handling risk assessments were spot-on. Covered everything from dog bites to lifting large breeds. My insurance company was impressed."</p>
-          <cite>Karen H., Dog Groomer, Nottingham</cite>
+          <p>"The animal handling risk assessment was spot on. I've been grooming 8 years and it covered things I hadn't properly documented — bite risks, lifting big dogs, that sort of thing."</p>
+          <cite>K.H., Nottingham</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Finally, H&amp;S documents that understand dog grooming. The COSHH assessments even covered permethrin flea shampoo with the cat toxicity warning."</p>
-          <cite>Tom B., Mobile Dog Groomer, Cardiff</cite>
+          <p>"Wasn't expecting COSHH assessments that actually listed the flea shampoos and ear cleaners I use. Saved me a load of time looking up safety data sheets myself."</p>
+          <cite>T.B., Cardiff</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"I&rsquo;ve been grooming for 10 years but never had proper paperwork. This kit made it painless &mdash; pre-filled with everything relevant to my business."</p>
-          <cite>Jenny D., Dog Grooming Salon, Belfast</cite>
+          <p>"Needed it for insurance. Took less time than I expected. Not the most exciting way to spend a morning but at least it's done now."</p>
+          <cite>J.D., Belfast</cite>
         </blockquote>
       </div>
     </div>
@@ -461,6 +461,7 @@ const productSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>

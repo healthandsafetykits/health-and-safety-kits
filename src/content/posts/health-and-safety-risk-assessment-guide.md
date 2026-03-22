@@ -6,6 +6,21 @@ dateModified: 2026-03-21
 tags: ["risk-assessment", "compliance"]
 featured: true
 excerpt: "Everything you need to know about conducting risk assessments for your small business — the legal requirements, the 5-step HSE process, and how to avoid common mistakes."
+howTo:
+  name: "How to Complete a Health and Safety Risk Assessment"
+  description: "Follow the HSE 5-step process to identify workplace hazards, assess risks, and document control measures for your business."
+  totalTime: "PT2H"
+  steps:
+    - name: "Identify the hazards"
+      text: "Walk through your workplace and list everything that could cause harm. Check manufacturer instructions, review accident records, and consider chemical, physical, biological, ergonomic, and environmental hazards specific to your trade."
+    - name: "Decide who might be harmed and how"
+      text: "For each hazard, identify who is at risk — employees, contractors, visitors, or members of the public. Note how they could be harmed, whether through direct contact, inhalation, repetitive exposure, or environmental factors."
+    - name: "Evaluate the risks and decide on precautions"
+      text: "Assess the likelihood and severity of each risk. Apply the hierarchy of controls: eliminate the hazard, substitute with something safer, use engineering controls, implement administrative controls, and provide PPE as a last resort."
+    - name: "Record your findings and implement them"
+      text: "Document each hazard, who is affected, existing controls, and any additional actions needed. Assign responsibility and deadlines for each action. If you have 5 or more employees, this written record is a legal requirement."
+    - name: "Review and update your assessment"
+      text: "Review your risk assessment at least annually, or whenever there is a significant change — new equipment, new premises, new chemicals, or after an accident or near miss. Update the document and communicate changes to all affected staff."
 ---
 
 > **Key Takeaways**

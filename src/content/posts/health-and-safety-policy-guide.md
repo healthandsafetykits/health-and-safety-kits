@@ -6,6 +6,23 @@ dateModified: 2026-03-21
 tags: ["policy", "compliance"]
 featured: true
 excerpt: "Your health and safety policy is the foundation of your compliance. Here's how to write one that actually protects your business — without hiring a consultant."
+howTo:
+  name: "How to Write a Health and Safety Policy"
+  description: "Step-by-step guide to writing a compliant health and safety policy for your business, covering the three mandatory parts required under UK and Irish law."
+  totalTime: "PT1H30M"
+  steps:
+    - name: "Assess your business activities and hazards"
+      text: "Before writing your policy, review your workplace activities, identify the main hazards, and understand your legal obligations. This ensures your policy addresses the specific risks relevant to your trade rather than being a generic document."
+    - name: "Write the general policy statement"
+      text: "Draft a signed statement from the business owner or senior manager committing to health and safety. Include your overall aims, confirm your commitment to complying with the Health and Safety at Work Act 1974, and sign and date the statement."
+    - name: "Define the organisation of responsibilities"
+      text: "Set out who is responsible for what. Name the person with overall responsibility (usually the owner), and assign specific duties such as risk assessments, training, first aid, fire safety, and accident reporting to named individuals or roles."
+    - name: "Document your arrangements"
+      text: "Describe the practical systems you have in place: how risk assessments are conducted, fire procedures, first aid provision, accident reporting, training arrangements, PPE provision, and how you consult employees on health and safety matters."
+    - name: "Communicate the policy to all staff"
+      text: "Share the policy with every employee and ensure they understand it. For businesses with 5 or more employees, the policy must be in writing. Display it where staff can access it and include it in induction training for new starters."
+    - name: "Review annually or after significant changes"
+      text: "Review your policy at least once a year. Update it whenever there are significant changes to your business — new premises, new equipment, new activities, staff changes, or after an accident or near miss. Re-sign and re-date the policy statement after each review."
 ---
 
 > **TL;DR — Key Takeaways**

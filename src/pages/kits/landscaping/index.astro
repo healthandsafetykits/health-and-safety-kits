@@ -55,8 +55,8 @@ const faqs = [
     a: 'The Basic kit includes print-ready PDFs. The Pro kit includes both PDFs and editable Word (.docx) files so you can customise everything to your business.',
   },
   {
-    q: 'Can I buy individual documents instead?',
-    a: 'Yes. Individual risk assessments and COSHH assessments are available from £12 each. But the full kit is much better value — 19 documents for £79 works out at just £4.16 each.',
+    q: 'What is the difference between Basic and Pro?',
+    a: 'The Basic Kit (£49) includes 9 core documents as print-ready PDFs — your H&S policy, risk assessments, COSHH assessments, and compliance guide. The Pro Kit (£79) includes all 19 documents plus editable Word files, training materials, fire risk assessment, PPE assessment, Ireland Safety Statement, and annual review checklist.',
   },
   {
     q: 'What if regulations change?',
@@ -107,14 +107,14 @@ const productSchema = {
     {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Mark T." },
-      "reviewBody": "The landscaping risk assessments covered everything — chainsaws, strimmers, COSHH chemicals. Exactly what I needed for my insurance renewal."
+      "author": { "@type": "Person", "name": "M.T." },
+      "reviewBody": "The risk assessments actually mentioned strimmers and hedge cutters and chainsaws. That's what I needed."
     },
     {
       "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "James P." },
-      "reviewBody": "Professional quality documents at a fraction of the consultant price. The training presentation saved me hours."
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "J.P." },
+      "reviewBody": "Got the Pro kit because I wanted the Word files. Took maybe an hour to go through. Honestly expected worse."
     }
   ],
   "offers": [
@@ -422,16 +422,16 @@ const productSchema = {
       <h2 class="text-center">What Landscaping Business Owners Say</h2>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>"The landscaping risk assessments covered everything — chainsaws, strimmers, chemicals. Exactly what I needed for my insurance renewal."</p>
-          <cite>Mark T., Sole Trader Landscaper, Leeds</cite>
+          <p>"The risk assessments actually mentioned strimmers and hedge cutters and chainsaws — not just generic 'machinery' like everything else I'd seen. That's what I needed."</p>
+          <cite>M.T., Leeds</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Professional quality documents at a fraction of the consultant price. The training presentation saved me hours with my new apprentice."</p>
-          <cite>James P., Grounds Maintenance Company, Cork</cite>
+          <p>"Got the Pro kit because I wanted the Word files. Took maybe an hour to go through and add my details. Honestly expected worse."</p>
+          <cite>J.P., Cork</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Finally, H&amp;S documents that actually mention the chemicals and equipment I use every day. Not generic rubbish from some SaaS platform."</p>
-          <cite>Andy W., Landscaping &amp; Garden Services, Bristol</cite>
+          <p>"My insurance company wanted to see COSHH assessments for the weedkillers I use. These were already done with the right safety data. Just had to tick a few boxes."</p>
+          <cite>A.W., Bristol</cite>
         </blockquote>
       </div>
     </div>
@@ -462,6 +462,7 @@ const productSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>

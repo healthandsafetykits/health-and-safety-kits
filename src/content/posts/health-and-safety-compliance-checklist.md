@@ -6,6 +6,23 @@ dateModified: 2026-03-14
 tags: ["compliance", "risk-assessment"]
 featured: false
 excerpt: "Not sure what health and safety documents your business actually needs? This checklist covers every legal requirement for UK and Ireland small businesses."
+howTo:
+  name: "How to Check Your Health and Safety Compliance"
+  description: "Use this checklist to verify your small business meets all UK and Irish health and safety legal requirements, from risk assessments to insurance."
+  totalTime: "PT1H"
+  steps:
+    - name: "Confirm you have a health and safety policy or safety statement"
+      text: "UK businesses with 5 or more employees must have a written health and safety policy. All Irish employers must have a written safety statement regardless of size. Sole traders without employees are not legally required to have one, but clients and insurers often expect it."
+    - name: "Complete your risk assessments"
+      text: "Carry out a general workplace risk assessment and any trade-specific assessments relevant to your activities. If you have 5 or more employees, the significant findings must be recorded in writing. Review and update assessments annually or after any significant change."
+    - name: "Complete COSHH assessments for all hazardous substances"
+      text: "If your work involves any hazardous substances — chemicals, dust, fumes, or biological agents — you must carry out a COSHH assessment for each one. Document the hazards, who is exposed, control measures, PPE requirements, and emergency procedures."
+    - name: "Ensure fire safety and emergency procedures are in place"
+      text: "Complete a fire risk assessment, install appropriate fire detection and extinguishing equipment, establish evacuation procedures, and designate fire marshals if applicable. Display emergency procedure notices where staff and visitors can see them."
+    - name: "Set up accident reporting and first aid"
+      text: "Maintain an accident book or incident log. Ensure you have adequate first aid provision for your workplace. Know your RIDDOR reporting obligations for serious injuries, diseases, and dangerous occurrences."
+    - name: "Verify insurance and training records"
+      text: "If you employ staff in the UK, you must have employers' liability insurance of at least £5 million. Maintain records of all health and safety training provided to employees. Display the Health and Safety Law poster where staff can see it."
 ---
 
 > **TL;DR:** If you run a small business in the UK or Ireland, you are legally required to manage health and safety. At a minimum, you need risk assessments, a health and safety policy (or safety statement in Ireland), fire safety provisions, an accident reporting process, first aid arrangements, and employers' liability insurance (UK, if you have employees). The exact requirements depend on your business size, sector, and whether you employ staff. This checklist walks you through every item so you know precisely where you stand.

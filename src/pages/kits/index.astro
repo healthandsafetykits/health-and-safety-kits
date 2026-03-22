@@ -242,37 +242,6 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- Individual Documents -->
-  <section class="section">
-    <div class="container text-center">
-      <h2>Just Need One Document?</h2>
-      <p class="section-subtitle">
-        Buy individual documents from &pound;12 each. Same professional quality, same pre-filled trade-specific content.
-      </p>
-      <div class="individual-prices">
-        <div class="ind-item">
-          <span class="ind-type">Risk Assessments</span>
-          <span class="ind-price">From &pound;12</span>
-        </div>
-        <div class="ind-item">
-          <span class="ind-type">COSHH Assessments</span>
-          <span class="ind-price">From &pound;12</span>
-        </div>
-        <div class="ind-item">
-          <span class="ind-type">H&amp;S Policies</span>
-          <span class="ind-price">From &pound;19</span>
-        </div>
-        <div class="ind-item">
-          <span class="ind-type">Training Materials</span>
-          <span class="ind-price">From &pound;15</span>
-        </div>
-      </div>
-      <p style="margin-top: 1.5rem; color: #4b5563; font-size: 0.925rem;">
-        <strong>Tip:</strong> Buying 4+ individual documents? The full kit is better value at just &pound;4.16 per document.
-      </p>
-    </div>
-  </section>
-
   <!-- Available Trades -->
   <section class="section trades-section">
     <div class="container">
@@ -311,6 +280,7 @@ const faqSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>
@@ -529,37 +499,6 @@ const faqSchema = {
     margin-bottom: 0;
   }
 
-  /* Individual docs */
-  .individual-prices {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .ind-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 1rem 1.5rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    background: #f9fafb;
-  }
-
-  .ind-type {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #4b5563;
-  }
-
-  .ind-price {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #2563eb;
-  }
-
   /* Trades grid */
   .trades-section {
     background: #f9fafb;
@@ -654,16 +593,6 @@ const faqSchema = {
 
     .trades-grid {
       grid-template-columns: 1fr;
-    }
-
-    .individual-prices {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .ind-item {
-      width: 100%;
-      max-width: 280px;
     }
   }
 </style>

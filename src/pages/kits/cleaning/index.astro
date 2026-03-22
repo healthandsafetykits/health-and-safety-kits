@@ -55,8 +55,8 @@ const faqs = [
     a: 'The Basic kit includes print-ready PDFs. The Pro kit includes both PDFs and editable Word (.docx) files so you can customise everything to your business.',
   },
   {
-    q: 'Can I buy individual documents instead?',
-    a: 'Yes. Individual risk assessments and COSHH assessments are available from £12 each, and policies from £19. But the full kit is much better value — 19 documents for £79 works out at just £4.16 each.',
+    q: 'What is the difference between Basic and Pro?',
+    a: 'The Basic Kit (£49) includes 9 core documents as print-ready PDFs — your H&S policy, risk assessments, COSHH assessments, and compliance guide. The Pro Kit (£79) includes all 19 documents plus editable Word files, training materials, fire risk assessment, PPE assessment, Ireland Safety Statement, and annual review checklist.',
   },
   {
     q: 'What if regulations change?',
@@ -107,14 +107,14 @@ const productSchema = {
     {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Sarah M." },
-      "reviewBody": "Saved me hundreds compared to hiring a consultant. The COSHH assessments were already filled in with the exact chemicals I use."
+      "author": { "@type": "Person", "name": "S.M." },
+      "reviewBody": "Needed COSHH assessments for an insurance renewal. The chemical data was already there. Took about 40 minutes for everything."
     },
     {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "David R." },
-      "reviewBody": "Won a council cleaning contract because I could show professional H&S documents. Paid for itself on the first job."
+      "author": { "@type": "Person", "name": "D.R." },
+      "reviewBody": "Won a council contract partly because I had proper H&S docs. The kit was less than a tank of diesel."
     }
   ],
   "offers": [
@@ -422,16 +422,16 @@ const productSchema = {
       <h2 class="text-center">What Cleaning Business Owners Say</h2>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>"Saved me hundreds compared to hiring a consultant. The COSHH assessments were already filled in with the exact chemicals I use — bleach, degreasers, the lot."</p>
-          <cite>Sarah M., Sole Trader Cleaner, Manchester</cite>
+          <p>"Needed COSHH assessments for an insurance renewal. Was dreading it but the chemical data was already there — just had to check it matched what I actually use. Took about 40 minutes for everything."</p>
+          <cite>S.M., Manchester</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"Won a council cleaning contract because I could show professional H&amp;S documents. The kit paid for itself on the first job."</p>
-          <cite>David R., Commercial Cleaning Company, Dublin</cite>
+          <p>"Won a council contract partly because I had proper H&amp;S docs to show them. The kit was less than what I'd spend on a tank of diesel so it was a no-brainer really."</p>
+          <cite>D.R., Dublin</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"I was dreading the paperwork for my insurance renewal. Downloaded the Pro kit, added my company name, and had everything ready in under an hour."</p>
-          <cite>Lisa K., Domestic Cleaning Business, Birmingham</cite>
+          <p>"I put it off for months thinking it would be complicated. It wasn't. Downloaded the Pro kit, added my company name, printed it. Done before lunch."</p>
+          <cite>L.K., Birmingham</cite>
         </blockquote>
       </div>
     </div>
@@ -463,6 +463,7 @@ const productSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>

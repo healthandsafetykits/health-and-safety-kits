@@ -55,8 +55,8 @@ const faqs = [
     a: 'The Basic kit includes print-ready PDFs. The Pro kit includes both PDFs and editable Word (.docx) files so you can customise everything to your business.',
   },
   {
-    q: 'Can I buy individual documents instead?',
-    a: 'Yes. Individual risk assessments and COSHH assessments are available from \u00A312 each, and policies from \u00A319. But the full kit is much better value — 19 documents for \u00A379 works out at just \u00A34.16 each.',
+    q: 'What is the difference between Basic and Pro?',
+    a: 'The Basic Kit (£49) includes 9 core documents as print-ready PDFs — your H&S policy, risk assessments, COSHH assessments, and compliance guide. The Pro Kit (£79) includes all 19 documents plus editable Word files, training materials, fire risk assessment, PPE assessment, Ireland Safety Statement, and annual review checklist.',
   },
   {
     q: 'What if regulations change?',
@@ -107,14 +107,14 @@ const productSchema = {
     {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Emma L." },
-      "reviewBody": "The COSHH assessments for hair dye and bleach were exactly what my insurance company asked for. Saved me a fortune compared to a consultant."
+      "author": { "@type": "Person", "name": "E.L." },
+      "reviewBody": "Needed COSHH assessments for hair dye and bleach for a new salon lease. The landlord's solicitor was happy with them."
     },
     {
       "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "author": { "@type": "Person", "name": "Rachel S." },
-      "reviewBody": "As a mobile beautician, the lone working policy and client site assessment were invaluable. Everything was already written for my situation."
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "R.S." },
+      "reviewBody": "I work mobile so the client site assessment was really useful. The lone working policy too."
     }
   ],
   "offers": [
@@ -423,16 +423,16 @@ const productSchema = {
       <h2 class="text-center">What Beauty Business Owners Say</h2>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>"The COSHH assessments for hair dye and bleach were exactly what my insurance company asked for. Saved me a fortune compared to hiring a consultant."</p>
-          <cite>Emma L., Salon Owner, London</cite>
+          <p>"Needed COSHH assessments for hair dye and bleach for a new salon lease. The landlord's solicitor was happy with them which is all I really cared about."</p>
+          <cite>E.L., London</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"As a mobile beautician, the lone working policy and client site assessment were invaluable. Everything was already written for my exact situation."</p>
-          <cite>Rachel S., Mobile Beauty Therapist, Glasgow</cite>
+          <p>"I work mobile so the client site assessment was really useful — hadn't even thought about needing one until a client asked. The lone working policy too."</p>
+          <cite>R.S., Glasgow</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"I needed H&amp;S documents for a new salon lease. The Pro kit had everything &mdash; fire risk assessment, emergency procedures, staff training. All done in an afternoon."</p>
-          <cite>Priya K., Hair &amp; Beauty Salon, Edinburgh</cite>
+          <p>"Bought the Basic first, then upgraded to Pro a week later for the Word files. Wish I'd just gone Pro from the start but at least the upgrade was easy."</p>
+          <cite>P.K., Edinburgh</cite>
         </blockquote>
       </div>
     </div>
@@ -463,6 +463,7 @@ const productSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>

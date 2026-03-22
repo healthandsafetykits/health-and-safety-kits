@@ -13,6 +13,15 @@ const posts = defineCollection({
     ogImage: z.string().optional(),
     excerpt: z.string().optional(),
     canonical: z.string().optional(),
+    howTo: z.object({
+      name: z.string(),
+      description: z.string(),
+      totalTime: z.string().optional(),
+      steps: z.array(z.object({
+        name: z.string(),
+        text: z.string(),
+      })),
+    }).optional(),
   }),
 });
 

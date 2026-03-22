@@ -6,6 +6,23 @@ dateModified: 2026-03-12
 tags: ["method-statement", "construction", "compliance"]
 featured: false
 excerpt: "Clients asking for your RAMS? Here's everything you need to know about method statements — what they are, when you need them, and how to write one properly."
+howTo:
+  name: "How to Write a Method Statement"
+  description: "Step-by-step guide to writing a method statement (safe system of work) for your business, covering the key sections that clients, contractors, and inspectors expect to see."
+  totalTime: "PT2H"
+  steps:
+    - name: "Describe the work activity"
+      text: "Clearly state what work is being carried out, where it will take place, and the expected duration. Include the site address, client name, and a brief description of the scope of work."
+    - name: "Identify the hazards and risks"
+      text: "List all hazards associated with the work activity — working at height, manual handling, hazardous substances, electrical risks, noise, and any site-specific hazards. Reference the corresponding risk assessment for each hazard."
+    - name: "Detail the safe working sequence"
+      text: "Break down the work into sequential steps, from site setup to completion. For each step, describe exactly how the work will be carried out safely, including the controls, equipment, and precautions to be used."
+    - name: "Specify equipment, PPE, and resources"
+      text: "List all tools, equipment, materials, and PPE required for each stage of the work. Include equipment inspection requirements and confirm that operatives hold any necessary training certificates or competency cards."
+    - name: "Define emergency procedures"
+      text: "Describe what to do if something goes wrong — first aid arrangements, fire procedures, spill response, and who to contact in an emergency. Include the location of the nearest hospital and emergency assembly point."
+    - name: "Sign, communicate, and review"
+      text: "The method statement must be signed by the person responsible for the work and communicated to all operatives before work begins. Review and update it if site conditions change, new hazards are identified, or the scope of work changes."
 ---
 
 > **TL;DR:** A method statement describes *how* you'll carry out a job safely, step by step. A risk assessment identifies *what could go wrong*. Together they're called RAMS (Risk Assessment and Method Statement). You'll need them for most contract work in the UK and Ireland — especially anything involving main contractors, councils, or higher-risk tasks. They don't need to be complicated, but they do need to be specific to the actual job. This guide walks you through everything: what to include, how to write one, when they're legally required, and common mistakes to avoid.

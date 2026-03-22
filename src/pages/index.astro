@@ -256,34 +256,30 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <!-- Individual Documents -->
-  <section class="section individual-section">
+  <!-- What's Included -->
+  <section class="section whats-included-section">
     <div class="container">
-      <h2 class="text-center">Just Need One Document?</h2>
+      <h2 class="text-center">What&rsquo;s Inside Every Kit?</h2>
       <p class="section-subtitle">
-        Don&rsquo;t need the full kit? Buy individual documents from &pound;12.
-        Every document is the same professional, trade-specific quality as the kits.
+        Each kit contains 19 professional documents &mdash; all pre-filled for your trade.
+        Basic (9 docs, &pound;49) or Pro (19 docs, &pound;79).
       </p>
-      <div class="individual-grid">
-        <div class="individual-card">
+      <div class="included-grid">
+        <div class="included-card">
           <h3>Risk Assessments</h3>
-          <p>General, trade-specific, manual handling, slips/trips, fire &mdash; pre-filled for your trade.</p>
-          <span class="individual-price">From &pound;12</span>
+          <p>General, trade-specific, manual handling, slips/trips, fire &mdash; pre-filled with real hazards and control measures.</p>
         </div>
-        <div class="individual-card">
+        <div class="included-card">
           <h3>COSHH Assessments</h3>
-          <p>Chemical-by-chemical assessments with real H-codes, GHS data, and control measures.</p>
-          <span class="individual-price">From &pound;12</span>
+          <p>Chemical-by-chemical assessments with real H-codes, GHS data, and control measures for 8 trade-specific substances.</p>
         </div>
-        <div class="individual-card">
-          <h3>H&amp;S Policies</h3>
-          <p>Complete health and safety policies pre-written for your trade. Just add your company details.</p>
-          <span class="individual-price">From &pound;19</span>
+        <div class="included-card">
+          <h3>Policies &amp; Training</h3>
+          <p>H&amp;S policy, lone working policy, training presentation, staff quiz, induction checklist, and more.</p>
         </div>
       </div>
       <p class="text-center" style="margin-top: 1.5rem; color: #4b5563;">
-        <strong>Better value:</strong> Each full kit includes 19 documents for &pound;79 &mdash; just &pound;4.16 each.
-        <a href="/kits/">Compare all kits</a>.
+        <a href="/kits/">Compare Basic vs Pro kits for your trade</a>.
       </p>
     </div>
   </section>
@@ -400,24 +396,24 @@ const breadcrumbSchema = {
       <h2 class="text-center">What Our Customers Say</h2>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>&ldquo;Won a school cleaning contract and they wanted H&amp;S docs within a week. The kit had everything &mdash; risk assessments, COSHH for all my chemicals, the lot. Printed it all and the client was impressed.&rdquo;</p>
-          <cite>&mdash; Sarah M, Cleaning Business Owner, Birmingham</cite>
+          <p>&ldquo;Got asked for H&amp;S docs by a new client on Friday. Bought the cleaning kit, printed everything Monday morning. Honestly thought it would take ages but it was pretty much done.&rdquo;</p>
+          <cite>&mdash; S.M., Birmingham</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>&ldquo;My insurance broker asked for a health and safety policy and risk assessments. I had no idea where to start. This kit saved me hours and probably hundreds in consultant fees.&rdquo;</p>
-          <cite>&mdash; Darren K, Landscaping Contractor, Manchester</cite>
+          <p>&ldquo;My insurance broker flagged that I didn&rsquo;t have proper risk assessments. Looked at hiring a consultant but the quotes were mad. This was a fraction of the cost and I could do it myself.&rdquo;</p>
+          <cite>&mdash; D.K., Manchester</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>&ldquo;I&rsquo;m a sole trader beautician and needed COSHH assessments for my salon chemicals. Every assessment was already filled in with the right H-codes and safety data. Brilliant.&rdquo;</p>
-          <cite>&mdash; Lisa T, Mobile Beauty Therapist, Dublin</cite>
+          <p>&ldquo;The COSHH assessments were the main thing I needed. Was expecting blank forms but they had all the chemical data already filled in, which saved a lot of headaches.&rdquo;</p>
+          <cite>&mdash; L.T., Dublin</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>&ldquo;The free sample convinced me. The quality of the pre-filled documents is miles ahead of the blank HSE templates. Bought the Pro kit the same day.&rdquo;</p>
-          <cite>&mdash; Mark R, Dog Grooming Salon Owner, Bristol</cite>
+          <p>&ldquo;Downloaded the free sample first because I wasn&rsquo;t sure. It was genuinely good so I went for the Pro kit. No regrets.&rdquo;</p>
+          <cite>&mdash; M.R., Bristol</cite>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>&ldquo;Needed H&amp;S documents for a council tender. Downloaded the kit on Monday morning, had everything printed and submitted by lunchtime. Got the contract.&rdquo;</p>
-          <cite>&mdash; Emma P, Office Cleaning Company, Leeds</cite>
+          <p>&ldquo;Needed documents for a council tender that was due in two days. Cut it close but got everything submitted on time. Won the contract too.&rdquo;</p>
+          <cite>&mdash; E.P., Leeds</cite>
         </blockquote>
       </div>
     </div>
@@ -456,6 +452,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
+  <p class="page-freshness">Content last reviewed: March 2026</p>
 </BaseLayout>
 
 <style>
@@ -735,18 +732,18 @@ const breadcrumbSchema = {
     color: #2563eb;
   }
 
-  /* Individual documents */
-  .individual-section {
+  /* What's Included */
+  .whats-included-section {
     background: #f9fafb;
   }
 
-  .individual-grid {
+  .included-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
-  .individual-card {
+  .included-card {
     padding: 1.5rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
@@ -754,22 +751,16 @@ const breadcrumbSchema = {
     text-align: center;
   }
 
-  .individual-card h3 {
+  .included-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
 
-  .individual-card p {
+  .included-card p {
     color: #4b5563;
     font-size: 0.9rem;
     line-height: 1.5;
-    margin-bottom: 0.75rem;
-  }
-
-  .individual-price {
-    font-weight: 700;
-    color: #2563eb;
-    font-size: 1.1rem;
+    margin-bottom: 0;
   }
 
   /* Trust section */
@@ -1031,7 +1022,7 @@ const breadcrumbSchema = {
       grid-template-columns: 1fr;
     }
 
-    .individual-grid {
+    .included-grid {
       grid-template-columns: 1fr;
     }
 

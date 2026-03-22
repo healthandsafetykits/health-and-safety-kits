@@ -6,6 +6,23 @@ dateModified: 2026-03-16
 tags: ["coshh", "compliance", "cleaning"]
 featured: false
 excerpt: "If your business uses any chemicals — even household cleaning products — you probably need a COSHH assessment. Here's exactly how to do one."
+howTo:
+  name: "How to Complete a COSHH Assessment"
+  description: "Follow this 6-step process to assess hazardous substances in your workplace, document control measures, and meet COSHH Regulations 2002 requirements."
+  totalTime: "PT2H"
+  steps:
+    - name: "Make an inventory of all hazardous substances"
+      text: "List every chemical, dust, fume, and biological agent used or produced in your workplace. Include cleaning products, paints, solvents, adhesives, and any substance with a hazard warning label or safety data sheet."
+    - name: "Gather Safety Data Sheets for each substance"
+      text: "Obtain the Safety Data Sheet (SDS) from the manufacturer or supplier for every hazardous substance. The SDS contains H-codes, GHS classifications, exposure limits, first aid measures, and recommended PPE."
+    - name: "Identify who is exposed and how"
+      text: "For each substance, determine who comes into contact with it — directly or indirectly. Consider inhalation, skin contact, ingestion, and eye exposure. Note the frequency and duration of exposure for each person or role."
+    - name: "Evaluate the risk level"
+      text: "Assess the likelihood and severity of harm for each exposure scenario. Consider the toxicity of the substance, the amount used, the duration of exposure, and whether existing controls are adequate."
+    - name: "Decide on control measures"
+      text: "Apply the hierarchy of controls: eliminate the substance, substitute with a less hazardous alternative, enclose the process, improve ventilation, implement safe working procedures, and provide appropriate PPE as a last resort."
+    - name: "Record, implement, and review"
+      text: "Document your findings for each substance including hazard data, who is exposed, control measures, and emergency procedures. Train all staff on the controls. Review the assessment annually or when substances, processes, or staff change."
 ---
 
 > **TL;DR:** A COSHH assessment identifies the hazardous substances in your workplace, evaluates who is at risk, and documents the controls you have in place. If your business uses any chemicals — including everyday cleaning products, paints, adhesives, or anything that creates dust or fumes — you are legally required to carry one out. The process is straightforward: inventory your substances, gather Safety Data Sheets, assess the risks, put controls in place, and record everything. This guide walks you through it step by step.
