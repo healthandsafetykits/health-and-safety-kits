@@ -51,15 +51,20 @@ const formattedModified = modifiedDate?.toLocaleDateString('en-GB', { day: 'nume
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": title,
   "description": description,
   "datePublished": publishedDate.toISOString(),
   ...(modifiedDate && { "dateModified": modifiedDate.toISOString() }),
   "author": {
-    "@type": "Organization",
-    "name": "Health and Safety Kits",
-    "url": siteUrl,
+    "@type": "Person",
+    "name": "Jim Health",
+    "jobTitle": "Health & Safety Compliance Specialist",
+    "url": `${siteUrl}/about/`,
+    "sameAs": [
+      "https://www.linkedin.com/company/health-and-safety-kits/",
+      "https://x.com/HandSKits",
+    ],
   },
   "publisher": {
     "@type": "Organization",
@@ -78,6 +83,10 @@ const articleSchema = {
   "wordCount": wordCount,
   "articleSection": tags[0] || "Health and Safety",
   "keywords": tags.join(', '),
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["article h1", "article .prose p:first-of-type"],
+  },
 };
 
 const breadcrumbSchema = {
@@ -125,6 +134,7 @@ const breadcrumbSchema = {
           <span class="reading-time">{readingTime} min read</span>
         </div>
         <h1>{title}</h1>
+        <p class="post-author">By <a href="/about/">Jim Health</a>, Health &amp; Safety Compliance Specialist</p>
         {tags.length > 0 && (
           <div class="post-tags">
             {tags.map(tag => (
@@ -195,6 +205,22 @@ const breadcrumbSchema = {
 
   .post-header {
     margin-bottom: 2.5rem;
+  }
+
+  .post-author {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .post-author a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .post-author a:hover {
+    text-decoration: underline;
   }
 
   .post-meta {

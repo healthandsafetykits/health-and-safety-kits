@@ -61,7 +61,17 @@ const orgSchema = {
     "contactType": "customer support",
     "email": "info@healthandsafetykits.com",
     "url": `${siteUrl}/contact/`,
+    "availableLanguage": ["English"],
   },
+  "founder": {
+    "@type": "Person",
+    "name": "Jim Health",
+    "jobTitle": "Health & Safety Compliance Specialist",
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/health-and-safety-kits/",
+    "https://x.com/HandSKits",
+  ],
 };
 
 // WebSite schema (helps search engines understand site structure)
@@ -74,6 +84,10 @@ const websiteSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "Health and Safety Kits",
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".hero-subtitle", ".section-subtitle"],
   },
 };
 ---
@@ -117,6 +131,7 @@ const websiteSchema = {
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@HandSKits" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
@@ -127,8 +142,14 @@ const websiteSchema = {
     {ogType === 'article' && tags.length > 0 && tags.map(tag => <meta property="article:tag" content={tag} />)}
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title="Health and Safety Kits Blog" href="/rss.xml" />
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en-GB" href={canonicalHref} />
+    <link rel="alternate" hreflang="en" href={canonicalHref} />
+    <link rel="alternate" hreflang="x-default" href={canonicalHref} />
 
     <slot name="head" />
 

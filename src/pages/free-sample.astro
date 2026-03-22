@@ -1,10 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://healthandsafetykits.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Free Sample", "item": "https://healthandsafetykits.com/free-sample/" }
+  ]
+};
 ---
 
-<BaseLayout title="Free Sample" description="Download a free sample of our H&S compliance kit — a risk assessment and COSHH assessment pre-filled for cleaning businesses. No signup required.">
+<BaseLayout title="Free Sample H&S Kit — Download Risk Assessment & COSHH Assessment" description="Download a free sample of our H&S compliance kit — a risk assessment and COSHH assessment pre-filled for cleaning businesses. No signup required.">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   <section class="section">
     <div class="container" style="max-width: 750px;">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span>Free Sample</span>
+      </nav>
       <h1 class="text-center">Free Sample Kit</h1>
       <p class="text-center subtitle">
         See the quality before you buy. Download two sample documents from our
@@ -85,6 +98,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .breadcrumb span[aria-hidden] {
+    margin: 0 0.35rem;
+    color: #9ca3af;
+  }
+
   .subtitle {
     color: #4b5563;
     font-size: 1.05rem;

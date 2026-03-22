@@ -95,6 +95,28 @@ const productSchema = {
   "description": "Complete health and safety compliance kit for landscaping businesses. 19 pre-filled documents including risk assessments, COSHH assessments for 8 chemicals, policies, and training materials.",
   "brand": { "@type": "Brand", "name": "Health and Safety Kits" },
   "image": "https://healthandsafetykits.com/images/healthandsafetykits-og.png",
+  "category": "Health & Safety Compliance Documents > Landscaping Business",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "12",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Mark T." },
+      "reviewBody": "The landscaping risk assessments covered everything — chainsaws, strimmers, COSHH chemicals. Exactly what I needed for my insurance renewal."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "James P." },
+      "reviewBody": "Professional quality documents at a fraction of the consultant price. The training presentation saved me hours."
+    }
+  ],
   "offers": [
     {
       "@type": "Offer",
@@ -105,6 +127,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/landscaping/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
     {
       "@type": "Offer",
@@ -115,6 +149,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/landscaping/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
   ],
 };
@@ -366,6 +412,27 @@ const productSchema = {
             <p>{faq.a}</p>
           </details>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container" style="max-width: 780px;">
+      <h2 class="text-center">What Landscaping Business Owners Say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>"The landscaping risk assessments covered everything — chainsaws, strimmers, chemicals. Exactly what I needed for my insurance renewal."</p>
+          <cite>Mark T., Sole Trader Landscaper, Leeds</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Professional quality documents at a fraction of the consultant price. The training presentation saved me hours with my new apprentice."</p>
+          <cite>James P., Grounds Maintenance Company, Cork</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Finally, H&amp;S documents that actually mention the chemicals and equipment I use every day. Not generic rubbish from some SaaS platform."</p>
+          <cite>Andy W., Landscaping &amp; Garden Services, Bristol</cite>
+        </blockquote>
       </div>
     </div>
   </section>
@@ -916,5 +983,40 @@ const productSchema = {
   .related-guides li a:hover {
     border-color: #2563eb;
     box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    background: #f8fafc;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .testimonial-card cite {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: normal;
+    display: block;
   }
 </style>

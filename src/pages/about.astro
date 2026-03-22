@@ -1,11 +1,90 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes Health and Safety Kits different from other H&S providers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Health and Safety Kits provides downloadable, trade-specific compliance documents pre-filled with real hazards, chemicals, and control measures for your exact trade. Unlike generic template providers or expensive consultants, our kits are ready to use immediately — no subscriptions, no blank forms to fill in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should use Health and Safety Kits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sole traders and micro businesses (1-5 staff) in trades such as cleaning, landscaping, mobile beauty, and dog grooming across the UK and Ireland. If you need H&S documents for contracts, insurance renewals, or legal compliance, our kits give you everything you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What UK and Irish regulations do your kits cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our kits are aligned with the Health and Safety at Work Act 1974 (UK), Management of Health and Safety at Work Regulations 1999, COSHH Regulations 2002, and the Safety, Health and Welfare at Work Act 2005 (Ireland). We monitor updates from the HSE and the Health and Safety Authority to keep content current."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://healthandsafetykits.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://healthandsafetykits.com/about/" }
+  ]
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jim Health",
+  "jobTitle": "Founder",
+  "url": "https://healthandsafetykits.com/about/",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Health and Safety Kits",
+    "url": "https://healthandsafetykits.com/"
+  },
+  "knowsAbout": [
+    "Health and Safety Compliance",
+    "COSHH Assessments",
+    "Risk Assessment",
+    "UK Health and Safety Law",
+    "Irish Safety Legislation",
+    "Small Business Compliance"
+  ],
+  "sameAs": [
+    "https://x.com/HandSKits",
+    "https://www.linkedin.com/company/health-and-safety-kits/"
+  ]
+};
 ---
 
-<BaseLayout title="About" description="Health and Safety Kits provides affordable, trade-specific H&S compliance kits for sole traders and small businesses across the UK and Ireland.">
+<BaseLayout title="About Health and Safety Kits – Our Mission, Expertise & Approach" description="About Health and Safety Kits — trade-specific H&S compliance kits for sole traders and micro businesses across the UK and Ireland. 20+ years of compliance expertise.">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+
   <section class="section">
-    <div class="container" style="max-width: 700px;">
+    <div class="container about-container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span>About</span>
+      </nav>
+
       <h1>About Health and Safety Kits</h1>
+
+      <div class="brand-statement">
+        <p>
+          <strong>Health and Safety Kits delivers downloadable, trade-specific compliance documents for sole traders and micro businesses across the UK and Ireland &mdash; pre-filled with real hazards and control measures, at a one-time price.</strong>
+        </p>
+      </div>
 
       <p>
         Health and Safety Kits was created to solve a simple problem: small tradespeople and
@@ -29,29 +108,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <li><strong>Trade-specific:</strong> Every kit is built for a specific trade, not a generic business.</li>
         <li><strong>One-time purchase:</strong> No subscriptions, no per-user fees, no logins.</li>
         <li><strong>Plain English:</strong> Written for business owners, not H&S professionals.</li>
-        <li><strong>Audit-ready:</strong> Documents aligned with UK H&S law, ready for inspectors and insurers.</li>
+        <li><strong>Pre-filled content:</strong> Real hazards, real chemicals, real control measures &mdash; not blank templates.</li>
+        <li><strong>Audit-ready:</strong> Documents aligned with UK and Irish H&S law, ready for inspectors and insurers.</li>
       </ul>
 
       <h2>Our Expertise</h2>
-      <p>
-        Our compliance documents are developed by a team with <strong>over 20 years of experience
-        in IT, regulatory compliance, and risk management</strong>. We also created the compliance
-        kits behind <a href="https://www.smbcyberhub.com" rel="noopener noreferrer" target="_blank">SMBCyberHub</a>,
-        used by small businesses across the UK and Ireland.
-      </p>
-      <p>
-        Every document in our kits is aligned with the legislation that governs your obligations:
-      </p>
-      <ul>
-        <li><strong>Health and Safety at Work Act 1974</strong> (UK)</li>
-        <li><strong>Management of Health and Safety at Work Regulations 1999</strong></li>
-        <li><strong>COSHH Regulations 2002</strong> (for chemical hazards)</li>
-        <li><strong>Safety, Health and Welfare at Work Act 2005</strong> (Ireland)</li>
-      </ul>
-      <p>
-        We monitor regulatory updates from the HSE, local authorities, and the Health and Safety
-        Authority (Ireland) to ensure our kits remain current.
-      </p>
+
+      <div class="expertise-box">
+        <h3>20+ Years of Compliance Experience</h3>
+        <p class="expertise-intro">Our documents are developed by professionals with deep expertise in regulatory compliance and risk management:</p>
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <h4>Trade-Specific Focus</h4>
+            <p>Specialising in sole traders and micro businesses (1&ndash;5 staff). We understand the constraints of running a small operation.</p>
+          </div>
+          <div class="expertise-card">
+            <h4>Regulatory Knowledge</h4>
+            <p>Deep knowledge of HSWA 1974, MHSWR 1999, COSHH 2002, and the Irish SHWW Act 2005.</p>
+          </div>
+          <div class="expertise-card">
+            <h4>Practical Documentation</h4>
+            <p>Real-world experience creating compliance documents that pass inspections and satisfy insurers.</p>
+          </div>
+          <div class="expertise-card">
+            <h4>Proven Track Record</h4>
+            <p>Also created the compliance kits behind <a href="https://www.smbcyberhub.com" rel="noopener noreferrer" target="_blank">SMBCyberHub</a>, used by small businesses across the UK and Ireland.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="regulations-box">
+        <h3>Legislation &amp; Standards We Cover</h3>
+        <p>Every document is aligned with the legislation that governs your obligations:</p>
+        <div class="regulations-grid">
+          <div class="reg-badge">
+            <span class="reg-name">HSWA 1974</span>
+            <span class="reg-detail">UK Core Act</span>
+          </div>
+          <div class="reg-badge">
+            <span class="reg-name">MHSWR 1999</span>
+            <span class="reg-detail">Management Regs</span>
+          </div>
+          <div class="reg-badge">
+            <span class="reg-name">COSHH 2002</span>
+            <span class="reg-detail">Chemical Hazards</span>
+          </div>
+          <div class="reg-badge">
+            <span class="reg-name">SHWW 2005</span>
+            <span class="reg-detail">Ireland</span>
+          </div>
+        </div>
+        <p class="reg-note">
+          We monitor regulatory updates from the HSE, local authorities, and the Health and Safety
+          Authority (Ireland) to ensure our kits remain current.
+        </p>
+      </div>
 
       <h2>Who We Serve</h2>
       <p>
@@ -63,6 +174,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         meet your legal obligations, our kits give you everything you need &mdash; without the
         consultant fees or SaaS subscriptions.
       </p>
+
+      <div class="trust-section">
+        <h2>Trust &amp; Compliance</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="trust-title">UK &amp; Irish Law Aligned</p>
+              <p class="trust-detail">Documents mapped to HSWA 1974, MHSWR 1999, COSHH 2002, and SHWW Act 2005.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="trust-title">No Logins or Subscriptions</p>
+              <p class="trust-detail">All kits are instant downloads. No SaaS, no tracking, no user accounts.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="trust-title">Pre-Filled, Not Blank</p>
+              <p class="trust-detail">Every document contains real, trade-specific content &mdash; not empty templates to figure out yourself.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <div>
+              <p class="trust-title">Founded by Compliance Professionals</p>
+              <p class="trust-detail">Built and maintained by a team with 20+ years of compliance, IT, and risk management experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-faq">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+          <summary>What makes Health and Safety Kits different from other H&S providers?</summary>
+          <p>Health and Safety Kits provides downloadable, trade-specific compliance documents pre-filled with real hazards, chemicals, and control measures for your exact trade. Unlike generic template providers or expensive consultants, our kits are ready to use immediately &mdash; no subscriptions, no blank forms to fill in.</p>
+        </details>
+        <details>
+          <summary>Who should use Health and Safety Kits?</summary>
+          <p>Sole traders and micro businesses (1&ndash;5 staff) in trades such as cleaning, landscaping, mobile beauty, and dog grooming across the UK and Ireland. If you need H&S documents for contracts, insurance renewals, or legal compliance, our kits give you everything you need.</p>
+        </details>
+        <details>
+          <summary>What UK and Irish regulations do your kits cover?</summary>
+          <p>Our kits are aligned with the Health and Safety at Work Act 1974 (UK), Management of Health and Safety at Work Regulations 1999, COSHH Regulations 2002, and the Safety, Health and Welfare at Work Act 2005 (Ireland). We monitor updates from the HSE and the Health and Safety Authority to keep content current.</p>
+        </details>
+      </div>
 
       <h2>Questions?</h2>
       <p>
@@ -76,6 +237,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+  .about-container {
+    max-width: 700px;
+  }
+
   ul {
     margin: 1rem 0 1.5rem;
     padding-left: 1.5rem;
@@ -83,5 +248,240 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   li {
     margin-bottom: 0.5rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .breadcrumb span[aria-hidden] {
+    margin: 0 0.35rem;
+    color: #9ca3af;
+  }
+
+  .brand-statement {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+    border-left: 4px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brand-statement p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+  }
+
+  .expertise-box {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .expertise-box h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .expertise-intro {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .expertise-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .expertise-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  .expertise-card p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .expertise-card a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .expertise-card a:hover { text-decoration: underline; }
+
+  .regulations-box {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .regulations-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .regulations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .reg-badge {
+    background: #f0f9ff;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .reg-name {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1e40af;
+  }
+
+  .reg-detail {
+    display: block;
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-top: 0.15rem;
+  }
+
+  .reg-note {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .trust-section {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .trust-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .trust-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .trust-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #16a34a;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .trust-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .trust-detail {
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  .about-faq {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .about-faq h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-faq details {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 0;
+  }
+
+  .about-faq summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+  }
+
+  .about-faq summary::-webkit-details-marker { display: none; }
+
+  .about-faq summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .about-faq details[open] summary::after { content: '\2212'; }
+
+  .about-faq details p {
+    margin-top: 0.5rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .expertise-grid,
+    .trust-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .regulations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>

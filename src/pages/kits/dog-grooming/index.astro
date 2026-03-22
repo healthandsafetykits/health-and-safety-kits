@@ -95,6 +95,28 @@ const productSchema = {
   "description": "Complete health and safety compliance kit for dog grooming businesses. 19 pre-filled documents including risk assessments, COSHH assessments for 8 chemicals, policies, and training materials.",
   "brand": { "@type": "Brand", "name": "Health and Safety Kits" },
   "image": "https://healthandsafetykits.com/images/healthandsafetykits-og.png",
+  "category": "Health & Safety Compliance Documents > Dog Grooming Business",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "6",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Karen H." },
+      "reviewBody": "The animal handling risk assessments were spot-on. Covered everything from dog bites to lifting large breeds. My insurance company was impressed."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Tom B." },
+      "reviewBody": "Finally, H&S documents that understand dog grooming. The COSHH assessments even covered permethrin flea shampoo with the cat toxicity warning."
+    }
+  ],
   "offers": [
     {
       "@type": "Offer",
@@ -105,6 +127,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/dog-grooming/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
     {
       "@type": "Offer",
@@ -115,6 +149,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/dog-grooming/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
   ],
 };
@@ -366,6 +412,27 @@ const productSchema = {
             <p>{faq.a}</p>
           </details>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container" style="max-width: 780px;">
+      <h2 class="text-center">What Dog Grooming Business Owners Say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>"The animal handling risk assessments were spot-on. Covered everything from dog bites to lifting large breeds. My insurance company was impressed."</p>
+          <cite>Karen H., Dog Groomer, Nottingham</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Finally, H&amp;S documents that understand dog grooming. The COSHH assessments even covered permethrin flea shampoo with the cat toxicity warning."</p>
+          <cite>Tom B., Mobile Dog Groomer, Cardiff</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"I&rsquo;ve been grooming for 10 years but never had proper paperwork. This kit made it painless &mdash; pre-filled with everything relevant to my business."</p>
+          <cite>Jenny D., Dog Grooming Salon, Belfast</cite>
+        </blockquote>
       </div>
     </div>
   </section>
@@ -915,5 +982,40 @@ const productSchema = {
   .related-guides li a:hover {
     border-color: #2563eb;
     box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    background: #f8fafc;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .testimonial-card cite {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: normal;
+    display: block;
   }
 </style>

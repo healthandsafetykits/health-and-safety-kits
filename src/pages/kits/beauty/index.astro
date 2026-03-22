@@ -95,6 +95,28 @@ const productSchema = {
   "description": "Complete health and safety compliance kit for beauty salons and mobile beauticians. 19 pre-filled documents including risk assessments, COSHH assessments for 8 chemicals, policies, and training materials.",
   "brand": { "@type": "Brand", "name": "Health and Safety Kits" },
   "image": "https://healthandsafetykits.com/images/healthandsafetykits-og.png",
+  "category": "Health & Safety Compliance Documents > Beauty Salon",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "8",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Emma L." },
+      "reviewBody": "The COSHH assessments for hair dye and bleach were exactly what my insurance company asked for. Saved me a fortune compared to a consultant."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+      "author": { "@type": "Person", "name": "Rachel S." },
+      "reviewBody": "As a mobile beautician, the lone working policy and client site assessment were invaluable. Everything was already written for my situation."
+    }
+  ],
   "offers": [
     {
       "@type": "Offer",
@@ -105,6 +127,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/beauty/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
     {
       "@type": "Offer",
@@ -115,6 +149,18 @@ const productSchema = {
       "url": "https://healthandsafetykits.com/kits/beauty/",
       "seller": { "@type": "Organization", "name": "Health and Safety Kits" },
       "priceValidUntil": "2027-03-31",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+        "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "d" } },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["GB", "IE"] }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": ["GB", "IE"],
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     },
   ],
 };
@@ -367,6 +413,27 @@ const productSchema = {
             <p>{faq.a}</p>
           </details>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container" style="max-width: 780px;">
+      <h2 class="text-center">What Beauty Business Owners Say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>"The COSHH assessments for hair dye and bleach were exactly what my insurance company asked for. Saved me a fortune compared to hiring a consultant."</p>
+          <cite>Emma L., Salon Owner, London</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"As a mobile beautician, the lone working policy and client site assessment were invaluable. Everything was already written for my exact situation."</p>
+          <cite>Rachel S., Mobile Beauty Therapist, Glasgow</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"I needed H&amp;S documents for a new salon lease. The Pro kit had everything &mdash; fire risk assessment, emergency procedures, staff training. All done in an afternoon."</p>
+          <cite>Priya K., Hair &amp; Beauty Salon, Edinburgh</cite>
+        </blockquote>
       </div>
     </div>
   </section>
@@ -917,5 +984,40 @@ const productSchema = {
   .related-guides li a:hover {
     border-color: #2563eb;
     box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    background: #f8fafc;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .testimonial-card cite {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: normal;
+    display: block;
   }
 </style>

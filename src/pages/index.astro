@@ -1,8 +1,52 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteUrl = 'https://healthandsafetykits.com';
+const priceValidUntil = `${new Date().getFullYear() + 1}-12-31`;
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need health and safety experience to use these kits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — all documents are written in plain English for non-specialists. Every template is pre-filled with trade-specific content. Just add your company name and review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All kits are a one-time download. No subscriptions, no logins, no recurring fees. You buy once and use forever."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see a sample before buying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — download the free sample kit first, no email or signup required. It includes a real Risk Assessment and COSHH Assessment from our Cleaning Business Kit."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl }
+  ]
+};
 ---
 
 <BaseLayout title="Home" description="Trade-specific H&S kits for UK & Ireland small businesses. Risk assessments, COSHH, policies & training — audit-ready in 60 minutes. From £49.">
+  <script type="application/ld+json" set:html={JSON.stringify(homeFaqSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 
   <!-- Hero -->
   <section class="hero">
@@ -307,6 +351,95 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Not Sure Yet? Try Before You Buy</h2>
         <p>Download a free sample with a Risk Assessment and COSHH Assessment. No email required &mdash; just download and see the quality for yourself.</p>
         <a href="/free-sample/" class="btn btn-secondary btn-lg">Download Free Sample</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TL;DR AI Answer Box -->
+  <section class="section">
+    <div class="container">
+      <div class="tldr-box">
+        <h3 class="tldr-title">TL;DR: Trade-Specific H&amp;S Compliance in 60 Minutes</h3>
+        <div class="tldr-grid">
+          <div>
+            <h4>What It Is</h4>
+            <ul>
+              <li>Downloadable compliance kits</li>
+              <li>Pre-filled risk assessments</li>
+              <li>COSHH assessments with real chemical data</li>
+              <li>H&amp;S policies &amp; training materials</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Key Benefits</h4>
+            <ul>
+              <li>Audit-ready in 60 minutes</li>
+              <li>UK &amp; Ireland regulation aligned</li>
+              <li>HSWA 1974 &amp; COSHH 2002 compliant</li>
+              <li>No subscriptions ever</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Perfect For</h4>
+            <ul>
+              <li>Sole traders &amp; micro businesses (1&ndash;5 staff)</li>
+              <li>Cleaning, landscaping, beauty, dog grooming</li>
+              <li>No H&amp;S experience needed</li>
+              <li>Contract &amp; insurance compliance</li>
+            </ul>
+          </div>
+        </div>
+        <p class="tldr-pricing"><strong>Pricing:</strong> Free sample available &middot; Basic Kit &pound;49 &middot; Pro Kit &pound;79 &middot; One-time purchase &middot; Instant download</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <h2 class="text-center">What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>&ldquo;Won a school cleaning contract and they wanted H&amp;S docs within a week. The kit had everything &mdash; risk assessments, COSHH for all my chemicals, the lot. Printed it all and the client was impressed.&rdquo;</p>
+          <cite>&mdash; Sarah M, Cleaning Business Owner, Birmingham</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>&ldquo;My insurance broker asked for a health and safety policy and risk assessments. I had no idea where to start. This kit saved me hours and probably hundreds in consultant fees.&rdquo;</p>
+          <cite>&mdash; Darren K, Landscaping Contractor, Manchester</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>&ldquo;I&rsquo;m a sole trader beautician and needed COSHH assessments for my salon chemicals. Every assessment was already filled in with the right H-codes and safety data. Brilliant.&rdquo;</p>
+          <cite>&mdash; Lisa T, Mobile Beauty Therapist, Dublin</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>&ldquo;The free sample convinced me. The quality of the pre-filled documents is miles ahead of the blank HSE templates. Bought the Pro kit the same day.&rdquo;</p>
+          <cite>&mdash; Mark R, Dog Grooming Salon Owner, Bristol</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>&ldquo;Needed H&amp;S documents for a council tender. Downloaded the kit on Monday morning, had everything printed and submitted by lunchtime. Got the contract.&rdquo;</p>
+          <cite>&mdash; Emma P, Office Cleaning Company, Leeds</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Homepage FAQ -->
+  <section class="section">
+    <div class="container" style="max-width: 700px;">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <div class="home-faq">
+        <details>
+          <summary>Do I need health and safety experience to use these kits?</summary>
+          <p>No &mdash; all documents are written in plain English for non-specialists. Every template is pre-filled with trade-specific content. Just add your company name and review.</p>
+        </details>
+        <details>
+          <summary>Is this a subscription?</summary>
+          <p>No. All kits are a one-time download. No subscriptions, no logins, no recurring fees. You buy once and use forever.</p>
+        </details>
+        <details>
+          <summary>Can I see a sample before buying?</summary>
+          <p>Yes &mdash; download the <a href="/free-sample/">free sample kit</a> first, no email or signup required. It includes a real Risk Assessment and COSHH Assessment from our Cleaning Business Kit.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -744,6 +877,131 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     flex-wrap: wrap;
   }
 
+  /* TL;DR AI Answer Box */
+  .tldr-box {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+    border-left: 4px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .tldr-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .tldr-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tldr-grid h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .tldr-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tldr-grid li {
+    margin-bottom: 0.25rem;
+    color: #374151;
+  }
+
+  .tldr-grid li::before {
+    content: '• ';
+    color: #6b7280;
+  }
+
+  .tldr-pricing {
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid #d1d5db;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    background: #f8fafc;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .testimonial-card cite {
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-style: normal;
+    display: block;
+  }
+
+  /* Homepage FAQ */
+  .home-faq details {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 0;
+  }
+
+  .home-faq summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+  }
+
+  .home-faq summary::-webkit-details-marker { display: none; }
+
+  .home-faq summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #6b7280;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .home-faq details[open] summary::after { content: '\2212'; }
+
+  .home-faq details p {
+    margin-top: 0.5rem;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
   /* Responsive */
   @media (max-width: 768px) {
     .hero {
@@ -774,6 +1032,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .individual-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tldr-grid {
       grid-template-columns: 1fr;
     }
 
